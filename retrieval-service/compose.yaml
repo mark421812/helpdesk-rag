@@ -1,0 +1,54 @@
+services:
+  retrieval-api:
+    build:
+      context: .
+    image: helpdesk/retrieval-service:local
+    init: true
+    restart: unless-stopped
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      API_INTERNAL_KEY: ${API_INTERNAL_KEY:-local-development-only}
+      CORS_ORIGINS: ${CORS_ORIGINS:-[]}
+      IDENTITY_MODE: ${IDENTITY_MODE:-development_headers}
+      KNOWLEDGE_INDEX_URL: ${KNOWLEDGE_INDEX_URL:-http://knowledge-index-api:8080}
+      KNOWLEDGE_INDEX_API_KEY: ${KNOWLEDGE_INDEX_API_KEY:-}
+      KNOWLEDGE_INDEX_CONNECT_TIMEOUT_SECONDS: ${KNOWLEDGE_INDEX_CONNECT_TIMEOUT_SECONDS:-3}
+      KNOWLEDGE_INDEX_READ_TIMEOUT_SECONDS: ${KNOWLEDGE_INDEX_READ_TIMEOUT_SECONDS:-45}
+      KNOWLEDGE_INDEX_TOTAL_TIMEOUT_SECONDS: ${KNOWLEDGE_INDEX_TOTAL_TIMEOUT_SECONDS:-50}
+      KNOWLEDGE_INDEX_READINESS_TIMEOUT_SECONDS: ${KNOWLEDGE_INDEX_READINESS_TIMEOUT_SECONDS:-5}
+      KNOWLEDGE_INDEX_MAX_RESPONSE_BODY_BYTES: ${KNOWLEDGE_INDEX_MAX_RESPONSE_BODY_BYTES:-5000000}
+      KNOWLEDGE_INDEX_RETRY_ATTEMPTS: ${KNOWLEDGE_INDEX_RETRY_ATTEMPTS:-1}
+      KNOWLEDGE_INDEX_RETRY_BACKOFF_SECONDS: ${KNOWLEDGE_INDEX_RETRY_BACKOFF_SECONDS:-0.2}
+      KNOWLEDGE_INDEX_RETRY_MAX_BACKOFF_SECONDS: ${KNOWLEDGE_INDEX_RETRY_MAX_BACKOFF_SECONDS:-2}
+      API_MAX_REQUEST_BODY_BYTES: ${API_MAX_REQUEST_BODY_BYTES:-65536}
+      DEFAULT_RETRIEVAL_LIMIT: ${DEFAULT_RETRIEVAL_LIMIT:-8}
+      MAX_RETRIEVAL_LIMIT: ${MAX_RETRIEVAL_LIMIT:-20}
+      MAX_CANDIDATE_LIMIT: ${MAX_CANDIDATE_LIMIT:-50}
+      CANDIDATE_MULTIPLIER: ${CANDIDATE_MULTIPLIER:-3}
+      MAX_CONTEXT_TOKENS: ${MAX_CONTEXT_TOKENS:-3000}
+      MAX_CHUNKS_PER_DOCUMENT: ${MAX_CHUNKS_PER_DOCUMENT:-3}
+      SCORE_THRESHOLD: ${SCORE_THRESHOLD:-}
+      ATTESTATION_PRIVATE_KEY_PATH: /run/secrets/retrieval-attestation-private.pem
+      ATTESTATION_KEY_ID: ${ATTESTATION_KEY_ID:-retrieval-dev-001}
+      ATTESTATION_TTL_SECONDS: ${ATTESTATION_TTL_SECONDS:-120}
+      ATTESTATION_ISSUER: retrieval-service
+      ATTESTATION_AUDIENCE: answer-generation-service
+      ATTESTATION_POLICY_VERSION: ${ATTESTATION_POLICY_VERSION:-retrieval-policy-v1}
+    secrets:
+      - source: retrieval-attestation-private
+        target: retrieval-attestation-private.pem
+    ports:
+      - "${RETRIEVAL_BIND_ADDRESS:-127.0.0.1}:${RETRIEVAL_API_PORT:-8100}:8100"
+
+networks:
+  default:
+    name: ${HELPDESK_NETWORK:-helpdesk-rag}
+    external: true
+
+secrets:
+  # 本機預設使用 development key；ARM Linux 部署時可用環境變數指向主機上的正式 secret。
+  # Compose secret 會掛到 /run/secrets，避免 bind mount 的 UID 在 Intel Mac 與 Linux ARM
+  # 主機之間不一致，導致 non-root container 無法讀取金鑰。
+  retrieval-attestation-private:
+    file: ${RETRIEVAL_ATTESTATION_PRIVATE_KEY_FILE:-./secrets/dev/retrieval-private.pem}

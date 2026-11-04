@@ -1,0 +1,2153 @@
+[
+  {
+    "id": "T01-fact",
+    "type": "fact",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T01",
+    "question": "教育訓練補助 v2 的申請截止日期？",
+    "history": [],
+    "scope": {
+      "topic": "教育訓練補助",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "2027-02-18"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T01/rules.md",
+          "version": "v2",
+          "anchors": [
+            "E-T01-DATE"
+          ],
+          "section": "日期",
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T01-list",
+    "type": "list",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T01",
+    "question": "根據教育訓練補助 v2 操作流程 PDF，列出全部開放項目，附單位及代碼並去重。",
+    "history": [],
+    "scope": {
+      "topic": "教育訓練補助",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T01/procedure.pdf",
+          "version": "v2",
+          "anchors": [
+            "E-T01-CATALOG",
+            "E-T01-END",
+            "R-T01-001",
+            "R-T01-002",
+            "R-T01-003",
+            "R-T01-004",
+            "R-T01-005"
+          ],
+          "section": "適用項目",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ],
+      "row_ids": [
+        "R-T01-001",
+        "R-T01-002",
+        "R-T01-003",
+        "R-T01-004",
+        "R-T01-005"
+      ],
+      "complete_required": true,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T01-count",
+    "type": "count",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T01",
+    "question": "根據教育訓練補助 v2 操作流程 PDF，以單位與項目代碼的組合去重，共有幾個開放項目？",
+    "history": [],
+    "scope": {
+      "topic": "教育訓練補助",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "0"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T01/procedure.pdf",
+          "version": "v2",
+          "anchors": [
+            "E-T01-CATALOG",
+            "E-T01-END",
+            "R-T01-001",
+            "R-T01-002",
+            "R-T01-003",
+            "R-T01-004",
+            "R-T01-005"
+          ],
+          "section": "適用項目",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ],
+      "row_ids": [
+        "R-T01-001",
+        "R-T01-002",
+        "R-T01-003",
+        "R-T01-004",
+        "R-T01-005"
+      ],
+      "complete_required": true,
+      "source_complete": true,
+      "count_unit": "課程",
+      "count_unique_key": [
+        "unit_id",
+        "item_code"
+      ],
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T01-compare",
+    "type": "compare",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T01",
+    "question": "比較教育訓練補助 v2 目錄中甲單位 K001 與乙單位 K001 的資格及費用。",
+    "history": [],
+    "scope": {
+      "topic": "教育訓練補助",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "甲單位 全體正式員工 800 元",
+        "乙單位 任職滿六個月 1200 元"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T01/catalog.docx",
+          "version": "v2",
+          "anchors": [
+            "R-T01-001",
+            "R-T01-002"
+          ],
+          "section": "適用項目",
+          "pages": null
+        }
+      ],
+      "row_ids": [
+        "R-T01-001",
+        "R-T01-002"
+      ],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T01-procedure",
+    "type": "procedure",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T01",
+    "question": "教育訓練補助 v2 操作流程的四個步驟，請依序說明。",
+    "history": [],
+    "scope": {
+      "topic": "教育訓練補助",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "確認課程適用資格",
+        "取得主管核准",
+        "提交補助申請表",
+        "收到核准後報名"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T01/procedure.pdf",
+          "version": "v2",
+          "anchors": [
+            "E-T01-STEP1",
+            "E-T01-STEP2",
+            "E-T01-STEP3",
+            "E-T01-STEP4"
+          ],
+          "section": "操作步驟",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T01-followup",
+    "type": "followup",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T01",
+    "question": "那第二個的資格和費用呢？",
+    "history": [
+      {
+        "role": "user",
+        "text": "請在教育訓練補助 v2 目錄比較甲單位 K001 與乙單位 K001。"
+      },
+      {
+        "role": "assistant",
+        "text": "第一個是甲單位 K001，第二個是乙單位 K001。"
+      }
+    ],
+    "scope": {
+      "topic": "教育訓練補助",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "乙單位 任職滿六個月 1200 元"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T01/catalog.docx",
+          "version": "v2",
+          "anchors": [
+            "R-T01-002"
+          ],
+          "section": "適用項目",
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T01-no_answer",
+    "type": "no_answer",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T01",
+    "question": "教育訓練補助文件中的補助所得的稅額是多少？",
+    "history": [],
+    "scope": {
+      "topic": "教育訓練補助",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "refuse",
+      "claims": [],
+      "reason": "not_documented",
+      "evidence": [
+        {
+          "document": "T01/notes.txt",
+          "version": "v2",
+          "anchors": [
+            "E-T01-MISSING"
+          ],
+          "section": null,
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T01-ambiguity",
+    "type": "ambiguity",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T01",
+    "question": "教育訓練補助這次的截止日是哪一天？",
+    "history": [],
+    "scope": {
+      "topic": "教育訓練補助",
+      "edition": null
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "clarify",
+      "claims": [],
+      "reason": "missing_edition",
+      "evidence": [
+        {
+          "document": "T01/notes.txt",
+          "version": "v2",
+          "anchors": [
+            "E-T01-EDITION"
+          ],
+          "section": null,
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T02-fact",
+    "type": "fact",
+    "split": "tuning",
+    "domain": "operations",
+    "source_group": "T02",
+    "question": "測試環境備份 v2 的備份驗收截止日期？",
+    "history": [],
+    "scope": {
+      "topic": "測試環境備份",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "2027-03-09"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T02/rules.md",
+          "version": "v2",
+          "anchors": [
+            "E-T02-DATE"
+          ],
+          "section": "日期",
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T02-list",
+    "type": "list",
+    "split": "tuning",
+    "domain": "operations",
+    "source_group": "T02",
+    "question": "根據測試環境備份 v2 操作流程 PDF，列出全部開放項目，附單位及代碼並去重。",
+    "history": [],
+    "scope": {
+      "topic": "測試環境備份",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "甲單位 K001 資料庫快照"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T02/procedure.pdf",
+          "version": "v2",
+          "anchors": [
+            "E-T02-CATALOG",
+            "E-T02-END",
+            "R-T02-001",
+            "R-T02-002",
+            "R-T02-003",
+            "R-T02-004",
+            "R-T02-005",
+            "R-T02-006"
+          ],
+          "section": "適用項目",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ],
+      "row_ids": [
+        "R-T02-001",
+        "R-T02-002",
+        "R-T02-003",
+        "R-T02-004",
+        "R-T02-005",
+        "R-T02-006"
+      ],
+      "complete_required": true,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T02-count",
+    "type": "count",
+    "split": "tuning",
+    "domain": "operations",
+    "source_group": "T02",
+    "question": "根據測試環境備份 v2 操作流程 PDF，以單位與項目代碼的組合去重，共有幾個開放項目？",
+    "history": [],
+    "scope": {
+      "topic": "測試環境備份",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "1"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T02/procedure.pdf",
+          "version": "v2",
+          "anchors": [
+            "E-T02-CATALOG",
+            "E-T02-END",
+            "R-T02-001",
+            "R-T02-002",
+            "R-T02-003",
+            "R-T02-004",
+            "R-T02-005",
+            "R-T02-006"
+          ],
+          "section": "適用項目",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ],
+      "row_ids": [
+        "R-T02-001",
+        "R-T02-002",
+        "R-T02-003",
+        "R-T02-004",
+        "R-T02-005",
+        "R-T02-006"
+      ],
+      "complete_required": true,
+      "source_complete": true,
+      "count_unit": "備份工作",
+      "count_unique_key": [
+        "unit_id",
+        "item_code"
+      ],
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T02-compare",
+    "type": "compare",
+    "split": "tuning",
+    "domain": "operations",
+    "source_group": "T02",
+    "question": "比較測試環境備份 v2 目錄中甲單位 K001 與乙單位 K001 的資格及費用。",
+    "history": [],
+    "scope": {
+      "topic": "測試環境備份",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "甲單位 資料庫維運人員 40 元",
+        "乙單位 值班維運人員 15 元"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T02/catalog.docx",
+          "version": "v2",
+          "anchors": [
+            "R-T02-001",
+            "R-T02-002"
+          ],
+          "section": "適用項目",
+          "pages": null
+        }
+      ],
+      "row_ids": [
+        "R-T02-001",
+        "R-T02-002"
+      ],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T02-procedure",
+    "type": "procedure",
+    "split": "tuning",
+    "domain": "operations",
+    "source_group": "T02",
+    "question": "測試環境備份 v2 操作流程的四個步驟，請依序說明。",
+    "history": [],
+    "scope": {
+      "topic": "測試環境備份",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "確認測試環境標籤",
+        "檢查備份工作完成",
+        "在隔離環境還原",
+        "記錄還原驗證結果"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T02/procedure.pdf",
+          "version": "v2",
+          "anchors": [
+            "E-T02-STEP1",
+            "E-T02-STEP2",
+            "E-T02-STEP3",
+            "E-T02-STEP4"
+          ],
+          "section": "操作步驟",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T02-followup",
+    "type": "followup",
+    "split": "tuning",
+    "domain": "operations",
+    "source_group": "T02",
+    "question": "那第二個的資格和費用呢？",
+    "history": [
+      {
+        "role": "user",
+        "text": "請在測試環境備份 v2 目錄比較甲單位 K001 與乙單位 K001。"
+      },
+      {
+        "role": "assistant",
+        "text": "第一個是甲單位 K001，第二個是乙單位 K001。"
+      }
+    ],
+    "scope": {
+      "topic": "測試環境備份",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "乙單位 值班維運人員 15 元"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T02/catalog.docx",
+          "version": "v2",
+          "anchors": [
+            "R-T02-002"
+          ],
+          "section": "適用項目",
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T02-no_answer",
+    "type": "no_answer",
+    "split": "tuning",
+    "domain": "operations",
+    "source_group": "T02",
+    "question": "測試環境備份文件中的正式環境的管理員密碼是多少？",
+    "history": [],
+    "scope": {
+      "topic": "測試環境備份",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "refuse",
+      "claims": [],
+      "reason": "not_documented",
+      "evidence": [
+        {
+          "document": "T02/notes.txt",
+          "version": "v2",
+          "anchors": [
+            "E-T02-MISSING"
+          ],
+          "section": null,
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T02-ambiguity",
+    "type": "ambiguity",
+    "split": "tuning",
+    "domain": "operations",
+    "source_group": "T02",
+    "question": "測試環境備份這次的截止日是哪一天？",
+    "history": [],
+    "scope": {
+      "topic": "測試環境備份",
+      "edition": null
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "clarify",
+      "claims": [],
+      "reason": "missing_edition",
+      "evidence": [
+        {
+          "document": "T02/notes.txt",
+          "version": "v2",
+          "anchors": [
+            "E-T02-EDITION"
+          ],
+          "section": null,
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T03-fact",
+    "type": "fact",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T03",
+    "question": "公務設備借用 v2 的借用申請截止日期？",
+    "history": [],
+    "scope": {
+      "topic": "公務設備借用",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "2027-04-21"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T03/rules.md",
+          "version": "v2",
+          "anchors": [
+            "E-T03-DATE"
+          ],
+          "section": "日期",
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T03-list",
+    "type": "list",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T03",
+    "question": "根據公務設備借用 v2 操作流程 PDF，列出全部開放項目，附單位及代碼並去重。",
+    "history": [],
+    "scope": {
+      "topic": "公務設備借用",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "甲單位 K001 簡報投影機",
+        "乙單位 K001 簡報投影機",
+        "甲單位 K002 公務設備借用項目03"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T03/procedure.pdf",
+          "version": "v2",
+          "anchors": [
+            "E-T03-CATALOG",
+            "E-T03-END",
+            "R-T03-001",
+            "R-T03-002",
+            "R-T03-003",
+            "R-T03-004",
+            "R-T03-005",
+            "R-T03-006",
+            "R-T03-007",
+            "R-T03-008"
+          ],
+          "section": "適用項目",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ],
+      "row_ids": [
+        "R-T03-001",
+        "R-T03-002",
+        "R-T03-003",
+        "R-T03-004",
+        "R-T03-005",
+        "R-T03-006",
+        "R-T03-007",
+        "R-T03-008"
+      ],
+      "complete_required": true,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T03-count",
+    "type": "count",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T03",
+    "question": "根據公務設備借用 v2 操作流程 PDF，以單位與項目代碼的組合去重，共有幾個開放項目？",
+    "history": [],
+    "scope": {
+      "topic": "公務設備借用",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "3"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T03/procedure.pdf",
+          "version": "v2",
+          "anchors": [
+            "E-T03-CATALOG",
+            "E-T03-END",
+            "R-T03-001",
+            "R-T03-002",
+            "R-T03-003",
+            "R-T03-004",
+            "R-T03-005",
+            "R-T03-006",
+            "R-T03-007",
+            "R-T03-008"
+          ],
+          "section": "適用項目",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ],
+      "row_ids": [
+        "R-T03-001",
+        "R-T03-002",
+        "R-T03-003",
+        "R-T03-004",
+        "R-T03-005",
+        "R-T03-006",
+        "R-T03-007",
+        "R-T03-008"
+      ],
+      "complete_required": true,
+      "source_complete": true,
+      "count_unit": "設備種類",
+      "count_unique_key": [
+        "unit_id",
+        "item_code"
+      ],
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T03-compare",
+    "type": "compare",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T03",
+    "question": "比較公務設備借用 v2 目錄中甲單位 K001 與乙單位 K001 的資格及費用。",
+    "history": [],
+    "scope": {
+      "topic": "公務設備借用",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "甲單位 有公務簡報需求 0 元",
+        "乙單位 有跨站會議需求 100 元"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T03/catalog.docx",
+          "version": "v2",
+          "anchors": [
+            "R-T03-001",
+            "R-T03-002"
+          ],
+          "section": "適用項目",
+          "pages": null
+        }
+      ],
+      "row_ids": [
+        "R-T03-001",
+        "R-T03-002"
+      ],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T03-procedure",
+    "type": "procedure",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T03",
+    "question": "公務設備借用 v2 操作流程的四個步驟，請依序說明。",
+    "history": [],
+    "scope": {
+      "topic": "公務設備借用",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "確認借用日期",
+        "提交設備預約",
+        "領取並檢查配件",
+        "歸還並登記設備狀態"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T03/procedure.pdf",
+          "version": "v2",
+          "anchors": [
+            "E-T03-STEP1",
+            "E-T03-STEP2",
+            "E-T03-STEP3",
+            "E-T03-STEP4"
+          ],
+          "section": "操作步驟",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T03-followup",
+    "type": "followup",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T03",
+    "question": "那第二個的資格和費用呢？",
+    "history": [
+      {
+        "role": "user",
+        "text": "請在公務設備借用 v2 目錄比較甲單位 K001 與乙單位 K001。"
+      },
+      {
+        "role": "assistant",
+        "text": "第一個是甲單位 K001，第二個是乙單位 K001。"
+      }
+    ],
+    "scope": {
+      "topic": "公務設備借用",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "乙單位 有跨站會議需求 100 元"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T03/catalog.docx",
+          "version": "v2",
+          "anchors": [
+            "R-T03-002"
+          ],
+          "section": "適用項目",
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T03-no_answer",
+    "type": "no_answer",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T03",
+    "question": "公務設備借用文件中的設備損壞的賠償上限是多少？",
+    "history": [],
+    "scope": {
+      "topic": "公務設備借用",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "refuse",
+      "claims": [],
+      "reason": "not_documented",
+      "evidence": [
+        {
+          "document": "T03/notes.txt",
+          "version": "v2",
+          "anchors": [
+            "E-T03-MISSING"
+          ],
+          "section": null,
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T03-ambiguity",
+    "type": "ambiguity",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T03",
+    "question": "公務設備借用這次的截止日是哪一天？",
+    "history": [],
+    "scope": {
+      "topic": "公務設備借用",
+      "edition": null
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "clarify",
+      "claims": [],
+      "reason": "missing_edition",
+      "evidence": [
+        {
+          "document": "T03/notes.txt",
+          "version": "v2",
+          "anchors": [
+            "E-T03-EDITION"
+          ],
+          "section": null,
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T04-fact",
+    "type": "fact",
+    "split": "tuning",
+    "domain": "operations",
+    "source_group": "T04",
+    "question": "測試憑證輪替 v2 的輪替驗證截止日期？",
+    "history": [],
+    "scope": {
+      "topic": "測試憑證輪替",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "2027-05-06"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T04/rules.md",
+          "version": "v2",
+          "anchors": [
+            "E-T04-DATE"
+          ],
+          "section": "日期",
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": false,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T04-list",
+    "type": "list",
+    "split": "tuning",
+    "domain": "operations",
+    "source_group": "T04",
+    "question": "根據測試憑證輪替 v2 操作流程 PDF，列出全部開放項目，附單位及代碼並去重。",
+    "history": [],
+    "scope": {
+      "topic": "測試憑證輪替",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "refuse",
+      "claims": [],
+      "reason": "missing_page",
+      "evidence": [
+        {
+          "document": "T04/procedure.pdf",
+          "version": "v2",
+          "anchors": [
+            "E-T04-CATALOG",
+            "E-T04-INCOMPLETE",
+            "R-T04-001",
+            "R-T04-002",
+            "R-T04-003",
+            "R-T04-004",
+            "R-T04-005",
+            "R-T04-006",
+            "R-T04-007",
+            "R-T04-008"
+          ],
+          "section": "適用項目",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ],
+      "row_ids": [
+        "R-T04-001",
+        "R-T04-002",
+        "R-T04-003",
+        "R-T04-004",
+        "R-T04-005",
+        "R-T04-006",
+        "R-T04-007",
+        "R-T04-008"
+      ],
+      "complete_required": true,
+      "source_complete": false,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T04-count",
+    "type": "count",
+    "split": "tuning",
+    "domain": "operations",
+    "source_group": "T04",
+    "question": "根據測試憑證輪替 v2 操作流程 PDF，以單位與項目代碼的組合去重，共有幾個開放項目？",
+    "history": [],
+    "scope": {
+      "topic": "測試憑證輪替",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "refuse",
+      "claims": [],
+      "reason": "missing_page",
+      "evidence": [
+        {
+          "document": "T04/procedure.pdf",
+          "version": "v2",
+          "anchors": [
+            "E-T04-CATALOG",
+            "E-T04-INCOMPLETE",
+            "R-T04-001",
+            "R-T04-002",
+            "R-T04-003",
+            "R-T04-004",
+            "R-T04-005",
+            "R-T04-006",
+            "R-T04-007",
+            "R-T04-008"
+          ],
+          "section": "適用項目",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ],
+      "row_ids": [
+        "R-T04-001",
+        "R-T04-002",
+        "R-T04-003",
+        "R-T04-004",
+        "R-T04-005",
+        "R-T04-006",
+        "R-T04-007",
+        "R-T04-008"
+      ],
+      "complete_required": true,
+      "source_complete": false,
+      "count_unit": "憑證工作",
+      "count_unique_key": [
+        "unit_id",
+        "item_code"
+      ],
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T04-compare",
+    "type": "compare",
+    "split": "tuning",
+    "domain": "operations",
+    "source_group": "T04",
+    "question": "比較測試憑證輪替 v2 目錄中甲單位 K001 與乙單位 K001 的資格及費用。",
+    "history": [],
+    "scope": {
+      "topic": "測試憑證輪替",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "甲單位 入口維運人員 30 元",
+        "乙單位 代理維運人員 20 元"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T04/catalog.docx",
+          "version": "v2",
+          "anchors": [
+            "R-T04-001",
+            "R-T04-002"
+          ],
+          "section": "適用項目",
+          "pages": null
+        }
+      ],
+      "row_ids": [
+        "R-T04-001",
+        "R-T04-002"
+      ],
+      "complete_required": false,
+      "source_complete": false,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T04-procedure",
+    "type": "procedure",
+    "split": "tuning",
+    "domain": "operations",
+    "source_group": "T04",
+    "question": "測試憑證輪替 v2 操作流程的四個步驟，請依序說明。",
+    "history": [],
+    "scope": {
+      "topic": "測試憑證輪替",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "檢查到期清單",
+        "在隔離環境建立新憑證",
+        "驗證新憑證連線",
+        "完成核准後更新測試配置"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T04/procedure.pdf",
+          "version": "v2",
+          "anchors": [
+            "E-T04-STEP1",
+            "E-T04-STEP2",
+            "E-T04-STEP3",
+            "E-T04-STEP4"
+          ],
+          "section": "操作步驟",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": false,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T04-followup",
+    "type": "followup",
+    "split": "tuning",
+    "domain": "operations",
+    "source_group": "T04",
+    "question": "那第二個的資格和費用呢？",
+    "history": [
+      {
+        "role": "user",
+        "text": "請在測試憑證輪替 v2 目錄比較甲單位 K001 與乙單位 K001。"
+      },
+      {
+        "role": "assistant",
+        "text": "第一個是甲單位 K001，第二個是乙單位 K001。"
+      }
+    ],
+    "scope": {
+      "topic": "測試憑證輪替",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "乙單位 代理維運人員 20 元"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T04/catalog.docx",
+          "version": "v2",
+          "anchors": [
+            "R-T04-002"
+          ],
+          "section": "適用項目",
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": false,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T04-no_answer",
+    "type": "no_answer",
+    "split": "tuning",
+    "domain": "operations",
+    "source_group": "T04",
+    "question": "測試憑證輪替文件中的正式服務的私鑰內容是多少？",
+    "history": [],
+    "scope": {
+      "topic": "測試憑證輪替",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "refuse",
+      "claims": [],
+      "reason": "not_documented",
+      "evidence": [
+        {
+          "document": "T04/notes.txt",
+          "version": "v2",
+          "anchors": [
+            "E-T04-MISSING"
+          ],
+          "section": null,
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": false,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T04-ambiguity",
+    "type": "ambiguity",
+    "split": "tuning",
+    "domain": "operations",
+    "source_group": "T04",
+    "question": "測試憑證輪替這次的截止日是哪一天？",
+    "history": [],
+    "scope": {
+      "topic": "測試憑證輪替",
+      "edition": null
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "clarify",
+      "claims": [],
+      "reason": "missing_edition",
+      "evidence": [
+        {
+          "document": "T04/notes.txt",
+          "version": "v2",
+          "anchors": [
+            "E-T04-EDITION"
+          ],
+          "section": null,
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": false,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T05-fact",
+    "type": "fact",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T05",
+    "question": "會議室預約 v2 的預約登記截止日期？",
+    "history": [],
+    "scope": {
+      "topic": "會議室預約",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "2027-06-14"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T05/rules.md",
+          "version": "v2",
+          "anchors": [
+            "E-T05-DATE"
+          ],
+          "section": "日期",
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T05-list",
+    "type": "list",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T05",
+    "question": "根據會議室預約 v2 操作流程 PDF，列出全部開放項目，附單位及代碼並去重。",
+    "history": [],
+    "scope": {
+      "topic": "會議室預約",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "甲單位 K001 北區會議室",
+        "乙單位 K001 北區會議室",
+        "甲單位 K002 會議室預約項目03",
+        "乙單位 K002 會議室預約項目04",
+        "甲單位 K003 會議室預約項目05",
+        "乙單位 K003 會議室預約項目06",
+        "甲單位 K004 會議室預約項目07",
+        "乙單位 K004 會議室預約項目08",
+        "甲單位 K005 會議室預約項目09",
+        "乙單位 K005 會議室預約項目10",
+        "甲單位 K006 會議室預約項目11",
+        "乙單位 K006 會議室預約項目12",
+        "甲單位 K007 會議室預約項目13",
+        "乙單位 K007 會議室預約項目14",
+        "甲單位 K008 會議室預約項目15",
+        "乙單位 K008 會議室預約項目16",
+        "甲單位 K009 會議室預約項目17",
+        "乙單位 K009 會議室預約項目18",
+        "甲單位 K010 會議室預約項目19",
+        "乙單位 K010 會議室預約項目20",
+        "甲單位 K011 會議室預約項目21",
+        "乙單位 K011 會議室預約項目22",
+        "甲單位 K012 會議室預約項目23",
+        "乙單位 K012 會議室預約項目24",
+        "甲單位 K013 會議室預約項目25",
+        "乙單位 K013 會議室預約項目26",
+        "甲單位 K014 會議室預約項目27",
+        "乙單位 K014 會議室預約項目28",
+        "甲單位 K015 會議室預約項目29",
+        "乙單位 K015 會議室預約項目30",
+        "甲單位 K016 會議室預約項目31",
+        "乙單位 K016 會議室預約項目32",
+        "甲單位 K017 會議室預約項目33",
+        "乙單位 K017 會議室預約項目34",
+        "甲單位 K018 會議室預約項目35",
+        "乙單位 K018 會議室預約項目36"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T05/procedure.pdf",
+          "version": "v2",
+          "anchors": [
+            "E-T05-CATALOG",
+            "E-T05-END",
+            "R-T05-001",
+            "R-T05-002",
+            "R-T05-003",
+            "R-T05-004",
+            "R-T05-005",
+            "R-T05-006",
+            "R-T05-007",
+            "R-T05-008",
+            "R-T05-009",
+            "R-T05-010",
+            "R-T05-011",
+            "R-T05-012",
+            "R-T05-013",
+            "R-T05-014",
+            "R-T05-015",
+            "R-T05-016",
+            "R-T05-017",
+            "R-T05-018",
+            "R-T05-019",
+            "R-T05-020",
+            "R-T05-021",
+            "R-T05-022",
+            "R-T05-023",
+            "R-T05-024",
+            "R-T05-025",
+            "R-T05-026",
+            "R-T05-027",
+            "R-T05-028",
+            "R-T05-029",
+            "R-T05-030",
+            "R-T05-031",
+            "R-T05-032",
+            "R-T05-033",
+            "R-T05-034",
+            "R-T05-035",
+            "R-T05-036",
+            "R-T05-037",
+            "R-T05-038",
+            "R-T05-039",
+            "R-T05-040",
+            "R-T05-041"
+          ],
+          "section": "適用項目",
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "row_ids": [
+        "R-T05-001",
+        "R-T05-002",
+        "R-T05-003",
+        "R-T05-004",
+        "R-T05-005",
+        "R-T05-006",
+        "R-T05-007",
+        "R-T05-008",
+        "R-T05-009",
+        "R-T05-010",
+        "R-T05-011",
+        "R-T05-012",
+        "R-T05-013",
+        "R-T05-014",
+        "R-T05-015",
+        "R-T05-016",
+        "R-T05-017",
+        "R-T05-018",
+        "R-T05-019",
+        "R-T05-020",
+        "R-T05-021",
+        "R-T05-022",
+        "R-T05-023",
+        "R-T05-024",
+        "R-T05-025",
+        "R-T05-026",
+        "R-T05-027",
+        "R-T05-028",
+        "R-T05-029",
+        "R-T05-030",
+        "R-T05-031",
+        "R-T05-032",
+        "R-T05-033",
+        "R-T05-034",
+        "R-T05-035",
+        "R-T05-036",
+        "R-T05-037",
+        "R-T05-038",
+        "R-T05-039",
+        "R-T05-040",
+        "R-T05-041"
+      ],
+      "complete_required": true,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T05-count",
+    "type": "count",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T05",
+    "question": "根據會議室預約 v2 操作流程 PDF，以單位與項目代碼的組合去重，共有幾個開放項目？",
+    "history": [],
+    "scope": {
+      "topic": "會議室預約",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "36"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T05/procedure.pdf",
+          "version": "v2",
+          "anchors": [
+            "E-T05-CATALOG",
+            "E-T05-END",
+            "R-T05-001",
+            "R-T05-002",
+            "R-T05-003",
+            "R-T05-004",
+            "R-T05-005",
+            "R-T05-006",
+            "R-T05-007",
+            "R-T05-008",
+            "R-T05-009",
+            "R-T05-010",
+            "R-T05-011",
+            "R-T05-012",
+            "R-T05-013",
+            "R-T05-014",
+            "R-T05-015",
+            "R-T05-016",
+            "R-T05-017",
+            "R-T05-018",
+            "R-T05-019",
+            "R-T05-020",
+            "R-T05-021",
+            "R-T05-022",
+            "R-T05-023",
+            "R-T05-024",
+            "R-T05-025",
+            "R-T05-026",
+            "R-T05-027",
+            "R-T05-028",
+            "R-T05-029",
+            "R-T05-030",
+            "R-T05-031",
+            "R-T05-032",
+            "R-T05-033",
+            "R-T05-034",
+            "R-T05-035",
+            "R-T05-036",
+            "R-T05-037",
+            "R-T05-038",
+            "R-T05-039",
+            "R-T05-040",
+            "R-T05-041"
+          ],
+          "section": "適用項目",
+          "pages": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "row_ids": [
+        "R-T05-001",
+        "R-T05-002",
+        "R-T05-003",
+        "R-T05-004",
+        "R-T05-005",
+        "R-T05-006",
+        "R-T05-007",
+        "R-T05-008",
+        "R-T05-009",
+        "R-T05-010",
+        "R-T05-011",
+        "R-T05-012",
+        "R-T05-013",
+        "R-T05-014",
+        "R-T05-015",
+        "R-T05-016",
+        "R-T05-017",
+        "R-T05-018",
+        "R-T05-019",
+        "R-T05-020",
+        "R-T05-021",
+        "R-T05-022",
+        "R-T05-023",
+        "R-T05-024",
+        "R-T05-025",
+        "R-T05-026",
+        "R-T05-027",
+        "R-T05-028",
+        "R-T05-029",
+        "R-T05-030",
+        "R-T05-031",
+        "R-T05-032",
+        "R-T05-033",
+        "R-T05-034",
+        "R-T05-035",
+        "R-T05-036",
+        "R-T05-037",
+        "R-T05-038",
+        "R-T05-039",
+        "R-T05-040",
+        "R-T05-041"
+      ],
+      "complete_required": true,
+      "source_complete": true,
+      "count_unit": "會議室",
+      "count_unique_key": [
+        "unit_id",
+        "item_code"
+      ],
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T05-compare",
+    "type": "compare",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T05",
+    "question": "比較會議室預約 v2 目錄中甲單位 K001 與乙單位 K001 的資格及費用。",
+    "history": [],
+    "scope": {
+      "topic": "會議室預約",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "甲單位 三人以上會議 200 元",
+        "乙單位 六人以上會議 300 元"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T05/catalog.docx",
+          "version": "v2",
+          "anchors": [
+            "R-T05-001",
+            "R-T05-002"
+          ],
+          "section": "適用項目",
+          "pages": null
+        }
+      ],
+      "row_ids": [
+        "R-T05-001",
+        "R-T05-002"
+      ],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T05-procedure",
+    "type": "procedure",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T05",
+    "question": "會議室預約 v2 操作流程的四個步驟，請依序說明。",
+    "history": [],
+    "scope": {
+      "topic": "會議室預約",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "查詢可用時段",
+        "填寫活動用途",
+        "送出預約申請",
+        "使用後完成設備復原"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T05/procedure.pdf",
+          "version": "v2",
+          "anchors": [
+            "E-T05-STEP1",
+            "E-T05-STEP2",
+            "E-T05-STEP3",
+            "E-T05-STEP4"
+          ],
+          "section": "操作步驟",
+          "pages": [
+            1,
+            2
+          ]
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T05-followup",
+    "type": "followup",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T05",
+    "question": "那第二個的資格和費用呢？",
+    "history": [
+      {
+        "role": "user",
+        "text": "請在會議室預約 v2 目錄比較甲單位 K001 與乙單位 K001。"
+      },
+      {
+        "role": "assistant",
+        "text": "第一個是甲單位 K001，第二個是乙單位 K001。"
+      }
+    ],
+    "scope": {
+      "topic": "會議室預約",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "answer",
+      "claims": [
+        "乙單位 六人以上會議 300 元"
+      ],
+      "reason": null,
+      "evidence": [
+        {
+          "document": "T05/catalog.docx",
+          "version": "v2",
+          "anchors": [
+            "R-T05-002"
+          ],
+          "section": "適用項目",
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T05-no_answer",
+    "type": "no_answer",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T05",
+    "question": "會議室預約文件中的週末可否過夜使用是多少？",
+    "history": [],
+    "scope": {
+      "topic": "會議室預約",
+      "edition": "v2"
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "refuse",
+      "claims": [],
+      "reason": "not_documented",
+      "evidence": [
+        {
+          "document": "T05/notes.txt",
+          "version": "v2",
+          "anchors": [
+            "E-T05-MISSING"
+          ],
+          "section": null,
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  },
+  {
+    "id": "T05-ambiguity",
+    "type": "ambiguity",
+    "split": "tuning",
+    "domain": "policy",
+    "source_group": "T05",
+    "question": "會議室預約這次的截止日是哪一天？",
+    "history": [],
+    "scope": {
+      "topic": "會議室預約",
+      "edition": null
+    },
+    "required_conditions": [
+      "source_group",
+      "edition",
+      "authorized_source"
+    ],
+    "gold": {
+      "expected": "clarify",
+      "claims": [],
+      "reason": "missing_edition",
+      "evidence": [
+        {
+          "document": "T05/notes.txt",
+          "version": "v2",
+          "anchors": [
+            "E-T05-EDITION"
+          ],
+          "section": null,
+          "pages": null
+        }
+      ],
+      "row_ids": [],
+      "complete_required": false,
+      "source_complete": true,
+      "count_unit": null,
+      "count_unique_key": null,
+      "human_review_status": "pending"
+    }
+  }
+]

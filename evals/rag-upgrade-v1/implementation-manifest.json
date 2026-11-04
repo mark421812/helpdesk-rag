@@ -1,0 +1,2666 @@
+{
+  "captured_at": "2026-10-01",
+  "last_updated_at": "2026-10-06T02:03:56.090207+08:00",
+  "scope": "U0 pending quality evidence and U1 docs-only exact contract proposal with offline synthetic golden vectors; no production changes",
+  "updates": [
+    {
+      "date": "2026-10-02",
+      "reason": "Reconcile user-provided read-only host inventory; U0 remains in_progress and quality BLOCKED",
+      "host_inventory_log": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-host-inventory.log",
+      "host_inventory_sha256": "4b7b1370b76df370b2a2ecfda67d216ff6aa6edbc4274c030f558796e4962f26",
+      "changed_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-baseline.md",
+          "previous_sha256": "606243ef9649538dfce0355bc81f6ce557569a198a190ec508fd39162ac5f3cb",
+          "current_sha256": "8ada0c28126d259b0468b83996ea1e39b83f7853d4a3bb7b7072b18ffd6a74c6"
+        }
+      ],
+      "progress_file": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/升級計劃v1.md",
+      "production_files_changed": 0
+    },
+    {
+      "date": "2026-10-02",
+      "reason": "Tokenizer host probe accepted; isolated Docker parser/chunk tooling added; full U0 remains BLOCKED",
+      "tokenizer_probe_log": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-tokenizer-probe.log",
+      "tokenizer_probe_sha256": "4eec42e758c2c8b992a0eabb0c42fcecd170593cc618ab7c2d7fae78742156d0",
+      "changed_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/Makefile",
+          "previous_sha256": "d1c8aed7361787b41294029463be83a6649b5075972cee12bb920047c4f3c945",
+          "current_sha256": "c53046f525df296be220146c5f91f525284b34096bbc68a9ed9e95847604fc10"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/README.md",
+          "previous_sha256": "62989587726023ba713f285f7cdf2bd9cd40e28b4405caca301f8faa6f476729",
+          "current_sha256": "836ee910d6cec67e8b8353bdde933a47c856fa2c9a5fc8eabf87b65718812e5c"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/audit_parsers.py",
+          "previous_sha256": "487b2e897bae64820b17e514eb4ab2cf70b64e543812bd7948b9cc7be0bee784",
+          "current_sha256": "25338e43657eac1ddfdb1dec0295939b17b0c3bee96959dc28c5e7a078940540"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-baseline.md",
+          "previous_sha256": "8ada0c28126d259b0468b83996ea1e39b83f7853d4a3bb7b7072b18ffd6a74c6",
+          "current_sha256": "9831e2462ebefb4f3062baf3e1beed019f39b062d240c324d597376e804048f6"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/docker_parser_audit.py",
+          "previous_sha256": null,
+          "current_sha256": "5b49846fef4f97a44a76909b0cd87c8926b4ed2d5fa7ed959abc0c33ca72095c"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_parser_audit.py",
+          "previous_sha256": null,
+          "current_sha256": "66e6ada0cfe882497a132ad59cd08ed2c3d093f747e504760e5a55bf86fa151a"
+        }
+      ],
+      "progress_file": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/升級計劃v1.md",
+      "production_files_changed": 0,
+      "tool_tests": {
+        "passed": 27,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      "docker_parser_chunk_audit": "BLOCKED in sandbox; awaiting host evidence"
+    },
+    {
+      "date": "2026-10-04",
+      "reason": "Accept complete host Docker parser/chunk evidence; KIS persistence and full U0 quality remain BLOCKED",
+      "docker_parser_chunk_log": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-parser-chunk-docker.log",
+      "docker_parser_chunk_log_sha256": "3bf370874ce884ba5d79df6e20c2dcf20ab61ed68dd21ed6308ed6130129dcd9",
+      "docker_parser_chunk_artifact": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-parser-chunk-docker.json",
+      "docker_parser_chunk_artifact_sha256": "29256a57bb8cd46d40553747bce403a807c2bfecd1a179b7ad55111c14354d7c",
+      "captured_at": "2026-10-03T15:59:38.278331+00:00",
+      "changed_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/README.md",
+          "previous_sha256": "836ee910d6cec67e8b8353bdde933a47c856fa2c9a5fc8eabf87b65718812e5c",
+          "current_sha256": "50d4fd85a9f5a8e490e822aed9c84282e87441c8ef39d382d28fcdf0ad43ba20"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-baseline.md",
+          "previous_sha256": "9831e2462ebefb4f3062baf3e1beed019f39b062d240c324d597376e804048f6",
+          "current_sha256": "fc85d525b52896d5925206d758ac09757a9af22aeb7f31a35b91ac7191c80ca1"
+        }
+      ],
+      "progress_file": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/升級計劃v1.md",
+      "production_files_changed": 0,
+      "tool_tests": {
+        "passed": 27,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      "docker_parser_chunk_audit": {
+        "status": "PASSED",
+        "exit_code": 0,
+        "documents": 40,
+        "total_chunks": 80,
+        "max_tokens": 171
+      },
+      "quality_gate": "BLOCKED"
+    },
+    {
+      "date": "2026-10-04",
+      "reason": "User-approved isolated KIS persistence PASSED with log-disabled final runtime; U0 quality remains BLOCKED",
+      "changed_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/Makefile",
+          "previous_sha256": "c53046f525df296be220146c5f91f525284b34096bbc68a9ed9e95847604fc10",
+          "current_sha256": "00146c49b13a6f69422bdd7660b14584646b19b540633cb4fb57ec146287f12f"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/README.md",
+          "previous_sha256": "50d4fd85a9f5a8e490e822aed9c84282e87441c8ef39d382d28fcdf0ad43ba20",
+          "current_sha256": "b5d2ba8b8044e03522b3054b8fce1e84403371410dae169b9dec977383de5b06"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-baseline.md",
+          "previous_sha256": "fc85d525b52896d5925206d758ac09757a9af22aeb7f31a35b91ac7191c80ca1",
+          "current_sha256": "950413982dc856e481ac07d73175de1434892940a0b892c6e6afdb997cf22bab"
+        }
+      ],
+      "new_files": [
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/index_fixtures.py",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/kis_persistence_probe.py",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/isolated_kis_audit.py",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_isolated_kis_audit.py"
+      ],
+      "runtime_report": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-kis-persistence-3a26cddc942b47b6bc4debaa4d84e833.json",
+      "runtime_report_sha256": "618d5862a6c2cad36deb2e3783917b9714ec19d4ccc2afc2671b7c33f028d518",
+      "earlier_pass_report": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-kis-persistence-0c211fd0e82946a691b0e739a3445424.json",
+      "progress_file": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/升級計劃v1.md",
+      "production_files_changed": 0,
+      "tool_tests": {
+        "passed": 34,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      "external_llm_calls": 0,
+      "cleanup": "passed",
+      "quality_gate": "BLOCKED"
+    },
+    {
+      "date": "2026-10-04",
+      "reason": "Installed-image structure inventory completed; 80 canonical chunk hashes matched historical persistence. Typed lineage unavailable; no production changes or U1 work.",
+      "changed_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/structure_probe.py",
+          "previous_sha256": null,
+          "current_sha256": "fab3711be2dbb0efcb02adf936012d647d48e33edc0c76d3f2360d2433ff2984"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/structure_audit.py",
+          "previous_sha256": null,
+          "current_sha256": "9fe85d7c4d28cffc4c8ca030e70b5b8b70d600deedc3154caf7715f0ecded8a6"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_structure_audit.py",
+          "previous_sha256": null,
+          "current_sha256": "ed20c5d058108dc6094315dbc0f2857c8612918bc6f2ac92274a29f9a3fa94de"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/Makefile",
+          "previous_sha256": "00146c49b13a6f69422bdd7660b14584646b19b540633cb4fb57ec146287f12f",
+          "current_sha256": "544e177bf414447b842d6774594e0c7673cd062f7812c01d9db98a90aab18840"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/README.md",
+          "previous_sha256": "b5d2ba8b8044e03522b3054b8fce1e84403371410dae169b9dec977383de5b06",
+          "current_sha256": "24a9386238665256655c7ca75541e73db9f94550a1061c1af491180b1d3467af"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-baseline.md",
+          "previous_sha256": "950413982dc856e481ac07d73175de1434892940a0b892c6e6afdb997cf22bab",
+          "current_sha256": "d83cf659a38cca36c7edb6de7ceedcd24cf38bfd22b1637d2a9ce35015ec88b9"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/README.md",
+          "previous_sha256": "26da79c0e4052a845afcdd911db34a306a5ac9aeca9ed49ff40bfc61f7d1f531",
+          "current_sha256": "90c18763eb5867d9fa66f11b914657a735f9ec2f966868ca28e407ebfbf0241c"
+        }
+      ],
+      "progress_file": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/升級計劃v1.md",
+      "structure_inventory_artifact": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-structure-audit-802a3f7bab64462cb8c61a3b22d36470.json",
+      "structure_inventory_sha256": "bf3668c750d19612a7a86033d31f9874baaab95b41a9fbcb10196032050572ab",
+      "commands": [
+        {
+          "command": "ruff format structure_audit.py structure_probe.py tests/test_structure_audit.py",
+          "exit_code": 0,
+          "test_counts": "N/A"
+        },
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 make lint format-check test validate",
+          "exit_code": 0,
+          "tool_tests": {
+            "passed": 47,
+            "failed": 0,
+            "skipped": 0,
+            "errors": 0
+          }
+        },
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 make structure-audit-docker",
+          "exit_code": 0,
+          "test_counts": "N/A",
+          "previous_environment_blocked_exit": 2
+        },
+        {
+          "command": "Installed module/source fingerprints check",
+          "exit_code": 0,
+          "modules": 7,
+          "mismatches": 0,
+          "test_counts": "N/A"
+        },
+        {
+          "command": "docker ps -a --filter label=helpdesk.u0.isolated-run",
+          "exit_code": 0,
+          "unremoved_resources": 0,
+          "test_counts": "N/A"
+        },
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 make validate lint format-check test",
+          "exit_code": 0,
+          "tool_tests": {
+            "passed": 47,
+            "failed": 0,
+            "skipped": 0,
+            "errors": 0
+          }
+        },
+        {
+          "command": "Complete report/tool/dataset and implementation manifest fingerprints check",
+          "exit_code": 0,
+          "entries": 105,
+          "mismatches": 0,
+          "test_counts": "N/A"
+        },
+        {
+          "command": "185 production files_sha256 fingerprints check",
+          "exit_code": 0,
+          "changed": 0,
+          "test_counts": "N/A"
+        },
+        {
+          "command": "docker inspect exact four KIS production containers (running/started_at only)",
+          "exit_code": 0,
+          "running": 4,
+          "started_at_unchanged": 4,
+          "test_counts": "N/A"
+        }
+      ],
+      "production_files_changed": 0,
+      "external_llm_calls": 0,
+      "database_connections": 0,
+      "quality_gate": "BLOCKED",
+      "next_eligible_phase": "U0"
+    },
+    {
+      "date": "2026-10-04",
+      "reason": "Diversified v2 draft, bound rendering QA, actual v2 KIS persistence and tuning candidates; U0 remains in_progress/quality BLOCKED",
+      "changed_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-baseline.md",
+          "previous_sha256": "d83cf659a38cca36c7edb6de7ceedcd24cf38bfd22b1637d2a9ce35015ec88b9",
+          "current_sha256": "1d80a79dc409c2f18c31c4456c40b469dd6e410bdbab7cc9087f6e79586bb019"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/Makefile",
+          "previous_sha256": "544e177bf414447b842d6774594e0c7673cd062f7812c01d9db98a90aab18840",
+          "current_sha256": "3094180fc8dc44b7ef6e5e01377d9bbf051796150603253573ac9cd37c9fdcf3"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/README.md",
+          "previous_sha256": "24a9386238665256655c7ca75541e73db9f94550a1061c1af491180b1d3467af",
+          "current_sha256": "1aeb0e855e0a37ea17c597be607507eaa7ca39cdf20e6e0dcd04b43d1d3863e1"
+        }
+      ],
+      "added_files": [
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/build_revision_v2.py",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/validate_revision_v2.py",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/audit_revision_v2.py",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/qa-fonts.conf",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revision_v2_payload.py",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revision_v2_probe.py",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/isolated_revision_v2.py",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tuning_candidates_v2.py",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_revision_v2.py",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_revision_persistence.py",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_tuning_candidates.py",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H01/catalog.docx",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H01/catalog.docx.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H01/notes.txt",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H01/notes.txt.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H01/procedure.pdf",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H01/procedure.pdf.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H01/rules.md",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H01/rules.md.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H02/catalog.docx",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H02/catalog.docx.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H02/notes.txt",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H02/notes.txt.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H02/procedure.pdf",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H02/procedure.pdf.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H02/rules.md",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H02/rules.md.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H03/catalog.docx",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H03/catalog.docx.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H03/notes.txt",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H03/notes.txt.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H03/procedure.pdf",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H03/procedure.pdf.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H03/rules.md",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H03/rules.md.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H04/catalog.docx",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H04/catalog.docx.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H04/notes.txt",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H04/notes.txt.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H04/procedure.pdf",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H04/procedure.pdf.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H04/rules.md",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H04/rules.md.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H05/catalog.docx",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H05/catalog.docx.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H05/notes.txt",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H05/notes.txt.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H05/procedure.pdf",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H05/procedure.pdf.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H05/rules.md",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H05/rules.md.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T01/catalog.docx",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T01/catalog.docx.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T01/notes.txt",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T01/notes.txt.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T01/procedure.pdf",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T01/procedure.pdf.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T01/rules.md",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T01/rules.md.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T02/catalog.docx",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T02/catalog.docx.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T02/notes.txt",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T02/notes.txt.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T02/procedure.pdf",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T02/procedure.pdf.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T02/rules.md",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T02/rules.md.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T03/catalog.docx",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T03/catalog.docx.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T03/notes.txt",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T03/notes.txt.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T03/procedure.pdf",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T03/procedure.pdf.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T03/rules.md",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T03/rules.md.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T04/catalog.docx",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T04/catalog.docx.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T04/notes.txt",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T04/notes.txt.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T04/procedure.pdf",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T04/procedure.pdf.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T04/rules.md",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T04/rules.md.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T05/catalog.docx",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T05/catalog.docx.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T05/notes.txt",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T05/notes.txt.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T05/procedure.pdf",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T05/procedure.pdf.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T05/rules.md",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T05/rules.md.metadata.yaml",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/datasets/holdout.json",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/datasets/tuning.json",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/documents.json",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/lineage.json",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/manifest.json",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/safety-cases.json",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/scenarios.json"
+      ],
+      "revision_manifest": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/manifest.json",
+      "revision_manifest_sha256": "09c9185ff12a773ab623be1f61ef03ddfc594f5ce28148f0ad5668a61e3b1ad2",
+      "runtime_report": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-v2-kis-persistence-fdea2aa4a85f4a4ab80bfd655e3c5218.json",
+      "runtime_report_sha256": "b51c99aab846f1a33df10edd2de81ca76588e05550930bc67f8fec9203ab6670",
+      "earlier_kis_only_report": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-v2-kis-persistence-2555975826104edc9fce49cb8216d66a.json",
+      "retained_failed_report": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-v2-kis-persistence-d9ce35b972d5407c8d9eb225030226fe.json",
+      "retained_failed_report_sha256": "b9a93c591f0f76848e63c55efb5e52d58e96adf020f8fb5a2af9ac615b20f10a",
+      "visual_qa_report": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-v2-visual-qa.json",
+      "visual_qa_sha256": "c318a1990236929136267708e3116febbfc81b9dc1dbabf56d11f8181518111e",
+      "tests": {
+        "passed": 70,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      "human_gold_pending": 80,
+      "external_llm_calls": 0,
+      "production_files_changed": 0,
+      "progress_file": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/升級計劃v1.md"
+    },
+    {
+      "date": "2026-10-05",
+      "reason": "Installed restricted Retrieval trace and 120-request resource baseline passed; human review template pending; full U0 remains in_progress",
+      "changed_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-baseline.md",
+          "previous_sha256": "1d80a79dc409c2f18c31c4456c40b469dd6e410bdbab7cc9087f6e79586bb019",
+          "current_sha256": "d759735663e3db28031dbbffe46e8ec27edb0663ac5f53d913870fed9fe535a9"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/Makefile",
+          "previous_sha256": "3094180fc8dc44b7ef6e5e01377d9bbf051796150603253573ac9cd37c9fdcf3",
+          "current_sha256": "9b77230e78bf018db558958ab586b648898c30e62db73718e54496462d25996c"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/README.md",
+          "previous_sha256": "1aeb0e855e0a37ea17c597be607507eaa7ca39cdf20e6e0dcd04b43d1d3863e1",
+          "current_sha256": "05f44d01638870212a4f9f6f0eee010ddd83f523fddfd5353a28115b81ec6c76"
+        }
+      ],
+      "added_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/retrieval_trace_v2.py",
+          "sha256": "8a6af24eca42d5bfe8087dabb503d108f64aea5eb3ccc3a349a083b4bbec9190",
+          "kind": "evaluation_tool",
+          "purpose": "Installed Retrieval usecase/real KIS HTTP restricted trace with canonical guards"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/isolated_retrieval_v2.py",
+          "sha256": "531fb97aa740a29a374a1fc85d3ce847be0a8ca28774f6e76ee13d642bc1220b",
+          "kind": "evaluation_tool",
+          "purpose": "Owned synthetic-only lifecycle, live policy whitelist, trace/load and exact-ID cleanup"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/retrieval_load_v2.py",
+          "sha256": "466f1e80c1054a5cb55725fade6fed30f073ff31abf1ba84f584efeba42a10a4",
+          "kind": "evaluation_tool",
+          "purpose": "Three concurrent client lanes retain all 120 canonical-validated outcomes with bounded projection"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/cgroup_resources_v2.py",
+          "sha256": "5a8fb95ca70eb8abb7333419f18a798cb0b815dc9eaddb08198424e3941292b8",
+          "kind": "evaluation_tool",
+          "purpose": "Read-only owned cgroup CPU/RAM window; explicit lifetime peak scope"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/gold_review_v2.py",
+          "sha256": "cea2f307fab233aeb8b7bcfae332ee1d4db2954571c6eda4028a119477f56370",
+          "kind": "evaluation_tool",
+          "purpose": "Hash-bound human Gold record structural validator; never approves or freezes"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/gold-review-v2.template.json",
+          "sha256": "2d903d6edaf4b7a9468f206d50a586188eb1e7054a3673f1f5c650c6deceabe7",
+          "kind": "evaluation_fixture",
+          "purpose": "80 pending human-review rows, no approval or private reviewer identity"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_retrieval_trace.py",
+          "sha256": "4dc28652fcb0b49b687ebd0fca3a90be677e4f95f6a961f961a2b5938968a046",
+          "kind": "test",
+          "purpose": "Canonical projection, governance, body-free and bounded readiness guards"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_retrieval_load.py",
+          "sha256": "813884823cb2a4e79ed30b72ec1b9e45a002f2d05f1aba0d1633bff02ad4fe7a",
+          "kind": "test",
+          "purpose": "All-run retention, bounded projection and cgroup numeric/counter guards"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_gold_review.py",
+          "sha256": "363d7a80ce305e1b18b4a1b034227d07c5ada9994b0fea73e2b16b8d697f7e14",
+          "kind": "test",
+          "purpose": "Human review/hash/check/independence guards; schema validity cannot claim quality PASS"
+        }
+      ],
+      "evidence": {
+        "restricted_trace": {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-v2-retrieval-restricted-411035912d1c430dafc4b7e321860564.json",
+          "sha256": "0e98cf7400fcdcdf42ee408a6210717456d772fd0cce3568028a5566b649a24b"
+        },
+        "restricted_readiness_failure": {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-v2-retrieval-restricted-e78419b3175f4bc497bbc18f3403af19.json",
+          "sha256": "f4edae53745bbdff3bdbd98726143b062a7e5caaa9d0a12e41119cb33a9ed845"
+        },
+        "load_final": {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-v2-retrieval-restricted-load-a7140183cdf74f999c329ffc8f2f767d.json",
+          "sha256": "e09a15cc10997150bb1fa8f13205e8bc178df3282c95e6ee588659fcfd9724ec"
+        },
+        "load_failure": {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-v2-retrieval-restricted-load-5ca8a2c39a8d45d5ab9da9a941e42a40.json",
+          "sha256": "e839e7ba5eb419566194e597b7c2d417d9be0a6293fd574688f4831db532074e"
+        },
+        "checks_log": {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-v2-retrieval-load-checks.log",
+          "sha256": "f2afac1221f775b7f3c68b67d972476fcefcf051471b3498a943440b4959759f"
+        }
+      },
+      "tools_verified": 18,
+      "retrieval_installed_modules_verified": 9,
+      "tests": {
+        "passed": 101,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      "u0_items": {
+        "U0-01": "in_progress",
+        "U0-02": "in_progress",
+        "U0-03": "completed_inventory_only",
+        "U0-04": "in_progress"
+      },
+      "human_gold_pending": 80,
+      "human_gold_approved": 0,
+      "human_reviewer_choice": "user_will_review_no_signature_yet",
+      "external_llm_calls": 0,
+      "groq_free_account": "NOT_CONFIRMED_UNLABELED_LIMIT_VALUES_NOT_PLAN_EVIDENCE",
+      "synthetic_external_llm_allowed": "false_no_true_authorization_received",
+      "production_files_changed": 0,
+      "quality_gate": "BLOCKED",
+      "next_eligible_phase": "U0",
+      "review_status": "not_started",
+      "progress_file": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/升級計劃v1.md"
+    },
+    {
+      "date": "2026-10-05",
+      "reason": "Formal offline retrieval metrics and pending human relevance template; no scoring or provider calls without approval",
+      "changed_files": [
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/Makefile",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/README.md",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-baseline.md"
+      ],
+      "added_files": [
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/retrieval_metrics_v2.py",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tuning-relevance-v2.template.json",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/relevance-protocol-v1.md",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_retrieval_metrics.py"
+      ],
+      "evidence": {
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-v2-retrieval-metrics-checks.log": "bf99608952771d2a7fe52c8a58d3114aa813993283d810dc8016788532ca2a75",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-v2-retrieval-restricted-load-a7140183cdf74f999c329ffc8f2f767d.json": "e09a15cc10997150bb1fa8f13205e8bc178df3282c95e6ee588659fcfd9724ec"
+      },
+      "commands": [
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 make lint format-check test relevance-review-v2",
+          "exit_code": 0
+        },
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 make validate validate-v2 lint format-check test gold-review-v2 relevance-review-v2",
+          "exit_code": 0
+        },
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 ../../ingestion-service/.venv/bin/python retrieval_metrics_v2.py score",
+          "exit_code": 2,
+          "expected": "Fail closed: no human approvals; not a quality PASS"
+        }
+      ],
+      "tests": {
+        "passed": 123,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      "u0_items": {
+        "U0-01": "in_progress",
+        "U0-02": "in_progress",
+        "U0-03": "completed_inventory_only",
+        "U0-04": "in_progress"
+      },
+      "human_gold_pending": 80,
+      "human_gold_approved": 0,
+      "human_relevance_pending": 40,
+      "human_relevance_approved": 0,
+      "formal_metrics_scored": false,
+      "external_llm_calls": 0,
+      "production_files_changed": 0,
+      "spec_deviations": [],
+      "groq_free_account": "not_confirmed",
+      "quality_gate": "BLOCKED",
+      "next_eligible_phase": "U0",
+      "review_status": "not_started",
+      "progress_file": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/升級計劃v1.md"
+    },
+    {
+      "date": "2026-10-05",
+      "reason": "ARM installed adapter audit tool and timeout evidence; no compatibility PASS or U0 gate advance",
+      "changed_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-baseline.md",
+          "previous_sha256": "7d6d56e6a1b5e3aa6cfec1c8406992ccca4e926c4f71d9b1ea95788dbabfcbdf",
+          "current_sha256": "1ef81f46e9571f0b14040b89c3ceaa43d91effc599eed312d728da37f7dfea01"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/Makefile",
+          "previous_sha256": "be9530bf222c95a22cb2445547c41b9e52ee585c1203bb846c65bc6553155009",
+          "current_sha256": "1153438aae8e2cd4d11470c2388f191f665db09354c5b4e1bb0e59669649d0ef"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/README.md",
+          "previous_sha256": "cac9fe236f81df640d4a21b8c075762e6db4e68802a8eee40871156da1f9f812",
+          "current_sha256": "52adb46e8426410faa78f299623f0502ce517477559f0b07a6128aae566140e0"
+        }
+      ],
+      "added_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/arm_cpu_probe.py",
+          "sha256": "e93e11abfb3089055f663f86580a24e23194abb9e3f5298aa831cd59fe8b7670",
+          "kind": "evaluation-tool",
+          "purpose": "Installed ARM parser and CPU embedding probe; no network or DB"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/arm_cpu_audit.py",
+          "sha256": "53427bec8a515eba2d8bc4f9f0c6d5bd60f113349fd93b265727d763bcdead48",
+          "kind": "evaluation-tool",
+          "purpose": "Local ARM no-network lifecycle, exact cleanup, source parity and compatibility guards"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_arm_cpu_audit.py",
+          "sha256": "059545b258cb083597c9913a96a4f8349b299bea67276a5f88487bc3cfd49799",
+          "kind": "evaluation-test",
+          "purpose": "Seven offline ARM guard tests; not runtime or business-quality evidence"
+        }
+      ],
+      "evidence": {
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-arm-cpu-checks.log": "159878219d17936f8ba0dffc46f8d338bbf0cb014fa1a21f92f936a875958c15",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-arm-cpu-428240d7791343d699107ee072725f50.json": "27ea055e96e90ec5cd60b0b9323bfe05cb62d0422268cc90f9861a1d2b42bf9a"
+      },
+      "commands": [
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 ../../ingestion-service/.venv/bin/python arm_cpu_audit.py",
+          "exit_code": 2,
+          "result": "BLOCKED: first ingestion probe deadline 360s; embedding not executed"
+        },
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 make validate validate-v2 lint format-check test gold-review-v2 relevance-review-v2",
+          "exit_code": 0
+        },
+        {
+          "command": "docker ps -a --filter label=helpdesk.u0.isolated-run=428240d7791343d699107ee072725f50 --format exact IDs and status",
+          "exit_code": 0,
+          "result": "empty; owned resource cleanup confirmed"
+        }
+      ],
+      "tests": {
+        "passed": 130,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      "arm_runtime_status": "BLOCKED",
+      "arm_runtime_scope": "Intel emulation not Oracle native performance",
+      "arm_embedding": "NOT_EXECUTED",
+      "cleanup": "PASSED",
+      "u0_items": {
+        "U0-01": "in_progress",
+        "U0-02": "in_progress",
+        "U0-03": "completed_inventory_only",
+        "U0-04": "in_progress"
+      },
+      "human_gold_pending": 80,
+      "human_gold_approved": 0,
+      "human_relevance_pending": 40,
+      "human_relevance_approved": 0,
+      "external_llm_calls": 0,
+      "production_files_changed": 0,
+      "production_fingerprints_verified": 185,
+      "spec_deviations": [],
+      "quality_gate": "BLOCKED",
+      "next_eligible_phase": "U0",
+      "review_status": "not_started",
+      "progress_file": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/升級計劃v1.md"
+    },
+    {
+      "date": "2026-10-05",
+      "reason": "Resolve installed ARM parser/CPU embedding compatibility with explicit numeric-thread limits; real answer quality still blocked on human approvals",
+      "changed_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-baseline.md",
+          "previous_sha256": "1ef81f46e9571f0b14040b89c3ceaa43d91effc599eed312d728da37f7dfea01",
+          "current_sha256": "07e5ef3125639fb70ebfa166bd7b58331bd4a599a916db2443681f7b2a497e0f"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/Makefile",
+          "previous_sha256": "1153438aae8e2cd4d11470c2388f191f665db09354c5b4e1bb0e59669649d0ef",
+          "current_sha256": "8427ea82c47069b671aba67d73c75abd3277c13605de9e4539148b9f4143f24e"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/README.md",
+          "previous_sha256": "52adb46e8426410faa78f299623f0502ce517477559f0b07a6128aae566140e0",
+          "current_sha256": "35acb9564cc8450e052058961a40d1bf43b79f16c9dddd6083977e0d1cba7dd8"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/arm_cpu_probe.py",
+          "previous_sha256": "e93e11abfb3089055f663f86580a24e23194abb9e3f5298aa831cd59fe8b7670",
+          "current_sha256": "f1ef9ce99fc4e342392f269534528c6cd2c949001440c807e33dd9635d2e3dca"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/arm_cpu_audit.py",
+          "previous_sha256": "53427bec8a515eba2d8bc4f9f0c6d5bd60f113349fd93b265727d763bcdead48",
+          "current_sha256": "530442b8f2f40c6e052a7f27b32f40a1f6a6dc667a46cf728328e9991a3c2f04"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_arm_cpu_audit.py",
+          "previous_sha256": "059545b258cb083597c9913a96a4f8349b299bea67276a5f88487bc3cfd49799",
+          "current_sha256": "705198a359f33300a29f283c297d4952987a7c61c818c69011962f00ae7605ea"
+        }
+      ],
+      "added_files": [],
+      "evidence": {
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-arm-startup-d8c00d6c5b3d4cf7ad5406e2e0f75e4b.json": "d9420ee72b7d935404327a4860e3ea77d62ad9928646c973c9b1603b053bd16f",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-arm-startup-b487174a03f34c109e97c3edb084d56a.json": "014f4ab3cc6dce82cfca3980dda9d8e2ce030d73e9230e1db0800aaae45a908c",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-arm-cpu-442e74cf15254928b6476c05c1710449.json": "7d658a29de4ad9c7da03da134c6773fdc786ad7bf8889bb176ec101742788b55",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-arm-cpu-f5cfda0f701d4deaac7809eeffd1675b.json": "f12ab225b78cfc2440fbafb7a1ef7749413c94b00fd609d97bbc05bad3422b8d",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-arm-cpu-ca1b4655dfed483fb8ec86ca825e9064.json": "cb52932c5a1ed581818ea3e881ed0edc7234de912e09f77cad8eb0ad7fbebaeb",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-arm-startup-295662dd5a0b4ef9a038e3faed4fa1eb.json": "b018dcff978f82bc1e6ab43bcacf36c2e2e31f29139b8fce763ee4bdf715f3ff",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-arm-reconciled-checks.log": "cf78116dec339fa40f59a9a3ac38d6a28c3525dc9a4fe557ae0e82fdf0c9c3ca",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-arm-startup-checks.log": "84379ec5d8942cc7ca705b10e8f039795ae39709ef88a5d29c40aadc054db7b0",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-arm-startup-final-checks.log": "52ad41aea39cc84253fddb80b21c50d357537944560079b5794c249dc8df3309",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-arm-single-thread-checks.log": "f8595eea171a2c4acffae9cc5185494f6b5e8911ec06595163020ea7057927c4",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-arm-final-checks.log": "fb12863dd72fc3702c7e519685a54068d144cc1899a67d26bd6a32d9d6d02fce"
+      },
+      "commands": [
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 ../../ingestion-service/.venv/bin/python arm_cpu_audit.py --diagnose-startup",
+          "exit_code": 2,
+          "result": "Tokenizer initialization not completed by 90s; exact cleanup passed"
+        },
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 ../../ingestion-service/.venv/bin/python arm_cpu_audit.py --diagnose-startup --single-thread",
+          "exit_codes": [
+            0,
+            0
+          ],
+          "result": "DIAGNOSTIC_ONLY; not compatibility PASS"
+        },
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 ../../ingestion-service/.venv/bin/python arm_cpu_audit.py --single-thread",
+          "exit_codes": [
+            0,
+            0,
+            0
+          ],
+          "result": "All 40 documents/91 chunks parity and real CPU embeddings; exact cleanup passed"
+        },
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 make lint format-check test",
+          "exit_code": 2,
+          "tests": {
+            "passed": 132,
+            "failed": 1,
+            "skipped": 0,
+            "errors": 0
+          },
+          "result": "New negative elapsed guard caught -1; repaired without lowering checks"
+        },
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 make validate validate-v2 lint format-check test gold-review-v2 relevance-review-v2",
+          "exit_codes_before_repair": [
+            2,
+            2,
+            2
+          ],
+          "failures": [
+            "B009",
+            "B018",
+            "E501"
+          ],
+          "final_exit_code": 0,
+          "log": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-arm-reconciled-checks.log"
+        },
+        {
+          "command": "make -n arm-cpu-single-thread-audit-docker arm-startup-diagnostic-docker",
+          "exit_code": 0,
+          "result": "Recipe dry-run only; not runtime proof"
+        }
+      ],
+      "tests": {
+        "passed": 133,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      "arm_runtime_status": "PASSED_ADAPTERS_ONLY",
+      "arm_full_runs": 3,
+      "final_arm_run_id": "ca1b4655dfed483fb8ec86ca825e9064",
+      "arm_runtime_scope": "Intel emulation not Oracle native performance, not other services/new candidate adapters",
+      "numeric_thread_environment": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1"
+      },
+      "thread_mechanism_primary_source": "https://www.openmathlib.org/OpenBLAS/docs/runtime_variables/",
+      "exact_library_failure_cause": "NOT_PROVEN",
+      "cleanup": "PASSED",
+      "u0_items": {
+        "U0-01": "in_progress",
+        "U0-02": "in_progress",
+        "U0-03": "completed_inventory_only",
+        "U0-04": "in_progress"
+      },
+      "human_gold_pending": 80,
+      "human_gold_approved": 0,
+      "human_relevance_pending": 40,
+      "human_relevance_approved": 0,
+      "formal_metrics_scored": false,
+      "external_llm_calls": 0,
+      "production_files_changed": 0,
+      "production_fingerprints_verified": 185,
+      "spec_deviations": [],
+      "groq_free_account": "not_confirmed",
+      "quality_gate": "BLOCKED",
+      "next_eligible_phase": "U0",
+      "review_status": "not_started",
+      "progress_file": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/升級計劃v1.md"
+    },
+    {
+      "date": "2026-10-05",
+      "reason": "Implement real human-record dataset freeze with pending refusal, immutable publication and drift verification; no actual approvals or freeze performed",
+      "changed_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-baseline.md",
+          "previous_sha256": "07e5ef3125639fb70ebfa166bd7b58331bd4a599a916db2443681f7b2a497e0f",
+          "current_sha256": "6b07f781fda77bd9f1d45c6bd46217e97796dc8074e39cbfc19d56b59151796c"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/Makefile",
+          "previous_sha256": "8427ea82c47069b671aba67d73c75abd3277c13605de9e4539148b9f4143f24e",
+          "current_sha256": "361bd1edf83aa63a0093737cdf40942814a6695fe392809d0d9034f16cc13f09"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/README.md",
+          "previous_sha256": "35acb9564cc8450e052058961a40d1bf43b79f16c9dddd6083977e0d1cba7dd8",
+          "current_sha256": "18afa1914c1ccb4e193e0d49bada08fb9e9f2eb59ed796d345650925573e490d"
+        }
+      ],
+      "added_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/freeze_dataset_v2.py",
+          "sha256": "a7382f35a5e256a7e899cbad766693363bbdae6628407e1264ab3e45ed384c5a",
+          "kind": "evaluation-tool",
+          "purpose": "Human-only dataset/Gold/tuning-relevance hash-bound freeze, atomic no-clobber and verification; no provider calls"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_freeze_dataset.py",
+          "sha256": "9814279b1ebb22f69372ba0f11aab5d18ca5c31f137008f02d58ee929f4e0111",
+          "kind": "evaluation-test",
+          "purpose": "22 offline or temporary-directory freeze guards; toy approvals are not real human evidence"
+        }
+      ],
+      "evidence": {
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-dataset-freeze-checks.log": "dde32c256cc2185ceb9104c689d431a681986e51e645f70d6611bb658a4fb324",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-dataset-freeze-reconciled-checks.log": "fe1ebe0989d772005e509c34c231b3c38cbb0fdbb511bc8d5334bce52a080e80",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-dataset-freeze-pending-check.log": "a19319f1e222ce8711670efc956b267e9e6b0c6a3fe4b99f910d9ecdbd56c5cf",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-dataset-freeze-pending-write.log": "5b74dc2796bef6b89bc410e7a59297c4d92b421ec11f653a5c33a8a0db2ba66e",
+        "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-dataset-freeze-final-pending.log": "ed589720b8c5155ecfb86a1f0aa5086f98f14c6939b23f79c05e78888aa8af7a"
+      },
+      "commands": [
+        {
+          "command": "ruff format freeze_dataset_v2.py tests/test_freeze_dataset.py",
+          "exit_code": 0,
+          "tests": "N/A"
+        },
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 make lint format-check test",
+          "initial_exit_codes": [
+            2,
+            2,
+            2
+          ],
+          "failures": [
+            "UP017/I001 before tests",
+            "Unused timezone import before tests",
+            "no_answer ID falsely matched as raw answer"
+          ],
+          "initial_unit_result": {
+            "passed": 150,
+            "failed": 1,
+            "skipped": 0,
+            "errors": 0
+          }
+        },
+        {
+          "command": "ruff check freeze_dataset_v2.py tests/test_freeze_dataset.py --select I,UP017 --target-version py311 --fix",
+          "exit_code": 0,
+          "tests": "N/A"
+        },
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 make validate validate-v2 lint format-check test gold-review-v2 relevance-review-v2",
+          "exit_codes": [
+            0,
+            0
+          ],
+          "unit_counts": [
+            154,
+            155
+          ],
+          "final_log": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runtime/u0-dataset-freeze-reconciled-checks.log"
+        },
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 make freeze-check-v2",
+          "exit_code": 2,
+          "tests": "N/A",
+          "result": "Expected refusal of pending human judgments; no filesystem snapshot"
+        },
+        {
+          "command": "PYTHONDONTWRITEBYTECODE=1 make freeze-dataset-v2",
+          "exit_code": 2,
+          "tests": "N/A",
+          "result": "Expected refusal before output creation; no actual freeze"
+        },
+        {
+          "command": "Wrapper asserts each pending target exit code equals 2",
+          "exit_code": 0,
+          "tests": "N/A",
+          "result": "Refusal guard only, not freeze or quality PASS"
+        },
+        {
+          "command": "Read-only 185 production fingerprint verification",
+          "initial_exit_code": 1,
+          "initial_reason": "Relative paths resolved against eval rather than workspace",
+          "exit_code": 0,
+          "changed": 0,
+          "tests": "N/A"
+        }
+      ],
+      "tests": {
+        "passed": 155,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      "added_tool_tests": 22,
+      "formatted_python_files": 71,
+      "u0_items": {
+        "U0-01": "in_progress",
+        "U0-02": "in_progress",
+        "U0-03": "completed_inventory_only",
+        "U0-04": "in_progress"
+      },
+      "human_gold_pending": 80,
+      "human_gold_approved": 0,
+      "human_relevance_pending": 40,
+      "human_relevance_approved": 0,
+      "actual_freeze_performed": false,
+      "runtime_configuration_frozen": false,
+      "formal_metrics_scored": false,
+      "external_llm_calls": 0,
+      "production_files_changed": 0,
+      "production_fingerprints_verified": 185,
+      "spec_deviations": [],
+      "groq_free_account": "not_confirmed",
+      "quality_gate": "BLOCKED",
+      "next_eligible_phase": "U0",
+      "review_status": "not_started",
+      "progress_file": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/升級計劃v1.md"
+    },
+    {
+      "date": "2026-10-05",
+      "captured_at": "2026-10-05T23:12:46.251430+08:00",
+      "reason": "User narrowed U0 to necessary baseline completion; documentation-only scope reconciliation, no new tooling or production work",
+      "changed_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-baseline.md",
+          "previous_sha256": "6b07f781fda77bd9f1d45c6bd46217e97796dc8074e39cbfc19d56b59151796c",
+          "current_sha256": "ac78b0ebd103ab07a374416c25bdb0520cedd3eb9d79824619c962cb7b7eb25c"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/README.md",
+          "previous_sha256": "18afa1914c1ccb4e193e0d49bada08fb9e9f2eb59ed796d345650925573e490d",
+          "current_sha256": "7df4352a9574b7037f733c1b8aed90b93e6f37ee22cfe9031a2769f5d7147f6b"
+        }
+      ],
+      "progress_file": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/升級計劃v1.md",
+      "production_files_changed": 0,
+      "new_tools": 0,
+      "commands": [
+        {
+          "cwd": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1",
+          "command": "PYTHONDONTWRITEBYTECODE=1 make validate-v2 gold-review-v2 relevance-review-v2",
+          "exit_code": 0,
+          "passed_failed_skipped_errors": "N/A: structural validators, not quality tests"
+        },
+        {
+          "cwd": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat",
+          "command": "Read-only implementation manifest and host inventory fingerprint reconciliation",
+          "exit_code": 0,
+          "manifest_entries_before": 221,
+          "manifest_mismatch": 0,
+          "production_fingerprints": 185,
+          "production_changed": 0
+        }
+      ],
+      "gold_pending": 80,
+      "relevance_pending": 40,
+      "formal_freeze_performed": false,
+      "provider_calls": 0,
+      "previous_155_tool_tests": "Historical evidence retained; not rerun during this documentation-only update",
+      "authorization_clarification": "Existing synthetic-only free Groq opt-in covers necessary isolated test governance; free account proof is still required, no company metadata or policy changes",
+      "quality_gate": "BLOCKED",
+      "implementation_status": "in_progress",
+      "review_status": "not_started",
+      "next_eligible_phase": "U0"
+    },
+    {
+      "date": "2026-10-05",
+      "captured_at": "2026-10-05T23:49:35.915358+08:00",
+      "reason": "User approved preliminary U0 with 16 representative human checks plus anomalies and confirmed Groq Free Plan; documentation only",
+      "changed_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-baseline.md",
+          "previous_sha256": "ac78b0ebd103ab07a374416c25bdb0520cedd3eb9d79824619c962cb7b7eb25c",
+          "current_sha256": "49335161560f79abd322cf977e8270d93009580575ebfbaea451ce08acd5672b"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/README.md",
+          "previous_sha256": "7df4352a9574b7037f733c1b8aed90b93e6f37ee22cfe9031a2769f5d7147f6b",
+          "current_sha256": "134eb8d1bb51621cd01a24de81a3cdabbfe918370a92a028d4e5b3ba1382f336"
+        }
+      ],
+      "added_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/u0-human-sample-review.md",
+          "sha256": "08445bf2f9ba8953757953e6ecac32182249387e79550de0f0f214620e4c6604"
+        }
+      ],
+      "progress_file": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/升級計劃v1.md",
+      "plan_version": "1.1",
+      "preliminary_protocol": "u0-preliminary-sampled-v1",
+      "production_files_changed": 0,
+      "new_tools": 0,
+      "commands": [
+        {
+          "cwd": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1",
+          "command": "PYTHONDONTWRITEBYTECODE=1 make validate-v2",
+          "exit_code": 0,
+          "passed_failed_skipped_errors": "N/A: dataset structure/hash validator, not RAG quality tests"
+        },
+        {
+          "cwd": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1",
+          "command": "Read-only sample, document gate, source links, implementation and production fingerprint checks",
+          "exit_code": 0,
+          "sample_cases": 16,
+          "sample_human_approved": 0,
+          "production_fingerprints": 185,
+          "production_changed": 0
+        },
+        {
+          "cwd": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1",
+          "command": "Initial combined read-only sample extraction",
+          "exit_code": 1,
+          "reason": "TypeError: dataset JSON is a list, not an object; corrected read-only extraction exited 0"
+        }
+      ],
+      "sample_case_ids": [
+        "T01-fact",
+        "T02-list",
+        "T03-count",
+        "T04-compare",
+        "T05-procedure",
+        "T01-followup",
+        "T02-no_answer",
+        "T03-ambiguity",
+        "H01-fact",
+        "H02-list",
+        "H03-count",
+        "H04-compare",
+        "H05-procedure",
+        "H01-followup",
+        "H02-no_answer",
+        "H03-ambiguity"
+      ],
+      "sample_review_pending": 16,
+      "formal_gold_pending": 80,
+      "formal_relevance_pending": 40,
+      "formal_freeze_performed": false,
+      "provider_calls": 0,
+      "provider_plan": {
+        "provider": "groq",
+        "model": "openai/gpt-oss-20b",
+        "plan": "Free Plan",
+        "confirmation_source": "User explicitly confirmed Free Plan in this conversation",
+        "account_limits_user_reported": {
+          "RPM": "1K",
+          "RPD": "500K",
+          "TPM": "250K",
+          "TPD": "-",
+          "ASH": "-",
+          "ASD": "-"
+        },
+        "api_or_remaining_quota_verified": false,
+        "paid_fallback_allowed": false
+      },
+      "previous_155_tool_tests": "Historical evidence retained; not rerun for documentation-only update",
+      "approved_acceptance_change": "Full human Gold, all-catalog relevance and strict formal freeze deferred from preliminary U0 to the corresponding formal U3/U6 gates; original validators and pending records unchanged",
+      "quality_gate": "BLOCKED: true answer runs and sampled human review are still missing",
+      "implementation_status": "in_progress",
+      "review_status": "not_started",
+      "next_eligible_phase": "U0"
+    },
+    {
+      "date": "2026-10-06",
+      "captured_at": "2026-10-06T00:21:24.475260+08:00",
+      "reason": "Record direct human confirmation of 16 sampled source/expected Gold checks; generated answers and citations remain pending",
+      "changed_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-baseline.md",
+          "previous_sha256": "49335161560f79abd322cf977e8270d93009580575ebfbaea451ce08acd5672b",
+          "current_sha256": "46fba7d87b3823877aa73e36db998badd167ba20c8079b9aadec8d0e2b4f961a"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/README.md",
+          "previous_sha256": "134eb8d1bb51621cd01a24de81a3cdabbfe918370a92a028d4e5b3ba1382f336",
+          "current_sha256": "a0d09123b88968ec0ba6a2046fec51f0f47de389e8484f906411c68744055559"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/u0-human-sample-review.md",
+          "previous_sha256": "08445bf2f9ba8953757953e6ecac32182249387e79550de0f0f214620e4c6604",
+          "current_sha256": "e9dbbb0cbcca6bfc77e342091b793302e885bc7896bee9cccd2ea847b6c8d70f"
+        }
+      ],
+      "progress_file": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/升級計劃v1.md",
+      "human_confirmation": {
+        "actor_kind": "human",
+        "actor": "User in this conversation",
+        "message": "檢查完了 OK",
+        "scope": "16 fixed source/expected Gold checks only",
+        "exact_reviewed_at_provided": false,
+        "prior_sample_sha256": "08445bf2f9ba8953757953e6ecac32182249387e79550de0f0f214620e4c6604",
+        "dataset_manifest_sha256": "09c9185ff12a773ab623be1f61ef03ddfc594f5ce28148f0ad5668a61e3b1ad2"
+      },
+      "sample_case_ids": [
+        "T01-fact",
+        "T02-list",
+        "T03-count",
+        "T04-compare",
+        "T05-procedure",
+        "T01-followup",
+        "T02-no_answer",
+        "T03-ambiguity",
+        "H01-fact",
+        "H02-list",
+        "H03-count",
+        "H04-compare",
+        "H05-procedure",
+        "H01-followup",
+        "H02-no_answer",
+        "H03-ambiguity"
+      ],
+      "sample_source_gold_approved": 16,
+      "sample_source_gold_pending": 0,
+      "sample_generated_answer_citation_approved": 0,
+      "sample_generated_answer_citation_pending": 16,
+      "formal_gold_pending": 80,
+      "formal_relevance_pending": 40,
+      "formal_freeze_performed": false,
+      "production_files_changed": 0,
+      "new_tools": 0,
+      "provider_calls": 0,
+      "commands": [
+        {
+          "cwd": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat",
+          "command": "PYTHONDONTWRITEBYTECODE=1 ingestion-service/.venv/bin/python - (read-only manifest, production and sample fingerprint checks)",
+          "exit_code": 0,
+          "passed_failed_skipped_errors": "N/A: document/evidence validation, not pytest or RAG quality tests"
+        },
+        {
+          "cwd": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1",
+          "command": "PYTHONDONTWRITEBYTECODE=1 make validate-v2",
+          "exit_code": 0,
+          "passed_failed_skipped_errors": "N/A: structure/hash validator; formal Gold pending 80 and quality gate BLOCKED"
+        },
+        {
+          "cwd": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat",
+          "command": "Final read-only document, sample scope, manifest and production fingerprint consistency checks",
+          "exit_code": 0,
+          "passed_failed_skipped_errors": "N/A: document/evidence validation, not RAG quality tests"
+        }
+      ],
+      "previous_155_tool_tests": "Historical evidence retained; not rerun for documentation-only update",
+      "quality_gate": "BLOCKED: true system answer runs, sampled generated answers/citations and independent review are still missing",
+      "implementation_status": "in_progress",
+      "review_status": "not_started",
+      "next_eligible_phase": "U0"
+    },
+    {
+      "date": "2026-10-06",
+      "reason": "User confirmed U1; plan v1.2 permits docs-only design after completed inventory, without claiming U0 quality PASS",
+      "protocol": "u1-design-entry-v1",
+      "plan_version": "1.2",
+      "current_phase": "U1",
+      "next_eligible_phase": "U1",
+      "u0_quality_status": "NOT_MEASURED",
+      "u1_implementation_status": "in_progress",
+      "u1_review_status": "not_started",
+      "u1_approval": "pending",
+      "contract_draft_version": "rag-upgrade-contracts-v0.1",
+      "changed_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/README.md",
+          "previous_sha256": "90c18763eb5867d9fa66f11b914657a735f9ec2f966868ca28e407ebfbf0241c",
+          "current_sha256": "5ffddb7e0065220ffb7afcd0f832a7f4c68e6615160e571a879ee9e2f8d3bca4"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-baseline.md",
+          "previous_sha256": "46fba7d87b3823877aa73e36db998badd167ba20c8079b9aadec8d0e2b4f961a",
+          "current_sha256": "3edc4e331c73e7ad887e2e70c690fcb5b9d996eaa24f40d93cd991ca780fafa8"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/README.md",
+          "previous_sha256": "a0d09123b88968ec0ba6a2046fec51f0f47de389e8484f906411c68744055559",
+          "current_sha256": "776055790385a8af2eb28ed6e5f2fe806efcfe3d1f9ff65e8202bee6db80b879"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-contracts.md",
+          "previous_sha256": null,
+          "current_sha256": "bb74353510e81ada22bff327f5f7cd5805cd36d6451aa4f70baea78e82fd35c3"
+        }
+      ],
+      "progress_file": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/升級計劃v1.md",
+      "production_files_changed": 0,
+      "provider_calls": 0,
+      "docker_operations": 0,
+      "database_operations": 0,
+      "models_downloaded": 0,
+      "tests_not_rerun": "Documentation only; existing 155 tool tests are historical evidence, not new test results"
+    },
+    {
+      "date": "2026-10-06",
+      "reason": "U1 v0.2 wire/scope/structure/budget/AGENTS proposal and independently recomputed Python/Node synthetic signature artifacts; approval/review pending",
+      "changed_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-contracts.md",
+          "previous_sha256": "bb74353510e81ada22bff327f5f7cd5805cd36d6451aa4f70baea78e82fd35c3",
+          "current_sha256": "0eab752431a16fe854bd5b686afafe183da4e22c2b691b78e64fa6dad30e0c2c"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-golden-vectors.json",
+          "previous_sha256": null,
+          "current_sha256": "44fd5e188f4eced5a065c056ce97b80894fd9bb24167bcfd16bc69c6b3c5979b"
+        },
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-vector-verification.md",
+          "previous_sha256": null,
+          "current_sha256": "b9fda85f264a34c8e227c70135aaf4cb10d308ed546f9b6fe6b6f32712fbd550"
+        }
+      ],
+      "progress_file": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/升級計劃v1.md",
+      "production_files_changed": 0,
+      "offline_vector_cases": 12,
+      "python_offline_checks": {
+        "exit_code": 0,
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      "node_offline_checks": {
+        "exit_code": 0,
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      "semantic_runtime_negative_cases_not_executed": 8,
+      "docker_operations": "read_only_inventory_only",
+      "provider_calls": 0,
+      "u1_implementation_status": "in_progress",
+      "u1_review_status": "not_started",
+      "approval": "pending",
+      "next_eligible_phase": "U1"
+    },
+    {
+      "date": "2026-10-06",
+      "reason": "U1 v0.2.1 resolves input/output lineage, nullable/empty/planner/history/cursor/renderer policy inconsistencies; remote asset and existing CPU lock hashes are proposals only",
+      "contract_draft_version": "rag-upgrade-contracts-v0.2.1",
+      "changed_files": [
+        {
+          "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-contracts.md",
+          "previous_sha256": "0eab752431a16fe854bd5b686afafe183da4e22c2b691b78e64fa6dad30e0c2c",
+          "current_sha256": "b93e29b067bcc98ff0432cefc3dcf5c37ebdbf15358e796d9233c5c7941c4d2b"
+        }
+      ],
+      "progress_file": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/升級計劃v1.md",
+      "production_files_changed": 0,
+      "provider_calls": 0,
+      "models_downloaded": 0,
+      "python_offline_checks": {
+        "exit_code": 0,
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      "node_offline_checks": {
+        "exit_code": 0,
+        "passed": 12,
+        "failed": 0,
+        "skipped": 0,
+        "errors": 0
+      },
+      "semantic_runtime_negative_cases_not_executed": 8,
+      "u1_implementation_status": "in_progress",
+      "u1_review_status": "not_started",
+      "approval": "pending",
+      "next_eligible_phase": "U1"
+    }
+  ],
+  "exclusions": [
+    "self hash (avoid recursion)",
+    "升級計劃v1.md status/handoff (self-updating)",
+    "runtime/qa/cache temporary evidence"
+  ],
+  "files": [
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/README.md",
+      "sha256": "5ffddb7e0065220ffb7afcd0f832a7f4c68e6615160e571a879ee9e2f8d3bca4",
+      "kind": "documentation",
+      "purpose": "Link U1 docs-only design; production remains v1 and U0 quality is not measured"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-baseline.md",
+      "sha256": "3edc4e331c73e7ad887e2e70c690fcb5b9d996eaa24f40d93cd991ca780fafa8",
+      "kind": "documentation",
+      "purpose": "Preserve U0 pending quality evidence and record approved U1 design entry exception"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/.gitignore",
+      "sha256": "45d5b05139ad92f7832696beb0ffd3595f2125dbc0c1073d3f31fcbc731745ea",
+      "kind": "evaluation_manifest",
+      "purpose": "Dataset integrity or tooling validation"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/Makefile",
+      "sha256": "361bd1edf83aa63a0093737cdf40942814a6695fe392809d0d9034f16cc13f09",
+      "kind": "evaluation_tool",
+      "purpose": "U0 evaluation targets including explicit human-record freeze check/write"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/README.md",
+      "sha256": "776055790385a8af2eb28ed6e5f2fe806efcfe3d1f9ff65e8202bee6db80b879",
+      "kind": "documentation",
+      "purpose": "Clarify U1 docs-only work while retaining U0 validators and pending human reviews"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/audit_parsers.py",
+      "sha256": "25338e43657eac1ddfdb1dec0295939b17b0c3bee96959dc28c5e7a078940540",
+      "kind": "evaluation_tool",
+      "purpose": "Offline evaluation / read-only audit"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/build_dataset.py",
+      "sha256": "ec1d17c24adc015ad98874970d31941a5b380719aefb8fcce2d21d8ed10a2923",
+      "kind": "evaluation_tool",
+      "purpose": "Offline evaluation / read-only audit"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H01/catalog.docx",
+      "sha256": "908302ef1819375dc29fb4997c29374622118b55851bf4d2f5bd6689d83edfa3",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H01/catalog.docx.metadata.yaml",
+      "sha256": "b7715c1b3ffc3a183f6ef78715e4638634ecea1ac7b0eaecafcc241a86265b75",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H01/notes.txt",
+      "sha256": "f95e644e8ca200f4e0ced73fd49e4f4b9c2aba81f837b26ea1c808b048fc879f",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H01/notes.txt.metadata.yaml",
+      "sha256": "40cea9651f6733140c120fda700bd80f39ecc5bf520831f755e78dc971dccbac",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H01/procedure.pdf",
+      "sha256": "8c042eae6dde9f13d24b82627725b624ab732fb459d86d0728d7ea7ad5c616f3",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H01/procedure.pdf.metadata.yaml",
+      "sha256": "d25875f2bbf2ebdc94cd28257390a46efcfa1afc76428f07137d6cf61e476435",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H01/rules.md",
+      "sha256": "4ce773e169b4529f13a1b4dc65fd98c30a257462a07e519f784b1b7bbcbcd884",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H01/rules.md.metadata.yaml",
+      "sha256": "d292f49c630715a9bc1a17c23e6b97b95065723b027cf6f4c64d32b3ca9903f3",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H02/catalog.docx",
+      "sha256": "4c4622891f41c5b90164ce65edd9f50eba22ae1c7a2ba8e4e0b6e0dc24c82d32",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H02/catalog.docx.metadata.yaml",
+      "sha256": "1de8e49f847ef43affbe17f12ef9acf61e5afa954f9be348c8f9aa5bc69955f9",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H02/notes.txt",
+      "sha256": "356819ea23f79925e83948110b217cbe7444d62fe22b9eaf1f00ca3409d522de",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H02/notes.txt.metadata.yaml",
+      "sha256": "f4ddefb700fec1a73d7513e804087eac0a266e4f41d3d68ebb8fe527b16da69e",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H02/procedure.pdf",
+      "sha256": "cf1f88407ddc6b57ad4ccfa648c650800162e85b6df33b3274a6e565d523af22",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H02/procedure.pdf.metadata.yaml",
+      "sha256": "06d77165a6d2f1cbfd9e4d18ff4a6bb21627814a3a9c9c3cea28952298f915c7",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H02/rules.md",
+      "sha256": "5355502a711dd5542456152e1dd6b4293af0b800ec8c6a589233a32cd3518b55",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H02/rules.md.metadata.yaml",
+      "sha256": "1559f05e445250c8ddc67389e5e094db4900087722a6d5c87abd73cce5733c6c",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H03/catalog.docx",
+      "sha256": "edaafa24d3ddfc6aa390b953da9caefd3a006b854bc50eb47cbe41c895000b41",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H03/catalog.docx.metadata.yaml",
+      "sha256": "12f594eb4a123c9560d5f207b3230445f3f7ba45136e12ce77b1283bb014eafd",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H03/notes.txt",
+      "sha256": "1165e3f5c84536b939c1bd305038f9b81e1ae7502119788b5638fe1f63691826",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H03/notes.txt.metadata.yaml",
+      "sha256": "be0342a81af8690dbeeb0eb28cac61902adee691a8223d1b10f8d725752e5b3b",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H03/procedure.pdf",
+      "sha256": "a4a55a504f67031030055237f56cb9f58b6ef8c722118768120a4ad45fa1b62f",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H03/procedure.pdf.metadata.yaml",
+      "sha256": "7ee24d245dbc0cda94caf0968817f89426c9eba820926c022c223a9e78e17987",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H03/rules.md",
+      "sha256": "951f75efc97a09c90a3d266546f6f7b7bbda85a267a82506ad1dcc4860ffd8b2",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H03/rules.md.metadata.yaml",
+      "sha256": "5d438b06a42e473547294bbd83dd112b75dff798e9e000b35767ce9523897b8e",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H04/catalog.docx",
+      "sha256": "29e1bc5bae421a372fc88464f535193948973521acfe2d9409004446f7a3758e",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H04/catalog.docx.metadata.yaml",
+      "sha256": "14f169f3d4d3e3c87c5fc441fe18e515993d2cdd3ea69656b9b2b8d900bc9f35",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H04/notes.txt",
+      "sha256": "da47e34556c2d475a04eed38461bd0e607beb9447a003d8bff21f7b0bddd8b46",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H04/notes.txt.metadata.yaml",
+      "sha256": "305f07fb0de4d4d928682179a61d7a755b72da941c722292647d1658c30f5311",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H04/procedure.pdf",
+      "sha256": "19ad1d7f26c0bc158a4d2a3305d3e1ef3e0543f79c26a96f8c4770d985078599",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H04/procedure.pdf.metadata.yaml",
+      "sha256": "b905111f58d3d9a95f36270d2f2981cde5f2005dc6982780ad44c1a405a44cc5",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H04/rules.md",
+      "sha256": "4d2146fc1944a79fa9d153fdc82adac421737a18f8bbec2c36bf1827b0112f83",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H04/rules.md.metadata.yaml",
+      "sha256": "93d06fb0093c21e7a2828f92f118ced6790af5a90a469225aa955b6b54ba8b4d",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H05/catalog.docx",
+      "sha256": "6793d18dd931bca299886dd1fab0da970f09e0aa29bb67dd6085b1315cadc974",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H05/catalog.docx.metadata.yaml",
+      "sha256": "38783408850f90cb4b6c10820827ebcf2409a4f87c75890ff31bcd379dff5c70",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H05/notes.txt",
+      "sha256": "816dc7dd5e2387ee3ef5dfa2a89c908975ae3ffaea02a789009c2b255d5e3981",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H05/notes.txt.metadata.yaml",
+      "sha256": "de1dcf2e2ee70bb5ba17d511f04e5da173b78335fab97bc25c5d8da4c2bc8322",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H05/procedure.pdf",
+      "sha256": "50b953f93f50738de22ddbdcae9c08503e87ed26163b6ebaf7fe85e3ac4a87b3",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H05/procedure.pdf.metadata.yaml",
+      "sha256": "d73e5f6ee7fd22b65a58d4194223febb65257224df61f23001658b590576c897",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H05/rules.md",
+      "sha256": "758abdd27de21ec04d9783ad5a32884b6d01e7effe3942855bb97aec50a27129",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/holdout/H05/rules.md.metadata.yaml",
+      "sha256": "e230684f094290d148a06293c8c8c38cd6df91500c6757807abe027411638996",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T01/catalog.docx",
+      "sha256": "9e0ac4bc2e73e49c2bde2923fe56027920400d3437fc652d1d9a5e07253a592f",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T01/catalog.docx.metadata.yaml",
+      "sha256": "fc14106da86917efaf21ac090ed163e885be8d3676faf153a6c6d6bc21eb713e",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T01/notes.txt",
+      "sha256": "6d720fe24676938bfa915e0ecd90172d012108e8c967e3754ffe623824e7c404",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T01/notes.txt.metadata.yaml",
+      "sha256": "6c288d52be812954acc913abf478fbf0bfbab3db414e0d523fb372e19714f575",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T01/procedure.pdf",
+      "sha256": "ce48a3c40e5437373f126f093648d73f99bcb3ca7ccf807c3c9695613a661f06",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T01/procedure.pdf.metadata.yaml",
+      "sha256": "3731656f875e65a61cbb19e22250888100267a76361b28b0c0e394d676f71dc6",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T01/rules.md",
+      "sha256": "f884e9a02d03aaacd497d285ffceb7da816ed87c704b094716be32752e56a02f",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T01/rules.md.metadata.yaml",
+      "sha256": "cb4c741585043ec9e850cba4271491cbf0874016a82398812de1d5ae3b2b5299",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T02/catalog.docx",
+      "sha256": "e6c14cf1ba4f5f6a76ec1b3479b7792806aab1e580380fbac254a053b4316ca0",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T02/catalog.docx.metadata.yaml",
+      "sha256": "c57cdffea8115ce65d2910e4e47fc7b0b9f4cb6bc6641f7dfad7e55bd94f49c5",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T02/notes.txt",
+      "sha256": "c71977f5ce615c126628be0a5762c1cb6d807d8ad05e849431003464baeffa4e",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T02/notes.txt.metadata.yaml",
+      "sha256": "cccfa90b82ef076f9e8d278862dec7a6f88be090c1470e87a1b9dfafdb94ca7e",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T02/procedure.pdf",
+      "sha256": "287946a4173a51416a54e8959621bd40764045eb720e64ba6a436929f2380eb2",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T02/procedure.pdf.metadata.yaml",
+      "sha256": "6abfc1e88ba54bc700a558792e0bb321954b358f33482b17eb7db38c36cc8e80",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T02/rules.md",
+      "sha256": "0485892eb9c33712952c0d504f8d584b9c7b4982ed21cd83f6827bee6028d61c",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T02/rules.md.metadata.yaml",
+      "sha256": "c1aaa61f45c08cdf522f60fc53b13586b45af29416f521e8daf48583fade2aa6",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T03/catalog.docx",
+      "sha256": "40b1d48f14081ae2ea0b6aee8df92239030e3bd0193f25a7c24459f971cf2b98",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T03/catalog.docx.metadata.yaml",
+      "sha256": "2075e18b0b456c156d9aec38dcb90e98c8fb3c219bf00ce9570fb9c1683dd107",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T03/notes.txt",
+      "sha256": "c69052659a2fe80bc74416bcfc3be213d162bd9c38562de9e98b75bf49dd1582",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T03/notes.txt.metadata.yaml",
+      "sha256": "61ae9eabe03b5737047b93a4f54f2706901da8f21b5c50bd5459aed6400516b6",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T03/procedure.pdf",
+      "sha256": "a5c66ad2ed9609834af95a41776c6d789d5a3c17eb27fa0bd9154d95665958bd",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T03/procedure.pdf.metadata.yaml",
+      "sha256": "f58d5c28a8baca9278b7c5006c7a8a3543d348d115c60f89b77ebdf07f21e858",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T03/rules.md",
+      "sha256": "0c4407fb550aeb5c251f2e2befacdec252309b216af3de0c2e083f56bee49ccd",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T03/rules.md.metadata.yaml",
+      "sha256": "02938e61da516a3b67a693cc3f8cd6bae7e2733f9116ed4bdd36343709ced0d5",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T04/catalog.docx",
+      "sha256": "abc7bfbeea8ccc3be7a7fd00a10609ba3cf6161a97f1b49ddf176b3570da3d52",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T04/catalog.docx.metadata.yaml",
+      "sha256": "1b6c607bac1fa1482d0c176337e53b6032b9072f7ecac3e634422e7c12c5ce9a",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T04/notes.txt",
+      "sha256": "fa47355db2dcd95a366e90ff0747c5c7dc6affcb9db5587cfef282b1b7308978",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T04/notes.txt.metadata.yaml",
+      "sha256": "87329759ab12ada98173333cb469eec420c389ee80fd49cfcc552fb0d1816ca7",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T04/procedure.pdf",
+      "sha256": "3d18029ad728b2793d8140c23302b071601b344a937190be16b3e0223a55ee73",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T04/procedure.pdf.metadata.yaml",
+      "sha256": "2e8e928aea6a8a419daf60cfd805c3659a7c1594eb040e21896beb0f41baf3eb",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T04/rules.md",
+      "sha256": "0447ef6e87193e5558389718de7fad5cb086ea14dd4ded5b6859fa82b26a547f",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T04/rules.md.metadata.yaml",
+      "sha256": "b7b28211acbee4bdcb1e57ad8d7a25cf6be206898d796b906337664c4d4e43e3",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T05/catalog.docx",
+      "sha256": "a20d36c83501e90e9b1500dc76071c21ed0615ab5ac3d1ccbb81f2c148581d32",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T05/catalog.docx.metadata.yaml",
+      "sha256": "850d20fb5937b8411c2098853f53bad67ca331f3ae9b4516dbcf7f00de3d2aba",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T05/notes.txt",
+      "sha256": "f04840a19cda96d8cd7ef564f2ccda1cfeff416b4f67ce1d3e918acae5dba0d4",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T05/notes.txt.metadata.yaml",
+      "sha256": "4b2258ad38235131f7badf33928d39802a868dde4adb99204b59f631d3401e5b",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T05/procedure.pdf",
+      "sha256": "766c200ef017ceecd39dc2e81d8fa617879e7b4c0ff3d9acd9b599cd91822c15",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T05/procedure.pdf.metadata.yaml",
+      "sha256": "d56adeff43a5d5f418deb68e54b7cacba0bf9274d906b88e6f28174815e25514",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T05/rules.md",
+      "sha256": "914d7057f8dbb1b996cc730dd82ec239d7c108eee470b4d04a3f36e76d9ca920",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/corpus/tuning/T05/rules.md.metadata.yaml",
+      "sha256": "eea3c51b04ff783f3a02532e8c1c3d74f0d1b11e25984f4e1714facc12dafbac",
+      "kind": "fixture",
+      "purpose": "Synthetic source or metadata; not imported"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/datasets/holdout.json",
+      "sha256": "916e9a51583f790627376c48c6741d7eee6b25b91c21bfbcfb295b862bdf5451",
+      "kind": "fixture",
+      "purpose": "Dataset integrity or tooling validation"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/datasets/tuning.json",
+      "sha256": "9b557b1219516e97ffe901f12801483e8fdf91abf170541dacdded166dfe14e0",
+      "kind": "fixture",
+      "purpose": "Dataset integrity or tooling validation"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/docker_parser_audit.py",
+      "sha256": "5b49846fef4f97a44a76909b0cd87c8926b4ed2d5fa7ed959abc0c33ca72095c",
+      "kind": "evaluation_tool",
+      "purpose": "Isolated no-network container parser/chunk audit; no DB/LLM calls"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/documents.json",
+      "sha256": "a3f49f6077f7cf6a073503110877aa5a5da2e3a48f8e571b8c64aa6c6f02b43b",
+      "kind": "evaluation_manifest",
+      "purpose": "Dataset integrity or tooling validation"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/host_inventory.py",
+      "sha256": "427fb537c0cd8c9d779b3a6a34b8740f2dc9547ae4a9955dbf063cd9a33fa579",
+      "kind": "evaluation_tool",
+      "purpose": "Offline evaluation / read-only audit"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/index_fixtures.py",
+      "sha256": "8e9910940e3fcf26b306a9c628ad4e319263ea44e23acfea9afc14ec999f2910",
+      "kind": "evaluation_tool",
+      "purpose": "U0 synthetic-only isolated persistence verification; no production/LLM writes"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/isolated_kis_audit.py",
+      "sha256": "d4e5308d3a7c5ad066727b00b2e2b70dfcb12240849b593ba963f59b5a01fb84",
+      "kind": "evaluation_tool",
+      "purpose": "U0 synthetic-only isolated persistence verification; no production/LLM writes"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/kis_persistence_probe.py",
+      "sha256": "bd9ac611c4bffa1688f2405b69478f19c2cc5b831e4f53864a85b76352c5e213",
+      "kind": "evaluation_tool",
+      "purpose": "U0 synthetic-only isolated persistence verification; no production/LLM writes"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/manifest.json",
+      "sha256": "40794e4027e12221c38710d7aa86da439b782314b07ffc6923b27f68751a1a9b",
+      "kind": "evaluation_manifest",
+      "purpose": "Dataset integrity or tooling validation"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/runner.py",
+      "sha256": "188c43dbc05665626128501f9b9b610f2344a319137586617fbab3a536714abf",
+      "kind": "evaluation_tool",
+      "purpose": "Offline evaluation / read-only audit"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/safety-cases.json",
+      "sha256": "b6d5f6162936cf5ea1943c089c5534c860f1def8e7c55e0de05ababe4b9c0fa9",
+      "kind": "test",
+      "purpose": "Dataset integrity or tooling validation"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/scenarios.json",
+      "sha256": "c29e5f2f1c79acf4cb29f794211575820a3c125606b5945f2aef3f685dd1e1a7",
+      "kind": "fixture",
+      "purpose": "Dataset integrity or tooling validation"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/structure_audit.py",
+      "sha256": "9fe85d7c4d28cffc4c8ca030e70b5b8b70d600deedc3154caf7715f0ecded8a6",
+      "kind": "evaluation_tool",
+      "purpose": "No-network inventory bound to historical canonical KIS hashes"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/structure_probe.py",
+      "sha256": "fab3711be2dbb0efcb02adf936012d647d48e33edc0c76d3f2360d2433ff2984",
+      "kind": "evaluation_tool",
+      "purpose": "Installed-image content-free structure snapshot; no DB or HTTP"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_eval.py",
+      "sha256": "cd24e0fbe146babd77e89b44110bb97dd9c47d3a02509779651cc42be6f8b70e",
+      "kind": "test",
+      "purpose": "Offline evaluation / read-only audit"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_isolated_kis_audit.py",
+      "sha256": "8de5198290f3d0452ca15ff096f4434c82e9f38562bc6efbbddc6e6bbfe6813f",
+      "kind": "test",
+      "purpose": "U0 synthetic-only isolated persistence verification; no production/LLM writes"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_parser_audit.py",
+      "sha256": "66e6ada0cfe882497a132ad59cd08ed2c3d093f747e504760e5a55bf86fa151a",
+      "kind": "test",
+      "purpose": "Evaluation-tool validation and container command safety; not RAG integration"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_structure_audit.py",
+      "sha256": "ed20c5d058108dc6094315dbc0f2857c8612918bc6f2ac92274a29f9a3fa94de",
+      "kind": "evaluation_test",
+      "purpose": "Pure guard tests; not PostgreSQL or RAG quality evidence"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/build_revision_v2.py",
+      "sha256": "bd7fdff4f15035b3adeedaba17d6b585babad535b1dcd9801d3c46d1b33bf6e1",
+      "kind": "tool",
+      "purpose": "Build independent diversified synthetic v2 draft; preserves v1 and does not approve Gold"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/validate_revision_v2.py",
+      "sha256": "067cba55c14b49e3e28b5ef10ca3350726587bcd270335fb4e734cd8d6264f7b",
+      "kind": "tool",
+      "purpose": "Validate v2 hashes/split/Gold draft; runtime and human approval remain separate"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/audit_revision_v2.py",
+      "sha256": "7d16f005c35f8c7900010135b1ce9c7a158bc4d78c16a1bb4ca3a6634253b390",
+      "kind": "tool",
+      "purpose": "Read-only production parser audit of v2 markers/linear cells/pages"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/qa-fonts.conf",
+      "sha256": "f7e912666a875ac1a7e9da53509804971dbfc1826f047e197878d3034e614d10",
+      "kind": "qa_configuration",
+      "purpose": "Workspace-only Fontconfig for Chinese DOCX rendering; no system changes"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revision_v2_payload.py",
+      "sha256": "27de82ddb80986acfff3158d78d1be23172e9e10b0388b738753a7e0caa4866e",
+      "kind": "tool",
+      "purpose": "Installed Ingestion parser/chunker/metadata produces v2 payload through memory-only pipe"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revision_v2_probe.py",
+      "sha256": "8c4d777e3745f965493df1da6cbbc6e328e9b963aa097c48227bf921a971f6cb",
+      "kind": "tool",
+      "purpose": "Bind verified KIS canonical mapping/anchors and collect actual tuning KIS candidates"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/isolated_revision_v2.py",
+      "sha256": "ca39f34c325a649389a2a2dbaa2f49f46d2fded1544683f06c933ab9feac7897",
+      "kind": "tool",
+      "purpose": "Explicit v2 producer/probe projection with inherited exact-ID isolated lifecycle"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tuning_candidates_v2.py",
+      "sha256": "914b8f39bb6faeafb0fa862b2a4f4888cf8549d95a45de1ab02550e99adaeaa7",
+      "kind": "tool",
+      "purpose": "Synthetic-only real KIS HTTP candidates; hash/rank/score projection; no quality scoring"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_revision_v2.py",
+      "sha256": "48f05bc323542ead7929b17fcbf636a8ecf1d33667bd472c3dac0840808cab40",
+      "kind": "test",
+      "purpose": "V2 diversity/source split/draft Gold guards, not human approval"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_revision_persistence.py",
+      "sha256": "14b81b5a5025495b7d3eb521c1d1004ed8e2e86d1c97ab41cf208e65fa4aee99",
+      "kind": "test",
+      "purpose": "V2 invocation/anchor/cell binding guards, not mocked persistence"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_tuning_candidates.py",
+      "sha256": "841fd0a5222dd645e1a5b0bb7ae85c040e74b273c3c75483f47b99dd900c9384",
+      "kind": "test",
+      "purpose": "Canonical candidate projection/private URL/finite latency guards"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H01/catalog.docx",
+      "sha256": "739307fe45c2e028de5d93923f49ebebd7c7050f878c9f0c883e32ac7e1b9083",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H01/catalog.docx.metadata.yaml",
+      "sha256": "21a81fda94938de3736c1163c50ef9b18360804c382011e0a2f793a453077945",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H01/notes.txt",
+      "sha256": "ddddb4168181540d35e9fc543238bc7ed3435f71a13382b96a4cbc2b8fde8969",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H01/notes.txt.metadata.yaml",
+      "sha256": "a7a76307052f7987fce5b7167c76f3b3289c317e83b1e524a40d84ccaf2c53f0",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H01/procedure.pdf",
+      "sha256": "f0987c8fc86ef5707b374345d153e46fc10c4f915840152c69388029eaf324bd",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H01/procedure.pdf.metadata.yaml",
+      "sha256": "645dbf94bf63871338e1981667dc48db7472fa039c1e586fe621a1cc5aff29cb",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H01/rules.md",
+      "sha256": "28a8b753c8780cb545ab72bd9f1f67081a740267fc6ef31556d5515cf8c09653",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H01/rules.md.metadata.yaml",
+      "sha256": "0222b1e4fd6c0386d874aeb7e3d507ee47a11a4288b4c3b82e3242d4cd5dc7c7",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H02/catalog.docx",
+      "sha256": "d1e55f687ce0407b78b4a01044222ee7d17906bb4063d7318e1e3ddcf2e3bb80",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H02/catalog.docx.metadata.yaml",
+      "sha256": "feede625369a7e01d5f726d5d024ae961bf7b8c7d1cfd808816a1091e127da4e",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H02/notes.txt",
+      "sha256": "1f970868306f7d92e3943c9a7b9e3c7a1e048f288f401f60a8cb08acdc01371a",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H02/notes.txt.metadata.yaml",
+      "sha256": "f374d98d3370de91a5ab0e7655d75bc61e1990cdf90c7f7b0228bd7060fc95dd",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H02/procedure.pdf",
+      "sha256": "c0e58a9a13f40fbbb18bfeb632cd3ca485cf568e7481595cdc013976503c7226",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H02/procedure.pdf.metadata.yaml",
+      "sha256": "97b077c772245ad338b12cc554ec2438911baeb25f07e7c18ef3248d3b4753f7",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H02/rules.md",
+      "sha256": "ffbf46e96486e23b61b8f515957f3f03ae1189baa3923259ffe5a964867fb04a",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H02/rules.md.metadata.yaml",
+      "sha256": "ddab845e8abab9a51d17fb95f7fdce62446a1dd442c9feadb7e80912c081ff1d",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H03/catalog.docx",
+      "sha256": "8377d81793668b93f8d9163b9ff75a1d76185f0f38c2ee24517de61c6cf789f8",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H03/catalog.docx.metadata.yaml",
+      "sha256": "3c4d8dbbdbca30c211feafa21329f93b8a9ef9da9a24477311c56aa0a275fb95",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H03/notes.txt",
+      "sha256": "e62ef61206366230ab9660a74fe5f6882d3118f278e320cbe235ec2273a6cdf2",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H03/notes.txt.metadata.yaml",
+      "sha256": "25af7a833bb6b554656c8b8e03b83c56fe8d5ac9015a793864f8aa733ed845a3",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H03/procedure.pdf",
+      "sha256": "a7bced292249afc2faceac2f1960cda80c403be4ca7839ac3bfc961bf94cf091",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H03/procedure.pdf.metadata.yaml",
+      "sha256": "c15be5690910f03f059146fc474332f50cb9ddad84cb5a72d5fdf76d2beddead",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H03/rules.md",
+      "sha256": "6a893ce4dbdff06416ded45f65ecda80ce9029f289f99b9e47cc8c9e07dc5c71",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H03/rules.md.metadata.yaml",
+      "sha256": "dd75cead442508e3101c8d4512d2a39affc7f7b7f8e9c30d45f966c75f9ed0bd",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H04/catalog.docx",
+      "sha256": "c2c6608cbf6a03d1967ba7423b1acd2bfe8522ae2c1e9fb2aabee3db4eb7ad20",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H04/catalog.docx.metadata.yaml",
+      "sha256": "af11b093ed70f254552a36bb48b3437ea049446a2007ec179779d53bd37a50d7",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H04/notes.txt",
+      "sha256": "573015b2f01c2ac2092e60568add62a2e664f5d309be0ec538dc09c5b0dfa71f",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H04/notes.txt.metadata.yaml",
+      "sha256": "9b6857cca123ac72d24535dcdb35e0ac3ede7dae4f83ef00e35cdb1e73cafbe5",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H04/procedure.pdf",
+      "sha256": "b2cb85aaf380bed19f44a8ead01a586c24791575ddfbabb26b0a89546844b223",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H04/procedure.pdf.metadata.yaml",
+      "sha256": "f3c152405670ce1313ec488ff8b199b84520bf12983e82c76e2c74073ce4c4aa",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H04/rules.md",
+      "sha256": "f675d746e2a0b26f20e6c400018c2b0a054126f0aba39580bf3302bd9ffda5f4",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H04/rules.md.metadata.yaml",
+      "sha256": "689c1aa7f208a15abe0b420341d0c625d0575d60df7c3f3ec77dd77e4ecd81e7",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H05/catalog.docx",
+      "sha256": "9c32f36486982432de1a3f2f59ecc07e3fe54c0f3405facc0f1f17e49133120f",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H05/catalog.docx.metadata.yaml",
+      "sha256": "6d4f17e88f69ce15c3716257dc4ec8f7e43d14c2de76d07ec67c74872ce13689",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H05/notes.txt",
+      "sha256": "21c5119ed7246209ca165e982caccf634269b8794700ef9ad0a8f9d10f3a69d5",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H05/notes.txt.metadata.yaml",
+      "sha256": "19a97297049bdeecee35ac94eb68d50dc7a718ab1c346da8464fb815fc9c40a7",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H05/procedure.pdf",
+      "sha256": "ab6c8945b1ef7600d11391610a191396c4b6be411572e5eccfcc943a8fc3d11f",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H05/procedure.pdf.metadata.yaml",
+      "sha256": "72a8aaa9e118dd9fd35d64621a37b2d2194c844e26a07660f1877b77430c8ea5",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H05/rules.md",
+      "sha256": "312deffe390ac8312b54c566256cb758d52b88139b4c856d9eca431cbcb79332",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/holdout/H05/rules.md.metadata.yaml",
+      "sha256": "5a2a5bda3f279897d969db0d66c68032e36448fad1f6526860555177f5351413",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T01/catalog.docx",
+      "sha256": "87c91f88c9da484a5728a19a47affd9c6b8a6e4df433addb8265373a06aab017",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T01/catalog.docx.metadata.yaml",
+      "sha256": "93541c84d72a9dfaf9b1af9f139cab8617b935a88d46010d75de5e3cdf006d01",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T01/notes.txt",
+      "sha256": "895d3722d02359ee5d8183ee56049e3959665877227116cf0b4c68377a2b9d25",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T01/notes.txt.metadata.yaml",
+      "sha256": "f683bd42a1d3d2b7b3edaf0c16476825cbdc1cef73e01e921e220868e55181f2",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T01/procedure.pdf",
+      "sha256": "c46030b6528e93d7fe05bfc02461e094339909edd2487077003845cbed4e3b90",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T01/procedure.pdf.metadata.yaml",
+      "sha256": "82437e57de5de82632a40a081e2e7699c16b8cef5f0c69be964b5d7226d0ab98",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T01/rules.md",
+      "sha256": "809a2295270e7e67450d7f750634e10978d2cedd646f33fd8ac553ff240b6462",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T01/rules.md.metadata.yaml",
+      "sha256": "0bc28f69d64232ff0a6a263e78526f5c57044882e2fb71d9a75e3bc8893eb323",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T02/catalog.docx",
+      "sha256": "d8d7c1baee3961b563feb6cbb1d8564a1e273dce7fa5d77e7f879088cbb87a29",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T02/catalog.docx.metadata.yaml",
+      "sha256": "670691024f096dceaaed32571b35cc36a543223b115c61b6ed5bafa876bd0f3f",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T02/notes.txt",
+      "sha256": "b691621959cf438d3e5e73c968a1e32d999142c880c5835b9da57d147d3bacd2",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T02/notes.txt.metadata.yaml",
+      "sha256": "58ff840e1e3538a6b0888d630e9aedfe8fe94590e6da1caec5e8cb0fa6317201",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T02/procedure.pdf",
+      "sha256": "1e1aac06a6db687a6c9293e41a3dfaa47b39c3864b4c3ce3d52631aa69939469",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T02/procedure.pdf.metadata.yaml",
+      "sha256": "e23fdc48eb99da9851087d3f1419f48f85a7666ed0180160500ca27e977613b0",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T02/rules.md",
+      "sha256": "89b55a7314f7fdb4937e96c480966aec32f25416b20e581f30fa0b8dff8974ec",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T02/rules.md.metadata.yaml",
+      "sha256": "43a0ed8a2f29ad3465c9a5780817da4cf460440899e7597b5ad695f99882dd17",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T03/catalog.docx",
+      "sha256": "fc4b7fcfa3a91a879b206080dcf10aa020211a828dd91d8ce2a0972421fb53e8",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T03/catalog.docx.metadata.yaml",
+      "sha256": "2f739a904435cabc4179d55254c3870210ef5a632a8e6d4acf67371394dc2206",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T03/notes.txt",
+      "sha256": "b22891d9a0bb5fd63c303b27f09a1c105267664e4a20aece6bd064434d0648aa",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T03/notes.txt.metadata.yaml",
+      "sha256": "76426ba9b9210acb738a231bda68f8c05d601972838fac0478342d60bfcc11b7",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T03/procedure.pdf",
+      "sha256": "64b0a09f475d246b4b0c39396c1e58e1f563275f0219b79d5c3bad55861af510",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T03/procedure.pdf.metadata.yaml",
+      "sha256": "6d0463ca50a2a46480554bdd6d6313f9948d783dc9108e91497b169067645254",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T03/rules.md",
+      "sha256": "8c6d344db430cc61e1ac8e881d92b23c15122d27fc083e0e7aebaa177b023d41",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T03/rules.md.metadata.yaml",
+      "sha256": "1aabb9cb7f162fd52b64346b72af7760311688df64afcad92c88e7b17b3e84a7",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T04/catalog.docx",
+      "sha256": "5bf00502c277fb46a4a42ba000a07b47a24fafb619e5dd38a3cfef8ce7ea6493",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T04/catalog.docx.metadata.yaml",
+      "sha256": "3c6eef00c903e2156fb6bd4965eed46be50f25b73a9269d684c2ebd387c5800a",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T04/notes.txt",
+      "sha256": "7c2f31a9d13fd7111d31f483eaacdf40fb24f67a1947e56a527300eb344df73c",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T04/notes.txt.metadata.yaml",
+      "sha256": "cd7c8ced09032dadf6d0b25e975934b271b505de83a63599f29ecc80391f952e",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T04/procedure.pdf",
+      "sha256": "a637a1eab6e1bd901e6caffac64109967519412c472021c5a8d251b291868aca",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T04/procedure.pdf.metadata.yaml",
+      "sha256": "d8d5a071cd8d3120e6e2c9fe5461f3178281f7cb565db36ce0a65a033af4740c",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T04/rules.md",
+      "sha256": "67d76681eda8e892d27d6ae8d891246cc17dcc63e2ddd4b7a8f427317bb348ca",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T04/rules.md.metadata.yaml",
+      "sha256": "2ffc6b3e0aba4417bbad34f4874de73da15bfedb78093adf06c007739b9f322f",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T05/catalog.docx",
+      "sha256": "6e32f4a4e2f52bce9d427fcdc29a4f582c10a7c4527ab638c32dc7e5fc9d097b",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T05/catalog.docx.metadata.yaml",
+      "sha256": "ff74cde1db8eb85a213d5e7f37f9a0e9db9fd8a022b9c3dfba1ee33603f40048",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T05/notes.txt",
+      "sha256": "9d17fd6acdb88053517e255b3040a39b7e295b7fe8216b67929750c32245af2a",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T05/notes.txt.metadata.yaml",
+      "sha256": "59171da37caf507bb1cb5e04422e5868f0f83f15687d194f9dd8c8295d28da7d",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T05/procedure.pdf",
+      "sha256": "508dfbdd070258943fe3c4504fab5a9d2e145718f6d6e36bbfc33342f167b7f6",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T05/procedure.pdf.metadata.yaml",
+      "sha256": "546bc672f2e9dc378806dcd48ee839704e92901e70dd0d99549d351920377d2e",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T05/rules.md",
+      "sha256": "1b1d0dcd8172672242e918a0b730a43885ae73ff8b2138e08ae3762bc0ee78d9",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/corpus/tuning/T05/rules.md.metadata.yaml",
+      "sha256": "f6a260a5b97c2ef0c70f7a4afbd269da8c4261dabcd8137288ddb7025e4d7b36",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/datasets/holdout.json",
+      "sha256": "2bb3b52058da6c55265138e0c656e12279a8d05c9be4fa383aa6b79988deb3b6",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/datasets/tuning.json",
+      "sha256": "d34901c734160303c2bc9f8ce8a2506635c323262ac7125eade732bddfd9ffb0",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/documents.json",
+      "sha256": "39f606e0c1764bfc8a1c76d513844d19d70be2283e81c30fdaa5f20607bcbe01",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/lineage.json",
+      "sha256": "011e7616dcbb9a7934218c08566b4a1381e15860fcf71b113b5fd922f43eb296",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/manifest.json",
+      "sha256": "09c9185ff12a773ab623be1f61ef03ddfc594f5ce28148f0ad5668a61e3b1ad2",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/safety-cases.json",
+      "sha256": "019f1275bdbc07556dd7166d9bd4eec926dc3ccc0a6fb0d61135db25895798fe",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/revisions/u0-synthetic-v2/scenarios.json",
+      "sha256": "5baf91cc6d4d070c0ba2296a680bcf5e25b937b4b191a2a20e70dd44e2214116",
+      "kind": "synthetic_fixture",
+      "purpose": "Independent v2 synthetic source/metadata/Gold/lineage draft; human review pending"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/retrieval_trace_v2.py",
+      "sha256": "8a6af24eca42d5bfe8087dabb503d108f64aea5eb3ccc3a349a083b4bbec9190",
+      "kind": "evaluation_tool",
+      "purpose": "Installed Retrieval usecase/real KIS HTTP restricted trace with canonical guards"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/isolated_retrieval_v2.py",
+      "sha256": "531fb97aa740a29a374a1fc85d3ce847be0a8ca28774f6e76ee13d642bc1220b",
+      "kind": "evaluation_tool",
+      "purpose": "Owned synthetic-only lifecycle, live policy whitelist, trace/load and exact-ID cleanup"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/retrieval_load_v2.py",
+      "sha256": "466f1e80c1054a5cb55725fade6fed30f073ff31abf1ba84f584efeba42a10a4",
+      "kind": "evaluation_tool",
+      "purpose": "Three concurrent client lanes retain all 120 canonical-validated outcomes with bounded projection"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/cgroup_resources_v2.py",
+      "sha256": "5a8fb95ca70eb8abb7333419f18a798cb0b815dc9eaddb08198424e3941292b8",
+      "kind": "evaluation_tool",
+      "purpose": "Read-only owned cgroup CPU/RAM window; explicit lifetime peak scope"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/gold_review_v2.py",
+      "sha256": "cea2f307fab233aeb8b7bcfae332ee1d4db2954571c6eda4028a119477f56370",
+      "kind": "evaluation_tool",
+      "purpose": "Hash-bound human Gold record structural validator; never approves or freezes"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/gold-review-v2.template.json",
+      "sha256": "2d903d6edaf4b7a9468f206d50a586188eb1e7054a3673f1f5c650c6deceabe7",
+      "kind": "evaluation_fixture",
+      "purpose": "80 pending human-review rows, no approval or private reviewer identity"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_retrieval_trace.py",
+      "sha256": "4dc28652fcb0b49b687ebd0fca3a90be677e4f95f6a961f961a2b5938968a046",
+      "kind": "test",
+      "purpose": "Canonical projection, governance, body-free and bounded readiness guards"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_retrieval_load.py",
+      "sha256": "813884823cb2a4e79ed30b72ec1b9e45a002f2d05f1aba0d1633bff02ad4fe7a",
+      "kind": "test",
+      "purpose": "All-run retention, bounded projection and cgroup numeric/counter guards"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_gold_review.py",
+      "sha256": "363d7a80ce305e1b18b4a1b034227d07c5ada9994b0fea73e2b16b8d697f7e14",
+      "kind": "test",
+      "purpose": "Human review/hash/check/independence guards; schema validity cannot claim quality PASS"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/retrieval_metrics_v2.py",
+      "sha256": "0ecd6671a3c300c20324d326c6c21605f8f3de90696a26bd5f0e2779cf856eb3",
+      "kind": "evaluation-tool",
+      "purpose": "Read-only hash-bound human relevance validator and graded retrieval metrics; never auto-approve"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tuning-relevance-v2.template.json",
+      "sha256": "52c57a31c19681d940af52800fa511a9d78ad8dd98a61c102928531a241b957b",
+      "kind": "evaluation-data",
+      "purpose": "All 40 tuning relevance rows pending; immutable 91 canonical source catalog"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/relevance-protocol-v1.md",
+      "sha256": "8cf159962388fdc052729e36d470602ef1e83c7442bac7f806bc32d0f3532186",
+      "kind": "documentation",
+      "purpose": "Draft human grading and entry-equivalence protocol with explicit limits and primary sources"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_retrieval_metrics.py",
+      "sha256": "cae249efb32c4441bb7104003fe8265933e4ebb42652d6303f037a4c09e3a980",
+      "kind": "evaluation-test",
+      "purpose": "22 offline math and input guards; toy observations are not service quality evidence"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/arm_cpu_probe.py",
+      "sha256": "f1ef9ce99fc4e342392f269534528c6cd2c949001440c807e33dd9635d2e3dca",
+      "kind": "evaluation-tool",
+      "purpose": "Installed ARM parser and CPU embedding probe; no network or DB"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/arm_cpu_audit.py",
+      "sha256": "530442b8f2f40c6e052a7f27b32f40a1f6a6dc667a46cf728328e9991a3c2f04",
+      "kind": "evaluation-tool",
+      "purpose": "Local ARM no-network lifecycle, exact cleanup, source parity and compatibility guards"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_arm_cpu_audit.py",
+      "sha256": "705198a359f33300a29f283c297d4952987a7c61c818c69011962f00ae7605ea",
+      "kind": "evaluation-test",
+      "purpose": "Seven offline ARM guard tests; not runtime or business-quality evidence"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/freeze_dataset_v2.py",
+      "sha256": "a7382f35a5e256a7e899cbad766693363bbdae6628407e1264ab3e45ed384c5a",
+      "kind": "evaluation-tool",
+      "purpose": "Human-only dataset/Gold/tuning-relevance hash-bound freeze, atomic no-clobber and verification; no provider calls"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/tests/test_freeze_dataset.py",
+      "sha256": "9814279b1ebb22f69372ba0f11aab5d18ca5c31f137008f02d58ee929f4e0111",
+      "kind": "evaluation-test",
+      "purpose": "22 offline or temporary-directory freeze guards; toy approvals are not real human evidence"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/evals/rag-upgrade-v1/u0-human-sample-review.md",
+      "sha256": "e9dbbb0cbcca6bfc77e342091b793302e885bc7896bee9cccd2ea847b6c8d70f",
+      "kind": "doc",
+      "purpose": "Fixed 16-case human sample review for user-approved preliminary U0; draft Gold and source links, no fabricated approvals"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-contracts.md",
+      "sha256": "b93e29b067bcc98ff0432cefc3dcf5c37ebdbf15358e796d9233c5c7941c4d2b",
+      "kind": "contract_proposal",
+      "purpose": "U1 cross-service v2 contract draft; decisions and independent review pending; not a production API"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-golden-vectors.json",
+      "sha256": "44fd5e188f4eced5a065c056ce97b80894fd9bb24167bcfd16bc69c6b3c5979b",
+      "kind": "contract_golden_vector",
+      "purpose": "U1 synthetic RFC8032/JCS/Ed25519 v2 proposal vectors; never deploy test key"
+    },
+    {
+      "path": "/Users/markhuang/Documents/Codex/2026-07-23/new-chat/docs/rag-upgrade-v1-vector-verification.md",
+      "sha256": "b9fda85f264a34c8e227c70135aaf4cb10d308ed546f9b6fe6b6f32712fbd550",
+      "kind": "contract_verification_document",
+      "purpose": "Reproducible read-only Python/Node fixture checks; not v2 service runtime tests"
+    }
+  ]
+}

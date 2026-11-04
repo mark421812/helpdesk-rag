@@ -1,0 +1,1422 @@
+[
+  {
+    "group": "T01",
+    "completeness": "complete",
+    "rows": [
+      {
+        "unit_id": "甲單位",
+        "item_code": "K001",
+        "name": "Python 基礎",
+        "qualification": "全體正式員工",
+        "fee": 800,
+        "status": "暫停",
+        "anchor": "R-T01-001",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K001",
+        "name": "Python 基礎",
+        "qualification": "任職滿六個月",
+        "fee": 1200,
+        "status": "暫停",
+        "anchor": "R-T01-002",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K002",
+        "name": "教育訓練補助項目03",
+        "qualification": "主管推薦",
+        "fee": 600,
+        "status": "暫停",
+        "anchor": "R-T01-003",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K002",
+        "name": "教育訓練補助項目04",
+        "qualification": "全體正式員工",
+        "fee": 800,
+        "status": "暫停",
+        "anchor": "R-T01-004",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K001",
+        "name": "Python 基礎",
+        "qualification": "全體正式員工",
+        "fee": 800,
+        "status": "暫停",
+        "anchor": "R-T01-005",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "group": "T02",
+    "completeness": "complete",
+    "rows": [
+      {
+        "unit_id": "甲單位",
+        "item_code": "K001",
+        "name": "資料庫快照",
+        "qualification": "資料庫維運人員",
+        "fee": 40,
+        "status": "開放",
+        "anchor": "R-T02-001",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K001",
+        "name": "資料庫快照",
+        "qualification": "值班維運人員",
+        "fee": 15,
+        "status": "暫停",
+        "anchor": "R-T02-002",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K002",
+        "name": "測試環境備份項目03",
+        "qualification": "系統管理員",
+        "fee": 8,
+        "status": "暫停",
+        "anchor": "R-T02-003",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K002",
+        "name": "測試環境備份項目04",
+        "qualification": "資料庫維運人員",
+        "fee": 40,
+        "status": "暫停",
+        "anchor": "R-T02-004",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K003",
+        "name": "測試環境備份項目05",
+        "qualification": "值班維運人員",
+        "fee": 15,
+        "status": "暫停",
+        "anchor": "R-T02-005",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K001",
+        "name": "資料庫快照",
+        "qualification": "資料庫維運人員",
+        "fee": 40,
+        "status": "開放",
+        "anchor": "R-T02-006",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "group": "T03",
+    "completeness": "complete",
+    "rows": [
+      {
+        "unit_id": "甲單位",
+        "item_code": "K001",
+        "name": "簡報投影機",
+        "qualification": "有公務簡報需求",
+        "fee": 0,
+        "status": "開放",
+        "anchor": "R-T03-001",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K001",
+        "name": "簡報投影機",
+        "qualification": "有跨站會議需求",
+        "fee": 100,
+        "status": "開放",
+        "anchor": "R-T03-002",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K002",
+        "name": "公務設備借用項目03",
+        "qualification": "有核准錄音需求",
+        "fee": 50,
+        "status": "開放",
+        "anchor": "R-T03-003",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K002",
+        "name": "公務設備借用項目04",
+        "qualification": "有公務簡報需求",
+        "fee": 0,
+        "status": "暫停",
+        "anchor": "R-T03-004",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K003",
+        "name": "公務設備借用項目05",
+        "qualification": "有跨站會議需求",
+        "fee": 100,
+        "status": "暫停",
+        "anchor": "R-T03-005",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K003",
+        "name": "公務設備借用項目06",
+        "qualification": "有核准錄音需求",
+        "fee": 50,
+        "status": "暫停",
+        "anchor": "R-T03-006",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K004",
+        "name": "公務設備借用項目07",
+        "qualification": "有公務簡報需求",
+        "fee": 0,
+        "status": "暫停",
+        "anchor": "R-T03-007",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K001",
+        "name": "簡報投影機",
+        "qualification": "有公務簡報需求",
+        "fee": 0,
+        "status": "開放",
+        "anchor": "R-T03-008",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "group": "T04",
+    "completeness": "missing_page",
+    "rows": [
+      {
+        "unit_id": "甲單位",
+        "item_code": "K001",
+        "name": "測試入口憑證",
+        "qualification": "入口維運人員",
+        "fee": 30,
+        "status": "開放",
+        "anchor": "R-T04-001",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K001",
+        "name": "測試入口憑證",
+        "qualification": "代理維運人員",
+        "fee": 20,
+        "status": "開放",
+        "anchor": "R-T04-002",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K002",
+        "name": "測試憑證輪替項目03",
+        "qualification": "測試負責人",
+        "fee": 10,
+        "status": "開放",
+        "anchor": "R-T04-003",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K002",
+        "name": "測試憑證輪替項目04",
+        "qualification": "入口維運人員",
+        "fee": 30,
+        "status": "開放",
+        "anchor": "R-T04-004",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K003",
+        "name": "測試憑證輪替項目05",
+        "qualification": "代理維運人員",
+        "fee": 20,
+        "status": "開放",
+        "anchor": "R-T04-005",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K003",
+        "name": "測試憑證輪替項目06",
+        "qualification": "測試負責人",
+        "fee": 10,
+        "status": "開放",
+        "anchor": "R-T04-006",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K004",
+        "name": "測試憑證輪替項目07",
+        "qualification": "入口維運人員",
+        "fee": 30,
+        "status": "開放",
+        "anchor": "R-T04-007",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K004",
+        "name": "測試憑證輪替項目08",
+        "qualification": "代理維運人員",
+        "fee": 20,
+        "status": "開放",
+        "anchor": "R-T04-008",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "group": "T05",
+    "completeness": "complete",
+    "rows": [
+      {
+        "unit_id": "甲單位",
+        "item_code": "K001",
+        "name": "北區會議室",
+        "qualification": "三人以上會議",
+        "fee": 200,
+        "status": "開放",
+        "anchor": "R-T05-001",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K001",
+        "name": "北區會議室",
+        "qualification": "六人以上會議",
+        "fee": 300,
+        "status": "開放",
+        "anchor": "R-T05-002",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K002",
+        "name": "會議室預約項目03",
+        "qualification": "跨部門活動",
+        "fee": 150,
+        "status": "開放",
+        "anchor": "R-T05-003",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K002",
+        "name": "會議室預約項目04",
+        "qualification": "三人以上會議",
+        "fee": 200,
+        "status": "開放",
+        "anchor": "R-T05-004",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K003",
+        "name": "會議室預約項目05",
+        "qualification": "六人以上會議",
+        "fee": 300,
+        "status": "開放",
+        "anchor": "R-T05-005",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K003",
+        "name": "會議室預約項目06",
+        "qualification": "跨部門活動",
+        "fee": 150,
+        "status": "開放",
+        "anchor": "R-T05-006",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K004",
+        "name": "會議室預約項目07",
+        "qualification": "三人以上會議",
+        "fee": 200,
+        "status": "開放",
+        "anchor": "R-T05-007",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K004",
+        "name": "會議室預約項目08",
+        "qualification": "六人以上會議",
+        "fee": 300,
+        "status": "開放",
+        "anchor": "R-T05-008",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K001",
+        "name": "北區會議室",
+        "qualification": "三人以上會議",
+        "fee": 200,
+        "status": "開放",
+        "anchor": "R-T05-009",
+        "page": 2
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K005",
+        "name": "會議室預約項目09",
+        "qualification": "跨部門活動",
+        "fee": 150,
+        "status": "開放",
+        "anchor": "R-T05-010",
+        "page": 2
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K005",
+        "name": "會議室預約項目10",
+        "qualification": "三人以上會議",
+        "fee": 200,
+        "status": "開放",
+        "anchor": "R-T05-011",
+        "page": 2
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K006",
+        "name": "會議室預約項目11",
+        "qualification": "六人以上會議",
+        "fee": 300,
+        "status": "開放",
+        "anchor": "R-T05-012",
+        "page": 2
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K006",
+        "name": "會議室預約項目12",
+        "qualification": "跨部門活動",
+        "fee": 150,
+        "status": "開放",
+        "anchor": "R-T05-013",
+        "page": 2
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K007",
+        "name": "會議室預約項目13",
+        "qualification": "三人以上會議",
+        "fee": 200,
+        "status": "開放",
+        "anchor": "R-T05-014",
+        "page": 2
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K007",
+        "name": "會議室預約項目14",
+        "qualification": "六人以上會議",
+        "fee": 300,
+        "status": "開放",
+        "anchor": "R-T05-015",
+        "page": 2
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K008",
+        "name": "會議室預約項目15",
+        "qualification": "跨部門活動",
+        "fee": 150,
+        "status": "開放",
+        "anchor": "R-T05-016",
+        "page": 2
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K008",
+        "name": "會議室預約項目16",
+        "qualification": "三人以上會議",
+        "fee": 200,
+        "status": "開放",
+        "anchor": "R-T05-017",
+        "page": 3
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K009",
+        "name": "會議室預約項目17",
+        "qualification": "六人以上會議",
+        "fee": 300,
+        "status": "開放",
+        "anchor": "R-T05-018",
+        "page": 3
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K009",
+        "name": "會議室預約項目18",
+        "qualification": "跨部門活動",
+        "fee": 150,
+        "status": "開放",
+        "anchor": "R-T05-019",
+        "page": 3
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K010",
+        "name": "會議室預約項目19",
+        "qualification": "三人以上會議",
+        "fee": 200,
+        "status": "開放",
+        "anchor": "R-T05-020",
+        "page": 3
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K010",
+        "name": "會議室預約項目20",
+        "qualification": "六人以上會議",
+        "fee": 300,
+        "status": "開放",
+        "anchor": "R-T05-021",
+        "page": 3
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K011",
+        "name": "會議室預約項目21",
+        "qualification": "跨部門活動",
+        "fee": 150,
+        "status": "開放",
+        "anchor": "R-T05-022",
+        "page": 3
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K011",
+        "name": "會議室預約項目22",
+        "qualification": "三人以上會議",
+        "fee": 200,
+        "status": "開放",
+        "anchor": "R-T05-023",
+        "page": 3
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K012",
+        "name": "會議室預約項目23",
+        "qualification": "六人以上會議",
+        "fee": 300,
+        "status": "開放",
+        "anchor": "R-T05-024",
+        "page": 3
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K012",
+        "name": "會議室預約項目24",
+        "qualification": "跨部門活動",
+        "fee": 150,
+        "status": "開放",
+        "anchor": "R-T05-025",
+        "page": 4
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K013",
+        "name": "會議室預約項目25",
+        "qualification": "三人以上會議",
+        "fee": 200,
+        "status": "開放",
+        "anchor": "R-T05-026",
+        "page": 4
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K013",
+        "name": "會議室預約項目26",
+        "qualification": "六人以上會議",
+        "fee": 300,
+        "status": "開放",
+        "anchor": "R-T05-027",
+        "page": 4
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K014",
+        "name": "會議室預約項目27",
+        "qualification": "跨部門活動",
+        "fee": 150,
+        "status": "開放",
+        "anchor": "R-T05-028",
+        "page": 4
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K014",
+        "name": "會議室預約項目28",
+        "qualification": "三人以上會議",
+        "fee": 200,
+        "status": "開放",
+        "anchor": "R-T05-029",
+        "page": 4
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K015",
+        "name": "會議室預約項目29",
+        "qualification": "六人以上會議",
+        "fee": 300,
+        "status": "開放",
+        "anchor": "R-T05-030",
+        "page": 4
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K015",
+        "name": "會議室預約項目30",
+        "qualification": "跨部門活動",
+        "fee": 150,
+        "status": "開放",
+        "anchor": "R-T05-031",
+        "page": 4
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K016",
+        "name": "會議室預約項目31",
+        "qualification": "三人以上會議",
+        "fee": 200,
+        "status": "開放",
+        "anchor": "R-T05-032",
+        "page": 4
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K016",
+        "name": "會議室預約項目32",
+        "qualification": "六人以上會議",
+        "fee": 300,
+        "status": "開放",
+        "anchor": "R-T05-033",
+        "page": 5
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K017",
+        "name": "會議室預約項目33",
+        "qualification": "跨部門活動",
+        "fee": 150,
+        "status": "開放",
+        "anchor": "R-T05-034",
+        "page": 5
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K017",
+        "name": "會議室預約項目34",
+        "qualification": "三人以上會議",
+        "fee": 200,
+        "status": "開放",
+        "anchor": "R-T05-035",
+        "page": 5
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K018",
+        "name": "會議室預約項目35",
+        "qualification": "六人以上會議",
+        "fee": 300,
+        "status": "開放",
+        "anchor": "R-T05-036",
+        "page": 5
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K018",
+        "name": "會議室預約項目36",
+        "qualification": "跨部門活動",
+        "fee": 150,
+        "status": "開放",
+        "anchor": "R-T05-037",
+        "page": 5
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K019",
+        "name": "會議室預約項目37",
+        "qualification": "三人以上會議",
+        "fee": 200,
+        "status": "暫停",
+        "anchor": "R-T05-038",
+        "page": 5
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K019",
+        "name": "會議室預約項目38",
+        "qualification": "六人以上會議",
+        "fee": 300,
+        "status": "暫停",
+        "anchor": "R-T05-039",
+        "page": 5
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K020",
+        "name": "會議室預約項目39",
+        "qualification": "跨部門活動",
+        "fee": 150,
+        "status": "暫停",
+        "anchor": "R-T05-040",
+        "page": 5
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K020",
+        "name": "會議室預約項目40",
+        "qualification": "三人以上會議",
+        "fee": 200,
+        "status": "暫停",
+        "anchor": "R-T05-041",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "group": "H01",
+    "completeness": "complete",
+    "rows": [
+      {
+        "unit_id": "甲單位",
+        "item_code": "K001",
+        "name": "藍色部署",
+        "qualification": "版本管理員",
+        "fee": 55,
+        "status": "暫停",
+        "anchor": "R-H01-001",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K001",
+        "name": "藍色部署",
+        "qualification": "平台管理員",
+        "fee": 70,
+        "status": "暫停",
+        "anchor": "R-H01-002",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K002",
+        "name": "版本发布演練項目03",
+        "qualification": "測試協調員",
+        "fee": 45,
+        "status": "暫停",
+        "anchor": "R-H01-003",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K002",
+        "name": "版本发布演練項目04",
+        "qualification": "版本管理員",
+        "fee": 55,
+        "status": "暫停",
+        "anchor": "R-H01-004",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K001",
+        "name": "藍色部署",
+        "qualification": "版本管理員",
+        "fee": 55,
+        "status": "暫停",
+        "anchor": "R-H01-005",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "group": "H02",
+    "completeness": "complete",
+    "rows": [
+      {
+        "unit_id": "甲單位",
+        "item_code": "K001",
+        "name": "河岸線",
+        "qualification": "河岸辦公區員工",
+        "fee": 60,
+        "status": "開放",
+        "anchor": "R-H02-001",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K001",
+        "name": "河岸線",
+        "qualification": "山城辦公區員工",
+        "fee": 90,
+        "status": "開放",
+        "anchor": "R-H02-002",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K002",
+        "name": "交通接駁登記項目03",
+        "qualification": "海港辦公區員工",
+        "fee": 75,
+        "status": "暫停",
+        "anchor": "R-H02-003",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K002",
+        "name": "交通接駁登記項目04",
+        "qualification": "河岸辦公區員工",
+        "fee": 60,
+        "status": "暫停",
+        "anchor": "R-H02-004",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K003",
+        "name": "交通接駁登記項目05",
+        "qualification": "山城辦公區員工",
+        "fee": 90,
+        "status": "暫停",
+        "anchor": "R-H02-005",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K003",
+        "name": "交通接駁登記項目06",
+        "qualification": "海港辦公區員工",
+        "fee": 75,
+        "status": "暫停",
+        "anchor": "R-H02-006",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K001",
+        "name": "河岸線",
+        "qualification": "河岸辦公區員工",
+        "fee": 60,
+        "status": "開放",
+        "anchor": "R-H02-007",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "group": "H03",
+    "completeness": "complete",
+    "rows": [
+      {
+        "unit_id": "甲單位",
+        "item_code": "K001",
+        "name": "延遲告警",
+        "qualification": "服務值班人員",
+        "fee": 12,
+        "status": "開放",
+        "anchor": "R-H03-001",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K001",
+        "name": "延遲告警",
+        "qualification": "品質值班人員",
+        "fee": 18,
+        "status": "開放",
+        "anchor": "R-H03-002",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K002",
+        "name": "事件告警演練項目03",
+        "qualification": "容量值班人員",
+        "fee": 24,
+        "status": "開放",
+        "anchor": "R-H03-003",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K002",
+        "name": "事件告警演練項目04",
+        "qualification": "服務值班人員",
+        "fee": 12,
+        "status": "開放",
+        "anchor": "R-H03-004",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K003",
+        "name": "事件告警演練項目05",
+        "qualification": "品質值班人員",
+        "fee": 18,
+        "status": "開放",
+        "anchor": "R-H03-005",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K003",
+        "name": "事件告警演練項目06",
+        "qualification": "容量值班人員",
+        "fee": 24,
+        "status": "暫停",
+        "anchor": "R-H03-006",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K004",
+        "name": "事件告警演練項目07",
+        "qualification": "服務值班人員",
+        "fee": 12,
+        "status": "暫停",
+        "anchor": "R-H03-007",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K004",
+        "name": "事件告警演練項目08",
+        "qualification": "品質值班人員",
+        "fee": 18,
+        "status": "暫停",
+        "anchor": "R-H03-008",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K001",
+        "name": "延遲告警",
+        "qualification": "服務值班人員",
+        "fee": 12,
+        "status": "開放",
+        "anchor": "R-H03-009",
+        "page": 2
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K005",
+        "name": "事件告警演練項目09",
+        "qualification": "容量值班人員",
+        "fee": 24,
+        "status": "暫停",
+        "anchor": "R-H03-010",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "group": "H04",
+    "completeness": "partial_visibility",
+    "rows": [
+      {
+        "unit_id": "甲單位",
+        "item_code": "K001",
+        "name": "展示攤位",
+        "qualification": "有核准展示計畫",
+        "fee": 1500,
+        "status": "開放",
+        "anchor": "R-H04-001",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K001",
+        "name": "展示攤位",
+        "qualification": "有互動展示設備",
+        "fee": 2100,
+        "status": "開放",
+        "anchor": "R-H04-002",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K002",
+        "name": "展覽攤位申請項目03",
+        "qualification": "有核准講師名單",
+        "fee": 900,
+        "status": "開放",
+        "anchor": "R-H04-003",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K002",
+        "name": "展覽攤位申請項目04",
+        "qualification": "有核准展示計畫",
+        "fee": 1500,
+        "status": "開放",
+        "anchor": "R-H04-004",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K003",
+        "name": "展覽攤位申請項目05",
+        "qualification": "有互動展示設備",
+        "fee": 2100,
+        "status": "開放",
+        "anchor": "R-H04-005",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K003",
+        "name": "展覽攤位申請項目06",
+        "qualification": "有核准講師名單",
+        "fee": 900,
+        "status": "開放",
+        "anchor": "R-H04-006",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K004",
+        "name": "展覽攤位申請項目07",
+        "qualification": "有核准展示計畫",
+        "fee": 1500,
+        "status": "開放",
+        "anchor": "R-H04-007",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K004",
+        "name": "展覽攤位申請項目08",
+        "qualification": "有互動展示設備",
+        "fee": 2100,
+        "status": "開放",
+        "anchor": "R-H04-008",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "group": "H05",
+    "completeness": "complete",
+    "rows": [
+      {
+        "unit_id": "甲單位",
+        "item_code": "K001",
+        "name": "熱資料區",
+        "qualification": "應用管理員",
+        "fee": 90,
+        "status": "開放",
+        "anchor": "R-H05-001",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K001",
+        "name": "熱資料區",
+        "qualification": "資料管理員",
+        "fee": 35,
+        "status": "開放",
+        "anchor": "R-H05-002",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K002",
+        "name": "儲存容量檢查項目03",
+        "qualification": "測試管理員",
+        "fee": 20,
+        "status": "開放",
+        "anchor": "R-H05-003",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K002",
+        "name": "儲存容量檢查項目04",
+        "qualification": "應用管理員",
+        "fee": 90,
+        "status": "開放",
+        "anchor": "R-H05-004",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K003",
+        "name": "儲存容量檢查項目05",
+        "qualification": "資料管理員",
+        "fee": 35,
+        "status": "開放",
+        "anchor": "R-H05-005",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K003",
+        "name": "儲存容量檢查項目06",
+        "qualification": "測試管理員",
+        "fee": 20,
+        "status": "開放",
+        "anchor": "R-H05-006",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K004",
+        "name": "儲存容量檢查項目07",
+        "qualification": "應用管理員",
+        "fee": 90,
+        "status": "開放",
+        "anchor": "R-H05-007",
+        "page": 1
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K004",
+        "name": "儲存容量檢查項目08",
+        "qualification": "資料管理員",
+        "fee": 35,
+        "status": "開放",
+        "anchor": "R-H05-008",
+        "page": 1
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K001",
+        "name": "熱資料區",
+        "qualification": "應用管理員",
+        "fee": 90,
+        "status": "開放",
+        "anchor": "R-H05-009",
+        "page": 2
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K005",
+        "name": "儲存容量檢查項目09",
+        "qualification": "測試管理員",
+        "fee": 20,
+        "status": "開放",
+        "anchor": "R-H05-010",
+        "page": 2
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K005",
+        "name": "儲存容量檢查項目10",
+        "qualification": "應用管理員",
+        "fee": 90,
+        "status": "開放",
+        "anchor": "R-H05-011",
+        "page": 2
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K006",
+        "name": "儲存容量檢查項目11",
+        "qualification": "資料管理員",
+        "fee": 35,
+        "status": "開放",
+        "anchor": "R-H05-012",
+        "page": 2
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K006",
+        "name": "儲存容量檢查項目12",
+        "qualification": "測試管理員",
+        "fee": 20,
+        "status": "開放",
+        "anchor": "R-H05-013",
+        "page": 2
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K007",
+        "name": "儲存容量檢查項目13",
+        "qualification": "應用管理員",
+        "fee": 90,
+        "status": "開放",
+        "anchor": "R-H05-014",
+        "page": 2
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K007",
+        "name": "儲存容量檢查項目14",
+        "qualification": "資料管理員",
+        "fee": 35,
+        "status": "開放",
+        "anchor": "R-H05-015",
+        "page": 2
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K008",
+        "name": "儲存容量檢查項目15",
+        "qualification": "測試管理員",
+        "fee": 20,
+        "status": "開放",
+        "anchor": "R-H05-016",
+        "page": 2
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K008",
+        "name": "儲存容量檢查項目16",
+        "qualification": "應用管理員",
+        "fee": 90,
+        "status": "開放",
+        "anchor": "R-H05-017",
+        "page": 3
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K009",
+        "name": "儲存容量檢查項目17",
+        "qualification": "資料管理員",
+        "fee": 35,
+        "status": "開放",
+        "anchor": "R-H05-018",
+        "page": 3
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K009",
+        "name": "儲存容量檢查項目18",
+        "qualification": "測試管理員",
+        "fee": 20,
+        "status": "開放",
+        "anchor": "R-H05-019",
+        "page": 3
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K010",
+        "name": "儲存容量檢查項目19",
+        "qualification": "應用管理員",
+        "fee": 90,
+        "status": "開放",
+        "anchor": "R-H05-020",
+        "page": 3
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K010",
+        "name": "儲存容量檢查項目20",
+        "qualification": "資料管理員",
+        "fee": 35,
+        "status": "開放",
+        "anchor": "R-H05-021",
+        "page": 3
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K011",
+        "name": "儲存容量檢查項目21",
+        "qualification": "測試管理員",
+        "fee": 20,
+        "status": "開放",
+        "anchor": "R-H05-022",
+        "page": 3
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K011",
+        "name": "儲存容量檢查項目22",
+        "qualification": "應用管理員",
+        "fee": 90,
+        "status": "開放",
+        "anchor": "R-H05-023",
+        "page": 3
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K012",
+        "name": "儲存容量檢查項目23",
+        "qualification": "資料管理員",
+        "fee": 35,
+        "status": "開放",
+        "anchor": "R-H05-024",
+        "page": 3
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K012",
+        "name": "儲存容量檢查項目24",
+        "qualification": "測試管理員",
+        "fee": 20,
+        "status": "開放",
+        "anchor": "R-H05-025",
+        "page": 4
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K013",
+        "name": "儲存容量檢查項目25",
+        "qualification": "應用管理員",
+        "fee": 90,
+        "status": "開放",
+        "anchor": "R-H05-026",
+        "page": 4
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K013",
+        "name": "儲存容量檢查項目26",
+        "qualification": "資料管理員",
+        "fee": 35,
+        "status": "開放",
+        "anchor": "R-H05-027",
+        "page": 4
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K014",
+        "name": "儲存容量檢查項目27",
+        "qualification": "測試管理員",
+        "fee": 20,
+        "status": "開放",
+        "anchor": "R-H05-028",
+        "page": 4
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K014",
+        "name": "儲存容量檢查項目28",
+        "qualification": "應用管理員",
+        "fee": 90,
+        "status": "開放",
+        "anchor": "R-H05-029",
+        "page": 4
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K015",
+        "name": "儲存容量檢查項目29",
+        "qualification": "資料管理員",
+        "fee": 35,
+        "status": "開放",
+        "anchor": "R-H05-030",
+        "page": 4
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K015",
+        "name": "儲存容量檢查項目30",
+        "qualification": "測試管理員",
+        "fee": 20,
+        "status": "開放",
+        "anchor": "R-H05-031",
+        "page": 4
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K016",
+        "name": "儲存容量檢查項目31",
+        "qualification": "應用管理員",
+        "fee": 90,
+        "status": "開放",
+        "anchor": "R-H05-032",
+        "page": 4
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K016",
+        "name": "儲存容量檢查項目32",
+        "qualification": "資料管理員",
+        "fee": 35,
+        "status": "開放",
+        "anchor": "R-H05-033",
+        "page": 5
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K017",
+        "name": "儲存容量檢查項目33",
+        "qualification": "測試管理員",
+        "fee": 20,
+        "status": "開放",
+        "anchor": "R-H05-034",
+        "page": 5
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K017",
+        "name": "儲存容量檢查項目34",
+        "qualification": "應用管理員",
+        "fee": 90,
+        "status": "暫停",
+        "anchor": "R-H05-035",
+        "page": 5
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K018",
+        "name": "儲存容量檢查項目35",
+        "qualification": "資料管理員",
+        "fee": 35,
+        "status": "暫停",
+        "anchor": "R-H05-036",
+        "page": 5
+      },
+      {
+        "unit_id": "乙單位",
+        "item_code": "K018",
+        "name": "儲存容量檢查項目36",
+        "qualification": "測試管理員",
+        "fee": 20,
+        "status": "暫停",
+        "anchor": "R-H05-037",
+        "page": 5
+      },
+      {
+        "unit_id": "甲單位",
+        "item_code": "K019",
+        "name": "儲存容量檢查項目37",
+        "qualification": "應用管理員",
+        "fee": 90,
+        "status": "暫停",
+        "anchor": "R-H05-038",
+        "page": 5
+      }
+    ]
+  }
+]

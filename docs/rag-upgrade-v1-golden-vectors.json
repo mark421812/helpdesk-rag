@@ -1,0 +1,745 @@
+{
+  "fixture_version": "rag-u1-golden-v0.2",
+  "status": "proposal_not_frozen",
+  "warning": "PUBLIC RFC8032 TEST MATERIAL ONLY. NEVER DEPLOY THIS KEY. Synthetic data; not production attestation or runtime evidence.",
+  "test_seed_hex": "9d61b19deffd5a60ba844af492ec2cc44449c5697b326919703bac031cae7f60",
+  "public_key_hex": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+  "clock_now": 1791244830,
+  "clock_skew_seconds": 5,
+  "question_domain_separator": "helpdesk-rag/question/v2\u0000",
+  "context_domain_separator": "helpdesk-rag/context/v2\u0000",
+  "scope_domain_separator": "helpdesk-rag/scope/v1\u0000",
+  "scope_fixture": {
+    "structure": {
+      "schema_version": "document-structure-v1",
+      "parser_revision": "synthetic-table-v1",
+      "quality": "complete",
+      "blocks": [
+        {
+          "block_id": "table-block-1",
+          "ordinal": 0,
+          "kind": "table",
+          "section_path": "招生系所表",
+          "page_number": 1,
+          "text": "招生系所表：代碼\t名稱",
+          "table_id": "table-1",
+          "quality": "complete"
+        }
+      ],
+      "tables": [
+        {
+          "table_id": "table-1",
+          "block_id": "table-block-1",
+          "unit_label": "系所",
+          "key_column": "key",
+          "columns": [
+            {
+              "key": "key",
+              "ordinal": 0,
+              "label": "代碼",
+              "role": "key"
+            },
+            {
+              "key": "label",
+              "ordinal": 1,
+              "label": "名稱",
+              "role": "label"
+            }
+          ],
+          "rows": [
+            {
+              "row_id": "row-1",
+              "ordinal": 0,
+              "cells": [
+                {
+                  "column_key": "key",
+                  "text": "P1"
+                },
+                {
+                  "column_key": "label",
+                  "text": "資訊科學系 😀"
+                }
+              ],
+              "anchors": [
+                {
+                  "block_id": "table-block-1",
+                  "page_number": 1,
+                  "section_path": "招生系所表"
+                }
+              ],
+              "continuation_of": null,
+              "quality": "complete"
+            },
+            {
+              "row_id": "row-2",
+              "ordinal": 1,
+              "cells": [
+                {
+                  "column_key": "key",
+                  "text": "P2"
+                },
+                {
+                  "column_key": "label",
+                  "text": "人文研究所 é／é"
+                }
+              ],
+              "anchors": [
+                {
+                  "block_id": "table-block-1",
+                  "page_number": 1,
+                  "section_path": "招生系所表"
+                }
+              ],
+              "continuation_of": null,
+              "quality": "complete"
+            }
+          ],
+          "quality": "complete"
+        }
+      ]
+    },
+    "manifest": {
+      "document_id": "11111111-1111-4111-8111-111111111111",
+      "version_id": "22222222-2222-4222-8222-222222222222",
+      "selector": {
+        "kind": "table",
+        "source_id": "table-1",
+        "start_ordinal": null,
+        "end_ordinal": null
+      },
+      "parser_revision": "synthetic-table-v1",
+      "quality": "complete",
+      "members": [
+        {
+          "block_id": "table-block-1",
+          "ordinal": 0,
+          "kind": "table",
+          "section_path": "招生系所表",
+          "page_number": 1,
+          "text": "招生系所表：代碼\t名稱",
+          "table_id": "table-1",
+          "quality": "complete"
+        },
+        {
+          "row_id": "row-1",
+          "ordinal": 0,
+          "cells": [
+            {
+              "column_key": "key",
+              "text": "P1"
+            },
+            {
+              "column_key": "label",
+              "text": "資訊科學系 😀"
+            }
+          ],
+          "anchors": [
+            {
+              "block_id": "table-block-1",
+              "page_number": 1,
+              "section_path": "招生系所表"
+            }
+          ],
+          "continuation_of": null,
+          "quality": "complete"
+        },
+        {
+          "row_id": "row-2",
+          "ordinal": 1,
+          "cells": [
+            {
+              "column_key": "key",
+              "text": "P2"
+            },
+            {
+              "column_key": "label",
+              "text": "人文研究所 é／é"
+            }
+          ],
+          "anchors": [
+            {
+              "block_id": "table-block-1",
+              "page_number": 1,
+              "section_path": "招生系所表"
+            }
+          ],
+          "continuation_of": null,
+          "quality": "complete"
+        }
+      ]
+    }
+  },
+  "normal_cases": [
+    {
+      "id": "zh-null",
+      "question": {
+        "question": "申請截止日？",
+        "language": null
+      },
+      "context": {
+        "schema_version": "retrieval-context-v2",
+        "task": "fact",
+        "requirements": [],
+        "pinned_scopes": [],
+        "coverage": {
+          "state": "sufficient",
+          "required_fields": [
+            "source_anchor"
+          ],
+          "satisfied_fields": [
+            "source_anchor"
+          ],
+          "missing_codes": [],
+          "complete_scope": false,
+          "truncated": false
+        },
+        "allowed_evidence": [
+          {
+            "rank": 1,
+            "chunk_id": "33333333-3333-4333-8333-000000000001",
+            "document_id": "11111111-1111-4111-8111-111111111111",
+            "version_id": "22222222-2222-4222-8222-222222222222",
+            "content": "自製規則：申請截止日為 2026-10-31。",
+            "document_type": "synthetic_policy",
+            "token_count": 64,
+            "citation": {
+              "title": "U1 自製驗證文件",
+              "section_path": "測試章節",
+              "page_number": null
+            },
+            "governance": {
+              "confidentiality": "public",
+              "language": "zh-TW",
+              "external_llm_allowed": true
+            },
+            "source_refs": [
+              {
+                "document_id": "11111111-1111-4111-8111-111111111111",
+                "version_id": "22222222-2222-4222-8222-222222222222",
+                "block_id": "paragraph-1",
+                "row_id": null,
+                "cell_keys": []
+              }
+            ]
+          }
+        ],
+        "verified_facts": null
+      },
+      "header": {
+        "alg": "EdDSA",
+        "kid": "u1-rfc8032-test-only",
+        "typ": "JWT"
+      },
+      "claims": {
+        "iss": "retrieval-service",
+        "aud": "answer-generation-service",
+        "iat": 1791244800,
+        "nbf": 1791244800,
+        "exp": 1791244920,
+        "jti": "44444444-4444-4444-8444-000000000001",
+        "context_schema_version": "retrieval-context-v2",
+        "policy_version": "retrieval-policy-v2",
+        "question_sha256": "FqFOeravAPQymjBZPO87WWthUu1IExUacScooHHIeck",
+        "context_sha256": "Duqd9LffHhaYwabiKYGy4z7btsWTo6YhlfpoP8RxVBw"
+      },
+      "expected": {
+        "question_jcs_utf8": "{\"language\":null,\"question\":\"申請截止日？\"}",
+        "context_jcs_utf8": "{\"allowed_evidence\":[{\"chunk_id\":\"33333333-3333-4333-8333-000000000001\",\"citation\":{\"page_number\":null,\"section_path\":\"測試章節\",\"title\":\"U1 自製驗證文件\"},\"content\":\"自製規則：申請截止日為 2026-10-31。\",\"document_id\":\"11111111-1111-4111-8111-111111111111\",\"document_type\":\"synthetic_policy\",\"governance\":{\"confidentiality\":\"public\",\"external_llm_allowed\":true,\"language\":\"zh-TW\"},\"rank\":1,\"source_refs\":[{\"block_id\":\"paragraph-1\",\"cell_keys\":[],\"document_id\":\"11111111-1111-4111-8111-111111111111\",\"row_id\":null,\"version_id\":\"22222222-2222-4222-8222-222222222222\"}],\"token_count\":64,\"version_id\":\"22222222-2222-4222-8222-222222222222\"}],\"coverage\":{\"complete_scope\":false,\"missing_codes\":[],\"required_fields\":[\"source_anchor\"],\"satisfied_fields\":[\"source_anchor\"],\"state\":\"sufficient\",\"truncated\":false},\"pinned_scopes\":[],\"requirements\":[],\"schema_version\":\"retrieval-context-v2\",\"task\":\"fact\",\"verified_facts\":null}",
+        "question_digest": "FqFOeravAPQymjBZPO87WWthUu1IExUacScooHHIeck",
+        "context_digest": "Duqd9LffHhaYwabiKYGy4z7btsWTo6YhlfpoP8RxVBw",
+        "compact_jws": "eyJhbGciOiJFZERTQSIsImtpZCI6InUxLXJmYzgwMzItdGVzdC1vbmx5IiwidHlwIjoiSldUIn0.eyJhdWQiOiJhbnN3ZXItZ2VuZXJhdGlvbi1zZXJ2aWNlIiwiY29udGV4dF9zY2hlbWFfdmVyc2lvbiI6InJldHJpZXZhbC1jb250ZXh0LXYyIiwiY29udGV4dF9zaGEyNTYiOiJEdXFkOUxmZkhoYVl3YWJpS1lHeTR6N2J0c1dUbzZZaGxmcG9QOFJ4VkJ3IiwiZXhwIjoxNzkxMjQ0OTIwLCJpYXQiOjE3OTEyNDQ4MDAsImlzcyI6InJldHJpZXZhbC1zZXJ2aWNlIiwianRpIjoiNDQ0NDQ0NDQtNDQ0NC00NDQ0LTg0NDQtMDAwMDAwMDAwMDAxIiwibmJmIjoxNzkxMjQ0ODAwLCJwb2xpY3lfdmVyc2lvbiI6InJldHJpZXZhbC1wb2xpY3ktdjIiLCJxdWVzdGlvbl9zaGEyNTYiOiJGcUZPZXJhdkFQUXltakJaUE84N1dXdGhVdTFJRXhVYWNTY29vSEhJZWNrIn0.8_Kqma_VqW0d1K2kkhnMULHjMWCqYXpfGAD-heZLnQ3lwRVLYh_UPN6xf8uehZinGR6Gbft0FVh30SJfVS-_Cg"
+      }
+    },
+    {
+      "id": "unicode-count",
+      "question": {
+        "question": "這次有幾個系所開放報名？",
+        "language": "zh-TW"
+      },
+      "context": {
+        "schema_version": "retrieval-context-v2",
+        "task": "count",
+        "requirements": [
+          {
+            "field": "scope",
+            "value": "招生系所表"
+          },
+          {
+            "field": "unit",
+            "value": "系所（依代碼去重）"
+          }
+        ],
+        "pinned_scopes": [
+          {
+            "document_id": "11111111-1111-4111-8111-111111111111",
+            "version_id": "22222222-2222-4222-8222-222222222222",
+            "selector": {
+              "kind": "table",
+              "source_id": "table-1",
+              "start_ordinal": null,
+              "end_ordinal": null
+            },
+            "structure_sha256": "3e11d7059a27a368c9abd29bf5db553f3deeb3c5ed95c4de714d051ef7e96102",
+            "scope_sha256": "e055cb8da4a72df78f25243af2722ef015850e8107e28d588ee964d1270a4eed",
+            "governance_revision": 1
+          }
+        ],
+        "coverage": {
+          "state": "sufficient",
+          "required_fields": [
+            "scope",
+            "unit",
+            "key",
+            "label"
+          ],
+          "satisfied_fields": [
+            "scope",
+            "unit",
+            "key",
+            "label"
+          ],
+          "missing_codes": [],
+          "complete_scope": true,
+          "truncated": false
+        },
+        "allowed_evidence": [
+          {
+            "rank": 1,
+            "chunk_id": "33333333-3333-4333-8333-000000000001",
+            "document_id": "11111111-1111-4111-8111-111111111111",
+            "version_id": "22222222-2222-4222-8222-222222222222",
+            "content": "代碼 P1：資訊科學系 😀。",
+            "document_type": "synthetic_policy",
+            "token_count": 64,
+            "citation": {
+              "title": "U1 自製驗證文件",
+              "section_path": "測試章節",
+              "page_number": null
+            },
+            "governance": {
+              "confidentiality": "public",
+              "language": "zh-TW",
+              "external_llm_allowed": true
+            },
+            "source_refs": [
+              {
+                "document_id": "11111111-1111-4111-8111-111111111111",
+                "version_id": "22222222-2222-4222-8222-222222222222",
+                "block_id": "table-block-1",
+                "row_id": "row-1",
+                "cell_keys": [
+                  "key",
+                  "label"
+                ]
+              }
+            ]
+          },
+          {
+            "rank": 2,
+            "chunk_id": "33333333-3333-4333-8333-000000000002",
+            "document_id": "11111111-1111-4111-8111-111111111111",
+            "version_id": "22222222-2222-4222-8222-222222222222",
+            "content": "代碼 P2：人文研究所 é／é。註記：\"測試\"\n不含公司資料。",
+            "document_type": "synthetic_policy",
+            "token_count": 64,
+            "citation": {
+              "title": "U1 自製驗證文件",
+              "section_path": "測試章節",
+              "page_number": null
+            },
+            "governance": {
+              "confidentiality": "public",
+              "language": "zh-TW",
+              "external_llm_allowed": true
+            },
+            "source_refs": [
+              {
+                "document_id": "11111111-1111-4111-8111-111111111111",
+                "version_id": "22222222-2222-4222-8222-222222222222",
+                "block_id": "table-block-1",
+                "row_id": "row-2",
+                "cell_keys": [
+                  "key",
+                  "label"
+                ]
+              }
+            ]
+          }
+        ],
+        "verified_facts": {
+          "schema_version": "verified-facts-v1",
+          "task": "count",
+          "unit": "distinct_value",
+          "key_field": "key",
+          "count": 2,
+          "items": [
+            {
+              "key": "P1",
+              "label": "資訊科學系 😀",
+              "values": [],
+              "source_refs": [
+                {
+                  "document_id": "11111111-1111-4111-8111-111111111111",
+                  "version_id": "22222222-2222-4222-8222-222222222222",
+                  "block_id": "table-block-1",
+                  "row_id": "row-1",
+                  "cell_keys": [
+                    "key",
+                    "label"
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "P2",
+              "label": "人文研究所 é／é",
+              "values": [],
+              "source_refs": [
+                {
+                  "document_id": "11111111-1111-4111-8111-111111111111",
+                  "version_id": "22222222-2222-4222-8222-222222222222",
+                  "block_id": "table-block-1",
+                  "row_id": "row-2",
+                  "cell_keys": [
+                    "key",
+                    "label"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "header": {
+        "alg": "EdDSA",
+        "kid": "u1-rfc8032-test-only",
+        "typ": "JWT"
+      },
+      "claims": {
+        "iss": "retrieval-service",
+        "aud": "answer-generation-service",
+        "iat": 1791244800,
+        "nbf": 1791244800,
+        "exp": 1791244920,
+        "jti": "44444444-4444-4444-8444-000000000002",
+        "context_schema_version": "retrieval-context-v2",
+        "policy_version": "retrieval-policy-v2",
+        "question_sha256": "odLA9TVGkDWWRj--T-nSXDYiUDwggZniFAh77m0Kijo",
+        "context_sha256": "S8kxn9MxJAidmfFp7xt4Asf-ru741wDuC1mfV5JYdLI"
+      },
+      "expected": {
+        "question_jcs_utf8": "{\"language\":\"zh-TW\",\"question\":\"這次有幾個系所開放報名？\"}",
+        "context_jcs_utf8": "{\"allowed_evidence\":[{\"chunk_id\":\"33333333-3333-4333-8333-000000000001\",\"citation\":{\"page_number\":null,\"section_path\":\"測試章節\",\"title\":\"U1 自製驗證文件\"},\"content\":\"代碼 P1：資訊科學系 😀。\",\"document_id\":\"11111111-1111-4111-8111-111111111111\",\"document_type\":\"synthetic_policy\",\"governance\":{\"confidentiality\":\"public\",\"external_llm_allowed\":true,\"language\":\"zh-TW\"},\"rank\":1,\"source_refs\":[{\"block_id\":\"table-block-1\",\"cell_keys\":[\"key\",\"label\"],\"document_id\":\"11111111-1111-4111-8111-111111111111\",\"row_id\":\"row-1\",\"version_id\":\"22222222-2222-4222-8222-222222222222\"}],\"token_count\":64,\"version_id\":\"22222222-2222-4222-8222-222222222222\"},{\"chunk_id\":\"33333333-3333-4333-8333-000000000002\",\"citation\":{\"page_number\":null,\"section_path\":\"測試章節\",\"title\":\"U1 自製驗證文件\"},\"content\":\"代碼 P2：人文研究所 é／é。註記：\\\"測試\\\"\\n不含公司資料。\",\"document_id\":\"11111111-1111-4111-8111-111111111111\",\"document_type\":\"synthetic_policy\",\"governance\":{\"confidentiality\":\"public\",\"external_llm_allowed\":true,\"language\":\"zh-TW\"},\"rank\":2,\"source_refs\":[{\"block_id\":\"table-block-1\",\"cell_keys\":[\"key\",\"label\"],\"document_id\":\"11111111-1111-4111-8111-111111111111\",\"row_id\":\"row-2\",\"version_id\":\"22222222-2222-4222-8222-222222222222\"}],\"token_count\":64,\"version_id\":\"22222222-2222-4222-8222-222222222222\"}],\"coverage\":{\"complete_scope\":true,\"missing_codes\":[],\"required_fields\":[\"scope\",\"unit\",\"key\",\"label\"],\"satisfied_fields\":[\"scope\",\"unit\",\"key\",\"label\"],\"state\":\"sufficient\",\"truncated\":false},\"pinned_scopes\":[{\"document_id\":\"11111111-1111-4111-8111-111111111111\",\"governance_revision\":1,\"scope_sha256\":\"e055cb8da4a72df78f25243af2722ef015850e8107e28d588ee964d1270a4eed\",\"selector\":{\"end_ordinal\":null,\"kind\":\"table\",\"source_id\":\"table-1\",\"start_ordinal\":null},\"structure_sha256\":\"3e11d7059a27a368c9abd29bf5db553f3deeb3c5ed95c4de714d051ef7e96102\",\"version_id\":\"22222222-2222-4222-8222-222222222222\"}],\"requirements\":[{\"field\":\"scope\",\"value\":\"招生系所表\"},{\"field\":\"unit\",\"value\":\"系所（依代碼去重）\"}],\"schema_version\":\"retrieval-context-v2\",\"task\":\"count\",\"verified_facts\":{\"count\":2,\"items\":[{\"key\":\"P1\",\"label\":\"資訊科學系 😀\",\"source_refs\":[{\"block_id\":\"table-block-1\",\"cell_keys\":[\"key\",\"label\"],\"document_id\":\"11111111-1111-4111-8111-111111111111\",\"row_id\":\"row-1\",\"version_id\":\"22222222-2222-4222-8222-222222222222\"}],\"values\":[]},{\"key\":\"P2\",\"label\":\"人文研究所 é／é\",\"source_refs\":[{\"block_id\":\"table-block-1\",\"cell_keys\":[\"key\",\"label\"],\"document_id\":\"11111111-1111-4111-8111-111111111111\",\"row_id\":\"row-2\",\"version_id\":\"22222222-2222-4222-8222-222222222222\"}],\"values\":[]}],\"key_field\":\"key\",\"schema_version\":\"verified-facts-v1\",\"task\":\"count\",\"unit\":\"distinct_value\"}}",
+        "question_digest": "odLA9TVGkDWWRj--T-nSXDYiUDwggZniFAh77m0Kijo",
+        "context_digest": "S8kxn9MxJAidmfFp7xt4Asf-ru741wDuC1mfV5JYdLI",
+        "compact_jws": "eyJhbGciOiJFZERTQSIsImtpZCI6InUxLXJmYzgwMzItdGVzdC1vbmx5IiwidHlwIjoiSldUIn0.eyJhdWQiOiJhbnN3ZXItZ2VuZXJhdGlvbi1zZXJ2aWNlIiwiY29udGV4dF9zY2hlbWFfdmVyc2lvbiI6InJldHJpZXZhbC1jb250ZXh0LXYyIiwiY29udGV4dF9zaGEyNTYiOiJTOGt4bjlNeEpBaWRtZkZwN3h0NEFzZi1ydTc0MXdEdUMxbWZWNUpZZExJIiwiZXhwIjoxNzkxMjQ0OTIwLCJpYXQiOjE3OTEyNDQ4MDAsImlzcyI6InJldHJpZXZhbC1zZXJ2aWNlIiwianRpIjoiNDQ0NDQ0NDQtNDQ0NC00NDQ0LTg0NDQtMDAwMDAwMDAwMDAyIiwibmJmIjoxNzkxMjQ0ODAwLCJwb2xpY3lfdmVyc2lvbiI6InJldHJpZXZhbC1wb2xpY3ktdjIiLCJxdWVzdGlvbl9zaGEyNTYiOiJvZExBOVRWR2tEV1dSai0tVC1uU1hEWWlVRHdnZ1puaUZBaDc3bTBLaWpvIn0.Jhf0_t97o0aZkOINpYOa2z_M4yEvRfP203apxh7CM26xvq3A7oDBUay-WRV8y-6ByVA1EC9_JcQw8woSPUd9AA"
+      }
+    }
+  ],
+  "negative_cases": [
+    {
+      "id": "question-tamper",
+      "base_case": "unicode-count",
+      "target": "question",
+      "operation": "replace",
+      "path": [
+        "question"
+      ],
+      "value": "另外一個問題",
+      "expected_rejection_stage": "digest",
+      "runtime_status": "offline_assertion"
+    },
+    {
+      "id": "language-tamper",
+      "base_case": "unicode-count",
+      "target": "question",
+      "operation": "replace",
+      "path": [
+        "language"
+      ],
+      "value": null,
+      "expected_rejection_stage": "digest",
+      "runtime_status": "offline_assertion"
+    },
+    {
+      "id": "content-tamper",
+      "base_case": "unicode-count",
+      "target": "context",
+      "operation": "replace",
+      "path": [
+        "allowed_evidence",
+        0,
+        "content"
+      ],
+      "value": "篡改內容",
+      "expected_rejection_stage": "digest",
+      "runtime_status": "offline_assertion"
+    },
+    {
+      "id": "ordered-evidence-tamper",
+      "base_case": "unicode-count",
+      "target": "context",
+      "operation": "replace",
+      "path": [
+        "allowed_evidence"
+      ],
+      "value": [
+        {
+          "rank": 2,
+          "chunk_id": "33333333-3333-4333-8333-000000000002",
+          "document_id": "11111111-1111-4111-8111-111111111111",
+          "version_id": "22222222-2222-4222-8222-222222222222",
+          "content": "代碼 P2：人文研究所 é／é。註記：\"測試\"\n不含公司資料。",
+          "document_type": "synthetic_policy",
+          "token_count": 64,
+          "citation": {
+            "title": "U1 自製驗證文件",
+            "section_path": "測試章節",
+            "page_number": null
+          },
+          "governance": {
+            "confidentiality": "public",
+            "language": "zh-TW",
+            "external_llm_allowed": true
+          },
+          "source_refs": [
+            {
+              "document_id": "11111111-1111-4111-8111-111111111111",
+              "version_id": "22222222-2222-4222-8222-222222222222",
+              "block_id": "table-block-1",
+              "row_id": "row-2",
+              "cell_keys": [
+                "key",
+                "label"
+              ]
+            }
+          ]
+        },
+        {
+          "rank": 1,
+          "chunk_id": "33333333-3333-4333-8333-000000000001",
+          "document_id": "11111111-1111-4111-8111-111111111111",
+          "version_id": "22222222-2222-4222-8222-222222222222",
+          "content": "代碼 P1：資訊科學系 😀。",
+          "document_type": "synthetic_policy",
+          "token_count": 64,
+          "citation": {
+            "title": "U1 自製驗證文件",
+            "section_path": "測試章節",
+            "page_number": null
+          },
+          "governance": {
+            "confidentiality": "public",
+            "language": "zh-TW",
+            "external_llm_allowed": true
+          },
+          "source_refs": [
+            {
+              "document_id": "11111111-1111-4111-8111-111111111111",
+              "version_id": "22222222-2222-4222-8222-222222222222",
+              "block_id": "table-block-1",
+              "row_id": "row-1",
+              "cell_keys": [
+                "key",
+                "label"
+              ]
+            }
+          ]
+        }
+      ],
+      "expected_rejection_stage": "digest",
+      "runtime_status": "offline_assertion"
+    },
+    {
+      "id": "coverage-tamper",
+      "base_case": "unicode-count",
+      "target": "context",
+      "operation": "replace",
+      "path": [
+        "coverage",
+        "complete_scope"
+      ],
+      "value": false,
+      "expected_rejection_stage": "digest",
+      "runtime_status": "offline_assertion"
+    },
+    {
+      "id": "fact-count-tamper",
+      "base_case": "unicode-count",
+      "target": "context",
+      "operation": "replace",
+      "path": [
+        "verified_facts",
+        "count"
+      ],
+      "value": 3,
+      "expected_rejection_stage": "digest",
+      "runtime_status": "offline_assertion"
+    },
+    {
+      "id": "fact-unit-tamper",
+      "base_case": "unicode-count",
+      "target": "context",
+      "operation": "replace",
+      "path": [
+        "verified_facts",
+        "unit"
+      ],
+      "value": "logical_row",
+      "expected_rejection_stage": "digest",
+      "runtime_status": "offline_assertion"
+    },
+    {
+      "id": "fact-lineage-tamper",
+      "base_case": "unicode-count",
+      "target": "context",
+      "operation": "replace",
+      "path": [
+        "verified_facts",
+        "items",
+        0,
+        "source_refs",
+        0,
+        "row_id"
+      ],
+      "value": "row-999",
+      "expected_rejection_stage": "digest",
+      "runtime_status": "offline_assertion"
+    },
+    {
+      "id": "scope-hash-tamper",
+      "base_case": "unicode-count",
+      "target": "context",
+      "operation": "replace",
+      "path": [
+        "pinned_scopes",
+        0,
+        "scope_sha256"
+      ],
+      "value": "0000000000000000000000000000000000000000000000000000000000000000",
+      "expected_rejection_stage": "digest",
+      "runtime_status": "offline_assertion"
+    },
+    {
+      "id": "signature-flip",
+      "base_case": "unicode-count",
+      "target": "token",
+      "operation": "signature_flip",
+      "path": [],
+      "value": null,
+      "expected_rejection_stage": "signature",
+      "runtime_status": "offline_assertion"
+    },
+    {
+      "id": "expired-signed-token",
+      "base_case": "unicode-count",
+      "target": "claims",
+      "operation": "replace",
+      "path": [
+        "exp"
+      ],
+      "value": 1791244790,
+      "expected_rejection_stage": "claims",
+      "runtime_status": "not_executed_runtime",
+      "resigned_test_jws": "eyJhbGciOiJFZERTQSIsImtpZCI6InUxLXJmYzgwMzItdGVzdC1vbmx5IiwidHlwIjoiSldUIn0.eyJhdWQiOiJhbnN3ZXItZ2VuZXJhdGlvbi1zZXJ2aWNlIiwiY29udGV4dF9zY2hlbWFfdmVyc2lvbiI6InJldHJpZXZhbC1jb250ZXh0LXYyIiwiY29udGV4dF9zaGEyNTYiOiJTOGt4bjlNeEpBaWRtZkZwN3h0NEFzZi1ydTc0MXdEdUMxbWZWNUpZZExJIiwiZXhwIjoxNzkxMjQ0NzkwLCJpYXQiOjE3OTEyNDQ4MDAsImlzcyI6InJldHJpZXZhbC1zZXJ2aWNlIiwianRpIjoiNDQ0NDQ0NDQtNDQ0NC00NDQ0LTg0NDQtMDAwMDAwMDAwMDAyIiwibmJmIjoxNzkxMjQ0ODAwLCJwb2xpY3lfdmVyc2lvbiI6InJldHJpZXZhbC1wb2xpY3ktdjIiLCJxdWVzdGlvbl9zaGEyNTYiOiJvZExBOVRWR2tEV1dSai0tVC1uU1hEWWlVRHdnZ1puaUZBaDc3bTBLaWpvIn0.f96admr96OcR1diLQ6c2cbdfyQDEOawnyd3oab7DdxYYXdek4K5Rse6J-TQFBPswdicEuxs66qWf9M1ZL44FAA"
+    },
+    {
+      "id": "unknown-key-id",
+      "base_case": "unicode-count",
+      "target": "header",
+      "operation": "replace",
+      "path": [
+        "kid"
+      ],
+      "value": "unknown-test-key",
+      "expected_rejection_stage": "key_lookup",
+      "runtime_status": "not_executed_runtime",
+      "resigned_test_jws": "eyJhbGciOiJFZERTQSIsImtpZCI6InVua25vd24tdGVzdC1rZXkiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOiJhbnN3ZXItZ2VuZXJhdGlvbi1zZXJ2aWNlIiwiY29udGV4dF9zY2hlbWFfdmVyc2lvbiI6InJldHJpZXZhbC1jb250ZXh0LXYyIiwiY29udGV4dF9zaGEyNTYiOiJTOGt4bjlNeEpBaWRtZkZwN3h0NEFzZi1ydTc0MXdEdUMxbWZWNUpZZExJIiwiZXhwIjoxNzkxMjQ0OTIwLCJpYXQiOjE3OTEyNDQ4MDAsImlzcyI6InJldHJpZXZhbC1zZXJ2aWNlIiwianRpIjoiNDQ0NDQ0NDQtNDQ0NC00NDQ0LTg0NDQtMDAwMDAwMDAwMDAyIiwibmJmIjoxNzkxMjQ0ODAwLCJwb2xpY3lfdmVyc2lvbiI6InJldHJpZXZhbC1wb2xpY3ktdjIiLCJxdWVzdGlvbl9zaGEyNTYiOiJvZExBOVRWR2tEV1dSai0tVC1uU1hEWWlVRHdnZ1puaUZBaDc3bTBLaWpvIn0.eRY1NhRuPCXh_FqPvYb6SY1LEn6kjdJ4OzITm86ggkiiLVeTywoiH7xem2Fk6SgDJmq_tdBHsnjz1u7Gdz2_CQ"
+    },
+    {
+      "id": "wrong-policy",
+      "base_case": "unicode-count",
+      "target": "claims",
+      "operation": "replace",
+      "path": [
+        "policy_version"
+      ],
+      "value": "retrieval-policy-v1",
+      "expected_rejection_stage": "policy",
+      "runtime_status": "not_executed_runtime",
+      "resigned_test_jws": "eyJhbGciOiJFZERTQSIsImtpZCI6InUxLXJmYzgwMzItdGVzdC1vbmx5IiwidHlwIjoiSldUIn0.eyJhdWQiOiJhbnN3ZXItZ2VuZXJhdGlvbi1zZXJ2aWNlIiwiY29udGV4dF9zY2hlbWFfdmVyc2lvbiI6InJldHJpZXZhbC1jb250ZXh0LXYyIiwiY29udGV4dF9zaGEyNTYiOiJTOGt4bjlNeEpBaWRtZkZwN3h0NEFzZi1ydTc0MXdEdUMxbWZWNUpZZExJIiwiZXhwIjoxNzkxMjQ0OTIwLCJpYXQiOjE3OTEyNDQ4MDAsImlzcyI6InJldHJpZXZhbC1zZXJ2aWNlIiwianRpIjoiNDQ0NDQ0NDQtNDQ0NC00NDQ0LTg0NDQtMDAwMDAwMDAwMDAyIiwibmJmIjoxNzkxMjQ0ODAwLCJwb2xpY3lfdmVyc2lvbiI6InJldHJpZXZhbC1wb2xpY3ktdjEiLCJxdWVzdGlvbl9zaGEyNTYiOiJvZExBOVRWR2tEV1dSai0tVC1uU1hEWWlVRHdnZ1puaUZBaDc3bTBLaWpvIn0.BynBpKy8FjEiGqQetxT9vPHhGGlq4iQCVR46gqYANmQsu_Y2Nrjd8ICkI7v-2sLH57ZVI7HPYWaOBT34GAk8AA"
+    },
+    {
+      "id": "wrong-schema",
+      "base_case": "unicode-count",
+      "target": "claims",
+      "operation": "replace",
+      "path": [
+        "context_schema_version"
+      ],
+      "value": "retrieval-context-v1",
+      "expected_rejection_stage": "schema",
+      "runtime_status": "not_executed_runtime",
+      "resigned_test_jws": "eyJhbGciOiJFZERTQSIsImtpZCI6InUxLXJmYzgwMzItdGVzdC1vbmx5IiwidHlwIjoiSldUIn0.eyJhdWQiOiJhbnN3ZXItZ2VuZXJhdGlvbi1zZXJ2aWNlIiwiY29udGV4dF9zY2hlbWFfdmVyc2lvbiI6InJldHJpZXZhbC1jb250ZXh0LXYxIiwiY29udGV4dF9zaGEyNTYiOiJTOGt4bjlNeEpBaWRtZkZwN3h0NEFzZi1ydTc0MXdEdUMxbWZWNUpZZExJIiwiZXhwIjoxNzkxMjQ0OTIwLCJpYXQiOjE3OTEyNDQ4MDAsImlzcyI6InJldHJpZXZhbC1zZXJ2aWNlIiwianRpIjoiNDQ0NDQ0NDQtNDQ0NC00NDQ0LTg0NDQtMDAwMDAwMDAwMDAyIiwibmJmIjoxNzkxMjQ0ODAwLCJwb2xpY3lfdmVyc2lvbiI6InJldHJpZXZhbC1wb2xpY3ktdjIiLCJxdWVzdGlvbl9zaGEyNTYiOiJvZExBOVRWR2tEV1dSai0tVC1uU1hEWWlVRHdnZ1puaUZBaDc3bTBLaWpvIn0.QlVCKz5WUoij4_qr6aS5PAA2JD4frSDsbulcamZARfsOPyOP-7PTKZSnVfbszzGuKBUgzYH0lF03CSrcXmxzDg"
+    },
+    {
+      "id": "strict-true-not-one",
+      "base_case": "unicode-count",
+      "target": "context",
+      "operation": "replace",
+      "path": [
+        "allowed_evidence",
+        0,
+        "governance",
+        "external_llm_allowed"
+      ],
+      "value": 1,
+      "expected_rejection_stage": "strict_schema",
+      "runtime_status": "not_executed_runtime",
+      "resigned_test_jws": "eyJhbGciOiJFZERTQSIsImtpZCI6InUxLXJmYzgwMzItdGVzdC1vbmx5IiwidHlwIjoiSldUIn0.eyJhdWQiOiJhbnN3ZXItZ2VuZXJhdGlvbi1zZXJ2aWNlIiwiY29udGV4dF9zY2hlbWFfdmVyc2lvbiI6InJldHJpZXZhbC1jb250ZXh0LXYyIiwiY29udGV4dF9zaGEyNTYiOiItRThZRFBiR2lQRmpmdV9NRFVWOVdKelVMczlOMjZNRTB5cWQxQ0FRYWRnIiwiZXhwIjoxNzkxMjQ0OTIwLCJpYXQiOjE3OTEyNDQ4MDAsImlzcyI6InJldHJpZXZhbC1zZXJ2aWNlIiwianRpIjoiNDQ0NDQ0NDQtNDQ0NC00NDQ0LTg0NDQtMDAwMDAwMDAwMDAyIiwibmJmIjoxNzkxMjQ0ODAwLCJwb2xpY3lfdmVyc2lvbiI6InJldHJpZXZhbC1wb2xpY3ktdjIiLCJxdWVzdGlvbl9zaGEyNTYiOiJvZExBOVRWR2tEV1dSai0tVC1uU1hEWWlVRHdnZ1puaUZBaDc3bTBLaWpvIn0.uZecM5e3DySQQo50KTDBb9M2DCOyWgapQW0560bpte48y1qpMQ2ii1GIFvuICt4Hfzs52srmTOnW3Ez4nketCA"
+    },
+    {
+      "id": "restricted-false",
+      "base_case": "unicode-count",
+      "target": "context",
+      "operation": "replace",
+      "path": [
+        "allowed_evidence",
+        0,
+        "governance",
+        "external_llm_allowed"
+      ],
+      "value": false,
+      "expected_rejection_stage": "outbound_policy",
+      "runtime_status": "not_executed_runtime",
+      "resigned_test_jws": "eyJhbGciOiJFZERTQSIsImtpZCI6InUxLXJmYzgwMzItdGVzdC1vbmx5IiwidHlwIjoiSldUIn0.eyJhdWQiOiJhbnN3ZXItZ2VuZXJhdGlvbi1zZXJ2aWNlIiwiY29udGV4dF9zY2hlbWFfdmVyc2lvbiI6InJldHJpZXZhbC1jb250ZXh0LXYyIiwiY29udGV4dF9zaGEyNTYiOiIxOGEzSFRKSFp0Nng0aWdPb1kyWTFZMXRBSHJxWG5aUnNiVFpUaEkxbWZrIiwiZXhwIjoxNzkxMjQ0OTIwLCJpYXQiOjE3OTEyNDQ4MDAsImlzcyI6InJldHJpZXZhbC1zZXJ2aWNlIiwianRpIjoiNDQ0NDQ0NDQtNDQ0NC00NDQ0LTg0NDQtMDAwMDAwMDAwMDAyIiwibmJmIjoxNzkxMjQ0ODAwLCJwb2xpY3lfdmVyc2lvbiI6InJldHJpZXZhbC1wb2xpY3ktdjIiLCJxdWVzdGlvbl9zaGEyNTYiOiJvZExBOVRWR2tEV1dSai0tVC1uU1hEWWlVRHdnZ1puaUZBaDc3bTBLaWpvIn0.FpnDYcR6secPhl7hrX75TSxcdbUhWWzpWNI2ebu0h_dQyDMbMrBXBTO3yz_ZK4mH2aFIyxQGjLUdGHpqowRsAg"
+    },
+    {
+      "id": "incomplete-signed-coverage",
+      "base_case": "unicode-count",
+      "target": "context",
+      "operation": "replace",
+      "path": [
+        "coverage",
+        "state"
+      ],
+      "value": "partial",
+      "expected_rejection_stage": "coverage",
+      "runtime_status": "not_executed_runtime",
+      "resigned_test_jws": "eyJhbGciOiJFZERTQSIsImtpZCI6InUxLXJmYzgwMzItdGVzdC1vbmx5IiwidHlwIjoiSldUIn0.eyJhdWQiOiJhbnN3ZXItZ2VuZXJhdGlvbi1zZXJ2aWNlIiwiY29udGV4dF9zY2hlbWFfdmVyc2lvbiI6InJldHJpZXZhbC1jb250ZXh0LXYyIiwiY29udGV4dF9zaGEyNTYiOiJ3T0JMN1RWdjd2YV9ocnlhQlptZzlodDF2di1QTnhQWXNWWGQtdTlZYzdJIiwiZXhwIjoxNzkxMjQ0OTIwLCJpYXQiOjE3OTEyNDQ4MDAsImlzcyI6InJldHJpZXZhbC1zZXJ2aWNlIiwianRpIjoiNDQ0NDQ0NDQtNDQ0NC00NDQ0LTg0NDQtMDAwMDAwMDAwMDAyIiwibmJmIjoxNzkxMjQ0ODAwLCJwb2xpY3lfdmVyc2lvbiI6InJldHJpZXZhbC1wb2xpY3ktdjIiLCJxdWVzdGlvbl9zaGEyNTYiOiJvZExBOVRWR2tEV1dSai0tVC1uU1hEWWlVRHdnZ1puaUZBaDc3bTBLaWpvIn0.ALcZ_U_wS7i_g-JNv0TPArMLMITMjSMh6TNsxXotLKKZVlaw9U_lOkhdAl1kQIQoYfF8kWDGRuMFKOp5DPCoBg"
+    },
+    {
+      "id": "missing-null-key",
+      "base_case": "zh-null",
+      "target": "context",
+      "operation": "remove",
+      "path": [
+        "verified_facts"
+      ],
+      "value": null,
+      "expected_rejection_stage": "strict_schema",
+      "runtime_status": "not_executed_runtime",
+      "resigned_test_jws": "eyJhbGciOiJFZERTQSIsImtpZCI6InUxLXJmYzgwMzItdGVzdC1vbmx5IiwidHlwIjoiSldUIn0.eyJhdWQiOiJhbnN3ZXItZ2VuZXJhdGlvbi1zZXJ2aWNlIiwiY29udGV4dF9zY2hlbWFfdmVyc2lvbiI6InJldHJpZXZhbC1jb250ZXh0LXYyIiwiY29udGV4dF9zaGEyNTYiOiIya0phSzFneld3QXo3OWJEc016Z2RZcFl3SkZneEpBaC1NQmdjNDZOWldVIiwiZXhwIjoxNzkxMjQ0OTIwLCJpYXQiOjE3OTEyNDQ4MDAsImlzcyI6InJldHJpZXZhbC1zZXJ2aWNlIiwianRpIjoiNDQ0NDQ0NDQtNDQ0NC00NDQ0LTg0NDQtMDAwMDAwMDAwMDAxIiwibmJmIjoxNzkxMjQ0ODAwLCJwb2xpY3lfdmVyc2lvbiI6InJldHJpZXZhbC1wb2xpY3ktdjIiLCJxdWVzdGlvbl9zaGEyNTYiOiJGcUZPZXJhdkFQUXltakJaUE84N1dXdGhVdTFJRXhVYWNTY29vSEhJZWNrIn0.pTt_idMEvSGUD-kI21c86XoL5EoRfw2mIYvWqwrvwyLoXa5i1FNscY9YXLaBom91hfn2BMyw0QdHl0tdzaikAw"
+    }
+  ]
+}

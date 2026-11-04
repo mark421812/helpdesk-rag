@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Help Desk RAG 本機 Web Chat Demo">
+    <title>Help Desk Demo</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Help Desk RAG</p>
+          <h1>Help Desk Demo</h1>
+        </div>
+        <button id="new-conversation" class="secondary" type="button">新對話</button>
+      </header>
+
+      <aside class="demo-notice" role="note">
+        本頁是本機 Demo，沒有登入、使用共用測試身分，只適合開發驗證。每個問題獨立檢索，
+        不會把前一則訊息當成多輪上下文；重新整理不會刪除 Chat Service 已保存的資料。
+      </aside>
+
+      <section id="status" class="status" role="status" aria-live="polite">準備開始新的對話。</section>
+      <section id="messages" class="messages" aria-live="polite" aria-label="對話訊息">
+        <p id="empty-state" class="empty-state">輸入公司規章或系統文件相關問題。</p>
+      </section>
+
+      <section class="composer" aria-label="問題輸入">
+        <label for="question">問題</label>
+        <textarea id="question" maxlength="20000" rows="5" placeholder="例如：員工每週可以遠端工作幾天？"></textarea>
+        <div class="composer-footer">
+          <span id="counter">0 / 20,000</span>
+          <div class="composer-actions">
+            <button id="confirm-request" class="secondary hidden" type="button">確認原請求結果</button>
+            <button id="send" class="primary" type="button">送出</button>
+          </div>
+        </div>
+        <p class="hint">Enter 換行；Ctrl+Enter（macOS 為 Cmd+Enter）送出。</p>
+      </section>
+    </main>
+  </body>
+</html>

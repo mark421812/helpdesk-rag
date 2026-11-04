@@ -1,0 +1,1 @@
+"""Retrieval HTTP adapter package。"""

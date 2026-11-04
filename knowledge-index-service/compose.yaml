@@ -1,0 +1,126 @@
+x-service-environment: &service-environment
+  APP_ENV: ${APP_ENV:-development}
+  LOG_LEVEL: ${LOG_LEVEL:-INFO}
+  DATABASE_URL: postgresql+asyncpg://knowledge:${POSTGRES_PASSWORD:-knowledge}@postgres:5432/knowledge
+  DATABASE_POOL_SIZE: ${DATABASE_POOL_SIZE:-10}
+  DATABASE_MAX_OVERFLOW: ${DATABASE_MAX_OVERFLOW:-20}
+  QDRANT_URL: http://qdrant:6333
+  # Local default only. Override with a long random value outside development.
+  QDRANT_API_KEY: ${QDRANT_API_KEY:-local-development-only}
+  QDRANT_COLLECTION: ${QDRANT_COLLECTION:-helpdesk_knowledge}
+  QDRANT_VECTORS_ON_DISK: ${QDRANT_VECTORS_ON_DISK:-true}
+  QDRANT_HNSW_ON_DISK: ${QDRANT_HNSW_ON_DISK:-true}
+  QDRANT_PAYLOAD_ON_DISK: ${QDRANT_PAYLOAD_ON_DISK:-true}
+  MODEL_ID: ${MODEL_ID:-intfloat/multilingual-e5-small}
+  MODEL_REVISION: ${MODEL_REVISION:-614241f622f53c4eeff9890bdc4f31cfecc418b3}
+  MODEL_DEVICE: cpu
+  MODEL_BATCH_SIZE: ${MODEL_BATCH_SIZE:-16}
+  MODEL_MAX_SEQUENCE_LENGTH: ${MODEL_MAX_SEQUENCE_LENGTH:-512}
+  NORMALIZE_EMBEDDINGS: ${NORMALIZE_EMBEDDINGS:-true}
+  TORCH_NUM_THREADS: ${TORCH_NUM_THREADS:-2}
+  EMBEDDING_MAX_CONCURRENCY: ${EMBEDDING_MAX_CONCURRENCY:-1}
+  API_INTERNAL_KEY: ${API_INTERNAL_KEY:-}
+  MAX_EMBEDDING_TEXTS: ${MAX_EMBEDDING_TEXTS:-64}
+  MAX_CHARACTERS_PER_TEXT: ${MAX_CHARACTERS_PER_TEXT:-20000}
+  MAX_SEARCH_LIMIT: ${MAX_SEARCH_LIMIT:-50}
+  MAX_SEARCH_CANDIDATES: ${MAX_SEARCH_CANDIDATES:-500}
+  MAX_DOCUMENT_CHUNKS: ${MAX_DOCUMENT_CHUNKS:-10000}
+  MAX_DOCUMENT_CHARACTERS: ${MAX_DOCUMENT_CHARACTERS:-20000000}
+  MAX_REQUEST_BODY_BYTES: ${MAX_REQUEST_BODY_BYTES:-25000000}
+  WORKER_POLL_INTERVAL_SECONDS: ${WORKER_POLL_INTERVAL_SECONDS:-1}
+  WORKER_LEASE_SECONDS: ${WORKER_LEASE_SECONDS:-3600}
+  WORKER_RETRY_BASE_SECONDS: ${WORKER_RETRY_BASE_SECONDS:-5}
+  CORS_ORIGINS: ${CORS_ORIGINS:-[]}
+  BUSINESS_TIMEZONE: ${BUSINESS_TIMEZONE:-Asia/Taipei}
+
+x-service-base: &service-base
+  image: helpdesk/knowledge-index-service:local
+  init: true
+  restart: unless-stopped
+  environment: *service-environment
+  volumes:
+    - model-cache:/var/cache/huggingface
+
+services:
+  postgres:
+    image: postgres:16-alpine@sha256:57c72fd2a128e416c7fcc499958864df5301e940bca0a56f58fddf30ffc07777
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: knowledge
+      POSTGRES_USER: knowledge
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-knowledge}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U knowledge -d knowledge"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  qdrant:
+    image: qdrant/qdrant:v1.18.3-unprivileged@sha256:affb67e1d6f2f93d7d20b90d238a7d4b974d36351c162e73bda794e4b2e03483
+    restart: unless-stopped
+    environment:
+      QDRANT__SERVICE__API_KEY: ${QDRANT_API_KEY:-local-development-only}
+    volumes:
+      - qdrant-data:/qdrant/storage
+    ports:
+      - "${QDRANT_PORT:-6333}:6333"
+
+  migrate:
+    <<: *service-base
+    # Only one Compose service owns the build. API/Worker reuse the same image,
+    # avoiding concurrent exporters racing to write an identical local tag.
+    build:
+      context: .
+    restart: "no"
+    command: ["alembic", "upgrade", "head"]
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  api:
+    <<: *service-base
+    command:
+      [
+        "uvicorn",
+        "knowledge_index_service.presentation.app:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8080",
+      ]
+    ports:
+      - "${API_PORT:-8080}:8080"
+    networks:
+      default:
+        aliases:
+          - knowledge-index-api
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      qdrant:
+        condition: service_started
+
+  worker:
+    <<: *service-base
+    command: ["python", "-m", "knowledge_index_service.worker"]
+    healthcheck:
+      disable: true
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      qdrant:
+        condition: service_started
+
+volumes:
+  postgres-data:
+  qdrant-data:
+  model-cache:
+
+networks:
+  default:
+    name: ${HELPDESK_NETWORK:-helpdesk-rag}
+    external: true

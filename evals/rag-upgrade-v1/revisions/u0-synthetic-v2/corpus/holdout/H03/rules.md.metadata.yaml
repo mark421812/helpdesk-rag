@@ -1,0 +1,23 @@
+{
+  "title": "H03 事件告警演練 rules.md",
+  "document_type": "operations",
+  "owner_department": "Synthetic Evaluation",
+  "document_owner": "u0-fixture-owner",
+  "version_number": "v2",
+  "confidentiality": "public",
+  "status": "published",
+  "language": "zh-TW",
+  "external_llm_allowed": false,
+  "acl": [
+    {
+      "principal_type": "group",
+      "principal_id": "rag-u0-fixtures",
+      "effect": "allow"
+    }
+  ],
+  "custom_metadata": {
+    "synthetic": true,
+    "u0_group": "H03",
+    "dataset_version": "u0-synthetic-v2-draft"
+  }
+}

@@ -1,0 +1,1428 @@
+{
+  "schema_version": "u0-human-gold-review-v1",
+  "dataset_manifest_sha256": "09c9185ff12a773ab623be1f61ef03ddfc594f5ce28148f0ad5668a61e3b1ad2",
+  "cases": [
+    {
+      "case_id": "T01-fact",
+      "split": "tuning",
+      "case_sha256": "7a8a5339932ce3cc435cf40f8561db5bd5356ebcca966eb502efd9f2b845c11e",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T01-list",
+      "split": "tuning",
+      "case_sha256": "e18bf91711a8723ed4d684952d8d7627aabd5de297115ad085581fd45a1b82c0",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T01-count",
+      "split": "tuning",
+      "case_sha256": "eb5cbab8c59e9729804975754fad5970b194942eae0919f19f69729ad779fe59",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T01-compare",
+      "split": "tuning",
+      "case_sha256": "c0e830d9027bee7ec6123afbdf8c1d260b9227c623cbafc391899b303575d416",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T01-procedure",
+      "split": "tuning",
+      "case_sha256": "d7df95e67b74d1e407d1ac3b563f44b2ddfb98138bd4da1ca9842ff35da9ed9b",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T01-followup",
+      "split": "tuning",
+      "case_sha256": "bfcdf6bc0ee296d6a527281b15b871df1da5d7f9706b1dd881d778fdca084e96",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "history_reference": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T01-no_answer",
+      "split": "tuning",
+      "case_sha256": "9f9736855acc12b60000707d743b1539e9fd7534058ab6f37603ed6eaa37bdd4",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T01-ambiguity",
+      "split": "tuning",
+      "case_sha256": "411b9bdc9b1b69a781fcc3dc55cd68db8d8c0bd2e5cd379f08bef8d049113a2e",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T02-fact",
+      "split": "tuning",
+      "case_sha256": "8af634b4851f2ba404f185568a4ceb6c402d9476a1c3ac70a15fcbaa046e7952",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T02-list",
+      "split": "tuning",
+      "case_sha256": "13ff5e17527559e4bfc466e45ba5e422aa15c5f7c205b37225bb8fdaeabd9e82",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T02-count",
+      "split": "tuning",
+      "case_sha256": "d93387de0d9820e92df645604e7cdfeb9cc64c2d0980364954a0f9e2de7e1fdd",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T02-compare",
+      "split": "tuning",
+      "case_sha256": "5c62a2442285091c2b2a0d49a0a4ca895a2c829ab8b500ee1d3943bf493423bf",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T02-procedure",
+      "split": "tuning",
+      "case_sha256": "2b125efe9d0864f97d9f15ce9fd38a1fe7327ea4252c7ec23e6bc85b120746e4",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T02-followup",
+      "split": "tuning",
+      "case_sha256": "05c2a2ee267f28d6786212b5fa55b8fbc7505ae947074de2f37a25246ffcea30",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "history_reference": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T02-no_answer",
+      "split": "tuning",
+      "case_sha256": "0e7c3634686a6ec06968ba4e4466ec14c6b6585097e9bceeaca732cca5f34ff6",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T02-ambiguity",
+      "split": "tuning",
+      "case_sha256": "400ee6a104d82a9a6d8941a5c57279e8014ce009e0ebd1a2bb2ece220c699ef3",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T03-fact",
+      "split": "tuning",
+      "case_sha256": "ca539da01e2cc7086febdc2d8c1065f65f3616ebe31b8b609d57c111f223a003",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T03-list",
+      "split": "tuning",
+      "case_sha256": "1850355139e2ee4111f2a5cd959c259c423312f8de45ed206c3e67a30aaca568",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T03-count",
+      "split": "tuning",
+      "case_sha256": "2b68f1b0f1878905a0b4581f504efe03cb1e09467e59ff48e1a60b35d2d55cf9",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T03-compare",
+      "split": "tuning",
+      "case_sha256": "9d9ace1a5cc175c8cf9cbfeda45140f034603f03596c5c5639f3e695a9d96e5d",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T03-procedure",
+      "split": "tuning",
+      "case_sha256": "e65fb207d02b30eab3eefa8001fcd71ded9dbeea57e2236d290d526d3481210f",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T03-followup",
+      "split": "tuning",
+      "case_sha256": "869546bb61a3ebd2d59f7fcadf9eeeb5295ba4795c12a76106647a6ea77637c0",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "history_reference": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T03-no_answer",
+      "split": "tuning",
+      "case_sha256": "d946720762803b6252d5f0bfcdf5fb71d0c13a5e20496415bf49e8f2f318f611",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T03-ambiguity",
+      "split": "tuning",
+      "case_sha256": "28e20728a6758c686c2dd4098d744db9b8e718242a08c50c89f38f152707f788",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T04-fact",
+      "split": "tuning",
+      "case_sha256": "0dddf3cc530a3cf0b61276cae0e610e3a6a16a2dd06665914097b2e81f7dac19",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T04-list",
+      "split": "tuning",
+      "case_sha256": "9afcf6726d5cf4008c0cdd9da6e7d1901f93857d481b0ec9cb5954443bbd00f0",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T04-count",
+      "split": "tuning",
+      "case_sha256": "f562886cdd0322b35d2341d7a5c3ce6484a221869991fb190f02121e0f7ca2e2",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T04-compare",
+      "split": "tuning",
+      "case_sha256": "ec01ce037819bd25460e0a5bb8a487dbaf9ca25cb013dc875375c7f7a0eb6025",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T04-procedure",
+      "split": "tuning",
+      "case_sha256": "570e1003019388933e5b73e22160d287b629c3d458572815a644ae879c34d0ef",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T04-followup",
+      "split": "tuning",
+      "case_sha256": "48017592658bab484d389de9c8e8b2cb0cc06f6797b7de6d92b357d006d77287",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "history_reference": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T04-no_answer",
+      "split": "tuning",
+      "case_sha256": "eb4e1a9f508b9fd7c621e1a82a1e995e64f2566a62dd8464bad74d6b52f3c56b",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T04-ambiguity",
+      "split": "tuning",
+      "case_sha256": "326b9d48712f8924f91ba56880cad9a7ba5716edff49e8065ec41415fb039369",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T05-fact",
+      "split": "tuning",
+      "case_sha256": "3b920fc42c7e12c5770a7e6d31e80c0317ecda3059432deae8ecf6abf40bbd4f",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T05-list",
+      "split": "tuning",
+      "case_sha256": "8c27b6f2e31699c385b3433a51d66bbc8baf357a048746661bcb6c4d357f6a09",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T05-count",
+      "split": "tuning",
+      "case_sha256": "6b55473fa69dc98c53eb0dbe51bcac964371926affd1b2bb7bd084e32668ef94",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T05-compare",
+      "split": "tuning",
+      "case_sha256": "61093ed414d056893120c701513e32e61861733f92d9d5e7fae0d0966f853422",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T05-procedure",
+      "split": "tuning",
+      "case_sha256": "fc2a41d7468bab05d0b1e7e581a283d39058b670be2f937d94473d5b345d9c1e",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T05-followup",
+      "split": "tuning",
+      "case_sha256": "0aab66d9cb82b76183109883cef2f186b582956fb205eec4e1fe675ee1694713",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "history_reference": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T05-no_answer",
+      "split": "tuning",
+      "case_sha256": "0b3d22fa2e9689b2ae3fb5a9a4e89cb194280f1e98fae8bbe0361746448ee088",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "T05-ambiguity",
+      "split": "tuning",
+      "case_sha256": "7761274a8f9e7f21d5a67c68db2f5407bdf3f863fe5aafbf926bbee9a6a58fbd",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H01-fact",
+      "split": "holdout",
+      "case_sha256": "868e87d9dbbdcf7aed52438ef82d3447123e4af1b213c62ed07d6d8d5fff1e6a",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H01-list",
+      "split": "holdout",
+      "case_sha256": "bc680ba4b7efbd98b765c08dfefce1ad912fd57a2f1d0e31992f1eb7f66897d0",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H01-count",
+      "split": "holdout",
+      "case_sha256": "1de47423fdb6768b10cd67b0e83d3998153d9146ccdf68fc6c30397e86f5758c",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H01-compare",
+      "split": "holdout",
+      "case_sha256": "e6deb1c20a8fdbffc40b892dc745ccf4ab89893004dc9018f132773c66c471dd",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H01-procedure",
+      "split": "holdout",
+      "case_sha256": "83d6ef400504e45fdd4fa5f926d93342a347e0431054489306e5335ba521b497",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H01-followup",
+      "split": "holdout",
+      "case_sha256": "8432431aa963a6e9e6a92be3d000ed0711b023922838e5605b446bb352fa9391",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "history_reference": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H01-no_answer",
+      "split": "holdout",
+      "case_sha256": "5c39a3c0dc02e5450848940ecb939e66d6d1f752c7b0f6eb2fdea884b9946758",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H01-ambiguity",
+      "split": "holdout",
+      "case_sha256": "0371a8aadd2979455a8bc2960dbf5ce0a53488221d2d0b96b26868651fc05d63",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H02-fact",
+      "split": "holdout",
+      "case_sha256": "93bbfc52551d0dae5ba01a3ea42f0af5e0a3300904cf496028f77e91b6ec45f0",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H02-list",
+      "split": "holdout",
+      "case_sha256": "b85c33398deab2a02481f335ffc955677eb50fe94ce9e2050ecaa8a7f2181ee0",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H02-count",
+      "split": "holdout",
+      "case_sha256": "6a8417aadd7c970817dc03d60c65b462107a0ef2e164de27b3beba89f2628aa9",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H02-compare",
+      "split": "holdout",
+      "case_sha256": "8bd8f71982d108658d9053875075a4013f6cab36b244f841234d0c9f42daf9eb",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H02-procedure",
+      "split": "holdout",
+      "case_sha256": "cbe97c02dba3702c90819911267f21e8dcfa75fa6f086ea8e5939c1a4b4e2354",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H02-followup",
+      "split": "holdout",
+      "case_sha256": "b1e85801a6f1084f48e24acd74fc986980f43861f295fbe6ecf6bf49afd661d5",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "history_reference": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H02-no_answer",
+      "split": "holdout",
+      "case_sha256": "8f9eb8a5c88af6d1ab58221148e1975334ba76ebd8260f826f4a603528166c4d",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H02-ambiguity",
+      "split": "holdout",
+      "case_sha256": "87cb679fd9297a8d21f0ade9b4390d0ec45077a274c922c804a3d6e61087c8e3",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H03-fact",
+      "split": "holdout",
+      "case_sha256": "22ca682275b980ac8de922a5dd0ca6b79d97a6fc5ef619b0b8e7f499f4d605cf",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H03-list",
+      "split": "holdout",
+      "case_sha256": "6352b0f0efe6d7a45cc89469325bc87b0a94a7e2335d4d532228cac5a997f0c4",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H03-count",
+      "split": "holdout",
+      "case_sha256": "95908e396ab46496cbbd0780c4f7914e52a95c8e17461a77b1efd2d778597ff2",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H03-compare",
+      "split": "holdout",
+      "case_sha256": "7847dd8f291a56667c3cbae2315e1ff071f8f0e4902c0bbaabf8da1d6cea5e20",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H03-procedure",
+      "split": "holdout",
+      "case_sha256": "26ca96577a958dae9b341668bb6b947dfdfbbb6649369552564a222f2a4b25c9",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H03-followup",
+      "split": "holdout",
+      "case_sha256": "5c5eee65e370a3c17f05a424ebdf0f13b500e80510ee0d2cd88a116b482e7425",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "history_reference": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H03-no_answer",
+      "split": "holdout",
+      "case_sha256": "addbb46b097679595f9e92c8cfba194a0ec14e753a8b415b55a7260ee81e4f80",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H03-ambiguity",
+      "split": "holdout",
+      "case_sha256": "8db7d21725a1a512e816d9e80156ec0fc4c04fb25ebf4e9ad244b39b7b540961",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H04-fact",
+      "split": "holdout",
+      "case_sha256": "6d9fbc81194291852032bd637923c29acfb168165b811f94e93f3b690eef8492",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H04-list",
+      "split": "holdout",
+      "case_sha256": "f4a3a45d2c96ce1de92490aa1db4960cb9ba305a09eb31ba05cf980d817618dd",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H04-count",
+      "split": "holdout",
+      "case_sha256": "2c4d631a9fca26ed360505ef1c946f659cc75a595431e5e33c5cec5cba8ea381",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H04-compare",
+      "split": "holdout",
+      "case_sha256": "99bc05edf04dd5affff6481a0c90826ecfd7a65e87960ee6b28568d9794cb725",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H04-procedure",
+      "split": "holdout",
+      "case_sha256": "c3bd6fb0116d54c46957ea667dca4cd2fc495fdec8439c8db4355f68d4a5f8c6",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H04-followup",
+      "split": "holdout",
+      "case_sha256": "0fd3731a5b85b69914a03346af3e9a2e80158b161fc065f4a3a336c91590a100",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "history_reference": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H04-no_answer",
+      "split": "holdout",
+      "case_sha256": "79cea6f9c97ae394dc23afebdc1bc6a19ea12cae062803dc491ed947d142667a",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H04-ambiguity",
+      "split": "holdout",
+      "case_sha256": "7e6aa4fb79c72033d18528c9d01306d7cf8c8a6154250202e118cbd16635ef1c",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H05-fact",
+      "split": "holdout",
+      "case_sha256": "ce90b6c764409bdc53bfd17731b303b81b92f135feb2f93549a1aa81a3aff2ef",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H05-list",
+      "split": "holdout",
+      "case_sha256": "c20f4216ad38249ad5037ad20500d2d19266b626cc00554b191d3f17b124c922",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H05-count",
+      "split": "holdout",
+      "case_sha256": "dc3f962130af4ffab05f67a30b4952d1470f4a16415649786acf81e535a51b8e",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "scope_completeness": null,
+        "unit_and_dedup_key": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H05-compare",
+      "split": "holdout",
+      "case_sha256": "09d34a7d4a9ebde8dab1cf26f818ee62320d6bcd91437b9f27f1684423a91461",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H05-procedure",
+      "split": "holdout",
+      "case_sha256": "3639a1b659ee7259c41c55e253e4ad13568ddaf852d6f66f92e591d2bca7b88e",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H05-followup",
+      "split": "holdout",
+      "case_sha256": "d6a1cfb53571c9dbdacd286db267ad3afb3f01ff207afc3a6818a62069a10b51",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null,
+        "history_reference": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H05-no_answer",
+      "split": "holdout",
+      "case_sha256": "025f9ad541ad476c87b5fd4647e9b5da1fe3a12529f96f34da11420184fa1e8e",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    },
+    {
+      "case_id": "H05-ambiguity",
+      "split": "holdout",
+      "case_sha256": "4416f65b15f9f2f6555bc4a69ef81e73128d0602d7816171c33585066e8d3a93",
+      "status": "pending",
+      "reviewer": null,
+      "reviewed_at": null,
+      "actor_kind": null,
+      "independent_from_implementation": null,
+      "checks": {
+        "question_scope": null,
+        "answer_or_refusal": null,
+        "evidence_support": null,
+        "citation_source": null
+      },
+      "notes": ""
+    }
+  ]
+}

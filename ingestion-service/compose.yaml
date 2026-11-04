@@ -1,0 +1,130 @@
+x-ingestion-environment: &ingestion-environment
+  APP_ENV: ${APP_ENV:-development}
+  LOG_LEVEL: ${LOG_LEVEL:-INFO}
+  API_INTERNAL_KEY: ${API_INTERNAL_KEY:-}
+  CORS_ORIGINS: ${CORS_ORIGINS:-[]}
+  DATABASE_URL: ${DATABASE_URL:-postgresql+asyncpg://${POSTGRES_USER:-knowledge}:${POSTGRES_PASSWORD:-knowledge}@${POSTGRES_HOST:-postgres}:${POSTGRES_PORT:-5432}/${POSTGRES_DB:-knowledge}}
+  DATABASE_POOL_SIZE: ${DATABASE_POOL_SIZE:-5}
+  DATABASE_MAX_OVERFLOW: ${DATABASE_MAX_OVERFLOW:-5}
+  KNOWLEDGE_INDEX_URL: ${KNOWLEDGE_INDEX_URL:-http://knowledge-index-api:8080}
+  KNOWLEDGE_INDEX_API_KEY: ${KNOWLEDGE_INDEX_API_KEY:-}
+  KNOWLEDGE_INDEX_TIMEOUT_SECONDS: ${KNOWLEDGE_INDEX_TIMEOUT_SECONDS:-120}
+  KNOWLEDGE_INDEX_READINESS_TIMEOUT_SECONDS: ${KNOWLEDGE_INDEX_READINESS_TIMEOUT_SECONDS:-5}
+  KNOWLEDGE_INDEX_MAX_REQUEST_BODY_BYTES: ${KNOWLEDGE_INDEX_MAX_REQUEST_BODY_BYTES:-25000000}
+  API_MAX_REQUEST_BODY_BYTES: ${API_MAX_REQUEST_BODY_BYTES:-65536}
+  # The host mount is configured by DOCUMENT_ROOT_HOST; this is the stable
+  # read-only path seen by all three containers.
+  DOCUMENT_ROOT: /data/documents
+  DEFAULT_SOURCE_NAME: ${DEFAULT_SOURCE_NAME:-local-documents}
+  ALLOWED_EXTENSIONS: ${ALLOWED_EXTENSIONS:-[".pdf",".docx",".txt",".md"]}
+  MAX_FILE_SIZE_BYTES: ${MAX_FILE_SIZE_BYTES:-104857600}
+  MISSING_SCANS_BEFORE_DELETE: ${MISSING_SCANS_BEFORE_DELETE:-2}
+  MAX_MISSING_RATIO: ${MAX_MISSING_RATIO:-0.25}
+  SOURCE_DEFAULT_METADATA: ${SOURCE_DEFAULT_METADATA:-{}}
+  MODEL_ID: ${MODEL_ID:-intfloat/multilingual-e5-small}
+  MODEL_REVISION: ${MODEL_REVISION:-614241f622f53c4eeff9890bdc4f31cfecc418b3}
+  CHUNK_TARGET_TOKENS: ${CHUNK_TARGET_TOKENS:-350}
+  CHUNK_MAX_TOKENS: ${CHUNK_MAX_TOKENS:-450}
+  CHUNK_OVERLAP_TOKENS: ${CHUNK_OVERLAP_TOKENS:-50}
+  MODEL_MAX_SEQUENCE_LENGTH: ${MODEL_MAX_SEQUENCE_LENGTH:-512}
+  MAX_DOCUMENT_CHARACTERS: ${MAX_DOCUMENT_CHARACTERS:-20000000}
+  MAX_DOCUMENT_CHUNKS: ${MAX_DOCUMENT_CHUNKS:-10000}
+  WORKER_POLL_INTERVAL_SECONDS: ${WORKER_POLL_INTERVAL_SECONDS:-1}
+  WORKER_LEASE_SECONDS: ${WORKER_LEASE_SECONDS:-3600}
+  WORKER_MAX_ATTEMPTS: ${WORKER_MAX_ATTEMPTS:-5}
+  WORKER_RETRY_BASE_SECONDS: ${WORKER_RETRY_BASE_SECONDS:-5}
+  ROLE_HEARTBEAT_INTERVAL_SECONDS: ${ROLE_HEARTBEAT_INTERVAL_SECONDS:-10}
+  ROLE_HEARTBEAT_MAX_AGE_SECONDS: ${ROLE_HEARTBEAT_MAX_AGE_SECONDS:-60}
+  SCHEDULE_HOUR: ${SCHEDULE_HOUR:-2}
+  SCHEDULE_MINUTE: ${SCHEDULE_MINUTE:-0}
+  SCHEDULE_TIMEZONE: ${SCHEDULE_TIMEZONE:-Asia/Taipei}
+
+x-ingestion-base: &ingestion-base
+  image: helpdesk/ingestion-service:local
+  init: true
+  restart: unless-stopped
+  environment: *ingestion-environment
+  volumes:
+    - ${DOCUMENT_ROOT_HOST:-./documents}:/data/documents:ro
+    - tokenizer-cache:/var/cache/huggingface
+
+services:
+  migrate:
+    <<: *ingestion-base
+    # Build once, then let API/Worker/Scheduler reuse the same immutable local
+    # image instead of exporting four builds to the same tag concurrently.
+    build:
+      context: .
+    restart: on-failure
+    command: ["alembic", "upgrade", "head"]
+
+  ingestion-api:
+    <<: *ingestion-base
+    command:
+      [
+        "uvicorn",
+        "ingestion_service.presentation.app:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8090",
+      ]
+    ports:
+      - "${INGESTION_API_PORT:-8090}:8090"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+  ingestion-worker:
+    <<: *ingestion-base
+    command: ["python", "-m", "ingestion_service.worker"]
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-m",
+          "ingestion_service.healthcheck",
+          "--path",
+          "/tmp/ingestion-worker.heartbeat",
+          "--max-age",
+          "${ROLE_HEARTBEAT_MAX_AGE_SECONDS:-60}",
+        ]
+      interval: 20s
+      timeout: 5s
+      start_period: 30s
+      retries: 3
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+  ingestion-scheduler:
+    <<: *ingestion-base
+    command: ["python", "-m", "ingestion_service.scheduler"]
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-m",
+          "ingestion_service.healthcheck",
+          "--path",
+          "/tmp/ingestion-scheduler.heartbeat",
+          "--max-age",
+          "${ROLE_HEARTBEAT_MAX_AGE_SECONDS:-60}",
+        ]
+      interval: 20s
+      timeout: 5s
+      start_period: 30s
+      retries: 3
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+volumes:
+  tokenizer-cache:
+
+networks:
+  default:
+    name: ${HELPDESK_NETWORK:-helpdesk-rag}
+    external: true

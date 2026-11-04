@@ -1,0 +1,36 @@
+services:
+  web-chat:
+    build:
+      context: .
+    image: helpdesk/web-chat:local
+    init: true
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      WEB_CHAT_PORT: ${WEB_CHAT_PORT:-8130}
+      CHAT_SERVICE_URL: ${CHAT_SERVICE_URL:-http://chat-api:8120}
+      DEMO_USER_ID: ${DEMO_USER_ID:-web-chat-demo-user}
+      DEMO_GROUP_IDS: ${DEMO_GROUP_IDS:-all-employees}
+      ALLOWED_HOSTS: ${ALLOWED_HOSTS:-localhost,127.0.0.1}
+      UPSTREAM_TIMEOUT_SECONDS: ${UPSTREAM_TIMEOUT_SECONDS:-330}
+      READINESS_TIMEOUT_SECONDS: ${READINESS_TIMEOUT_SECONDS:-5}
+      UPSTREAM_MAX_RESPONSE_BODY_BYTES: ${UPSTREAM_MAX_RESPONSE_BODY_BYTES:-5000000}
+      API_MAX_REQUEST_BODY_BYTES: ${API_MAX_REQUEST_BODY_BYTES:-65536}
+    ports:
+      - "127.0.0.1:${WEB_CHAT_PORT:-8130}:8130"
+    networks:
+      default:
+        aliases:
+          - web-chat
+
+networks:
+  default:
+    name: ${HELPDESK_NETWORK:-helpdesk-rag}
+    external: true

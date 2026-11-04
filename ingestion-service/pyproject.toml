@@ -1,0 +1,82 @@
+[build-system]
+requires = ["hatchling==1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ingestion-service"
+version = "0.1.0"
+description = "Local-folder parsing, metadata and chunking service for the Help Desk RAG system."
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = { text = "Proprietary" }
+dependencies = [
+  "alembic>=1.13,<2",
+  "asyncpg>=0.29,<1",
+  "charset-normalizer>=3.4,<4",
+  "fastapi>=0.115,<1",
+  "httpx>=0.27,<1",
+  "markdown-it-py>=3,<5",
+  "prometheus-client>=0.20,<1",
+  "pydantic-settings>=2.5,<3",
+  "pypdf>=5,<7",
+  "python-docx>=1.1,<2",
+  "PyYAML>=6,<7",
+  "sqlalchemy[asyncio]>=2.0.35,<3",
+  "structlog>=24.4,<26",
+  "transformers>=4.46,<6",
+  "tzdata>=2025.2,<2027",
+  "uvicorn[standard]>=0.32,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.13,<2",
+  "pytest>=8.3,<9",
+  "pytest-asyncio>=0.24,<1",
+  "pytest-cov>=6,<8",
+  "ruff>=0.8,<1",
+  "testcontainers[postgres]>=4.9,<5",
+]
+
+[project.scripts]
+ingestion = "ingestion_service.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ingestion_service"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers"
+asyncio_mode = "auto"
+testpaths = ["tests"]
+markers = [
+  "integration: requires real PostgreSQL or an external service",
+  "e2e: requires the complete Help Desk Docker stack",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "ASYNC", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/**/*.py" = ["RUF002", "RUF003"]
+"tests/**/*.py" = ["RUF001"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+packages = ["ingestion_service"]
+
+# Ingestion only uses Transformers' tokenizer API and never depends on NumPy's
+# type surface. New NumPy stubs installed by Python 3.13 contain syntax that a
+# Python 3.11 type-check target intentionally rejects, so keep that transitive
+# implementation detail outside our application type boundary.
+[[tool.mypy.overrides]]
+module = ["numpy", "numpy.*", "transformers", "transformers.*"]
+follow_imports = "skip"
+
+[tool.coverage.run]
+source = ["ingestion_service"]
+branch = true

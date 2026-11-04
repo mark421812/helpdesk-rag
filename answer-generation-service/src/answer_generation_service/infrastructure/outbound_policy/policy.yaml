@@ -1,0 +1,101 @@
+version: outbound-policy-v1
+
+# 第二層內容掃描的全域開關。false 只停用本檔 rules；不會繞過文件的
+# external_llm_allowed、context attestation 或外部 Provider 核准。
+enabled: false
+
+# 所有內容阻擋規則集中於此。Python 只提供通用 regex/literal matcher，及 YAML 明確指定的
+# checksum/IP validator；不在程式碼中決定哪些內容類型需要阻擋。
+rules:
+  - id: jwt
+    category: credential
+    type: regex
+    pattern: '(?<![A-Za-z0-9_-])[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}(?![A-Za-z0-9_-])'
+
+  - id: bearer-token
+    category: credential
+    type: regex
+    pattern: '\bbearer\s+[A-Za-z0-9._~+/=-]{8,}'
+    ignore_case: true
+
+  - id: private-key
+    category: credential
+    type: regex
+    pattern: '-----BEGIN(?: [A-Z0-9]+)? PRIVATE KEY-----'
+    ignore_case: true
+
+  - id: secret-assignment
+    category: credential
+    type: regex
+    pattern: '\b(?:api[_ -]?key|access[_ -]?token|secret|password|passwd|pwd)\s*[:=]\s*[^\s,;]{4,}'
+    ignore_case: true
+
+  - id: connection-string
+    category: credential
+    type: regex
+    pattern: '\b(?:postgres(?:ql)?|mysql|mariadb|mongodb(?:\+srv)?|redis)://[^\s]+'
+    ignore_case: true
+
+  - id: email
+    category: personal_data
+    type: regex
+    pattern: '(?<![\w.-])[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}(?![\w.-])'
+    ignore_case: true
+
+  - id: taiwan-phone
+    category: personal_data
+    type: regex
+    pattern: '(?<!\d)(?:\+?886|0)?9(?:[\s-]?\d){8}(?!\d)'
+
+  - id: personal-hr-record
+    category: hr_sensitive
+    type: regex
+    pattern: '[\u4e00-\u9fff]{2,4}的(?:薪資|薪水|考績|懲處|病假原因|醫療紀錄|請假原因)'
+
+  - id: bank-account
+    category: financial
+    type: regex
+    pattern: '(?:銀行帳號|薪資帳戶|bank account)\D{0,12}\d{8,20}'
+    ignore_case: true
+
+  - id: taiwan-id
+    category: personal_data
+    type: regex
+    pattern: '(?<![A-Z0-9])[A-Z][12]\d{8}(?![A-Z0-9])'
+    ignore_case: true
+    validator: taiwan_id_checksum
+
+  - id: payment-card
+    category: financial
+    type: regex
+    pattern: '(?<!\d)(?:\d[ -]?){13,19}(?!\d)'
+    validator: luhn_checksum
+
+  - id: private-ip
+    category: system_security
+    type: regex
+    pattern: '(?<!\d)(?:\d{1,3}\.){3}\d{1,3}(?!\d)'
+    validator: private_ip
+
+  - id: taiwan-address
+    category: personal_data
+    type: all_regex
+    patterns:
+      - '(?:台|臺)[北中南東]市|(?:新北|桃園|基隆|新竹|嘉義)市|(?:彰化|南投|雲林|屏東|宜蘭|花蓮|台東|臺東)縣'
+      - '(?:路|街|巷|弄)\s*\d+號'
+    ignore_case: false
+
+  - id: company-secret-project-example
+    category: company_confidential
+    type: contains
+    value: REPLACE_WITH_REAL_SECRET_PROJECT_CODE
+
+  - id: customer-quotation
+    category: customer_confidential
+    type: all_contains
+    values: [customer, quotation]
+
+  - id: client-contract
+    category: customer_confidential
+    type: all_contains
+    values: [client, contract]

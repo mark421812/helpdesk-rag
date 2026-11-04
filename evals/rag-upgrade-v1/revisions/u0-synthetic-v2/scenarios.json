@@ -1,0 +1,332 @@
+[
+  {
+    "id": "T01",
+    "split": "tuning",
+    "domain": "policy",
+    "topic": "教育訓練補助",
+    "event": "申請",
+    "deadline": "2027-02-18",
+    "unit": "課程",
+    "names": [
+      "Python 基礎",
+      "資料視覺化",
+      "專案寫作"
+    ],
+    "fees": [
+      800,
+      1200,
+      600
+    ],
+    "qualifications": [
+      "全體正式員工",
+      "任職滿六個月",
+      "主管推薦"
+    ],
+    "steps": [
+      "確認課程適用資格",
+      "取得主管核准",
+      "提交補助申請表",
+      "收到核准後報名"
+    ],
+    "missing": "補助所得的稅額",
+    "open_count": 0,
+    "completeness": "complete"
+  },
+  {
+    "id": "T02",
+    "split": "tuning",
+    "domain": "operations",
+    "topic": "測試環境備份",
+    "event": "備份驗收",
+    "deadline": "2027-03-09",
+    "unit": "備份工作",
+    "names": [
+      "資料庫快照",
+      "設定封存",
+      "日誌備份"
+    ],
+    "fees": [
+      40,
+      15,
+      8
+    ],
+    "qualifications": [
+      "資料庫維運人員",
+      "值班維運人員",
+      "系統管理員"
+    ],
+    "steps": [
+      "確認測試環境標籤",
+      "檢查備份工作完成",
+      "在隔離環境還原",
+      "記錄還原驗證結果"
+    ],
+    "missing": "正式環境的管理員密碼",
+    "open_count": 1,
+    "completeness": "complete"
+  },
+  {
+    "id": "T03",
+    "split": "tuning",
+    "domain": "policy",
+    "topic": "公務設備借用",
+    "event": "借用申請",
+    "deadline": "2027-04-21",
+    "unit": "設備種類",
+    "names": [
+      "簡報投影機",
+      "視訊攝影機",
+      "錄音設備"
+    ],
+    "fees": [
+      0,
+      100,
+      50
+    ],
+    "qualifications": [
+      "有公務簡報需求",
+      "有跨站會議需求",
+      "有核准錄音需求"
+    ],
+    "steps": [
+      "確認借用日期",
+      "提交設備預約",
+      "領取並檢查配件",
+      "歸還並登記設備狀態"
+    ],
+    "missing": "設備損壞的賠償上限",
+    "open_count": 3,
+    "completeness": "complete"
+  },
+  {
+    "id": "T04",
+    "split": "tuning",
+    "domain": "operations",
+    "topic": "測試憑證輪替",
+    "event": "輪替驗證",
+    "deadline": "2027-05-06",
+    "unit": "憑證工作",
+    "names": [
+      "測試入口憑證",
+      "測試代理憑證",
+      "測試用戶端憑證"
+    ],
+    "fees": [
+      30,
+      20,
+      10
+    ],
+    "qualifications": [
+      "入口維運人員",
+      "代理維運人員",
+      "測試負責人"
+    ],
+    "steps": [
+      "檢查到期清單",
+      "在隔離環境建立新憑證",
+      "驗證新憑證連線",
+      "完成核准後更新測試配置"
+    ],
+    "missing": "正式服務的私鑰內容",
+    "open_count": 12,
+    "completeness": "missing_page"
+  },
+  {
+    "id": "T05",
+    "split": "tuning",
+    "domain": "policy",
+    "topic": "會議室預約",
+    "event": "預約登記",
+    "deadline": "2027-06-14",
+    "unit": "會議室",
+    "names": [
+      "北區會議室",
+      "中區會議室",
+      "南區會議室"
+    ],
+    "fees": [
+      200,
+      300,
+      150
+    ],
+    "qualifications": [
+      "三人以上會議",
+      "六人以上會議",
+      "跨部門活動"
+    ],
+    "steps": [
+      "查詢可用時段",
+      "填寫活動用途",
+      "送出預約申請",
+      "使用後完成設備復原"
+    ],
+    "missing": "週末可否過夜使用",
+    "open_count": 36,
+    "completeness": "complete"
+  },
+  {
+    "id": "H01",
+    "split": "holdout",
+    "domain": "operations",
+    "topic": "版本发布演練",
+    "event": "演練結案",
+    "deadline": "2028-07-11",
+    "unit": "部署項目",
+    "names": [
+      "藍色部署",
+      "綠色部署",
+      "灰度部署"
+    ],
+    "fees": [
+      55,
+      70,
+      45
+    ],
+    "qualifications": [
+      "版本管理員",
+      "平台管理員",
+      "測試協調員"
+    ],
+    "steps": [
+      "核對測試版本標籤",
+      "確認回退檔案可用",
+      "在隔離環境演練切換",
+      "提交演練證據"
+    ],
+    "missing": "正式發布的核准時間",
+    "open_count": 0,
+    "completeness": "complete"
+  },
+  {
+    "id": "H02",
+    "split": "holdout",
+    "domain": "policy",
+    "topic": "交通接駁登記",
+    "event": "搭乘登記",
+    "deadline": "2028-08-23",
+    "unit": "接駁路線",
+    "names": [
+      "河岸線",
+      "山城線",
+      "海港線"
+    ],
+    "fees": [
+      60,
+      90,
+      75
+    ],
+    "qualifications": [
+      "河岸辦公區員工",
+      "山城辦公區員工",
+      "海港辦公區員工"
+    ],
+    "steps": [
+      "確認通勤路線",
+      "填寫搭乘日期",
+      "提交登記資料",
+      "依通知到指定站點候車"
+    ],
+    "missing": "眷屬可否免費搭乘",
+    "open_count": 2,
+    "completeness": "complete"
+  },
+  {
+    "id": "H03",
+    "split": "holdout",
+    "domain": "operations",
+    "topic": "事件告警演練",
+    "event": "告警驗證",
+    "deadline": "2028-09-17",
+    "unit": "告警規則",
+    "names": [
+      "延遲告警",
+      "錯誤率告警",
+      "資源告警"
+    ],
+    "fees": [
+      12,
+      18,
+      24
+    ],
+    "qualifications": [
+      "服務值班人員",
+      "品質值班人員",
+      "容量值班人員"
+    ],
+    "steps": [
+      "建立隔離演練時段",
+      "注入合成測試事件",
+      "確認通知送達測試收件者",
+      "停止注入並核對復原"
+    ],
+    "missing": "正式值班人員的私人電話",
+    "open_count": 5,
+    "completeness": "complete"
+  },
+  {
+    "id": "H04",
+    "split": "holdout",
+    "domain": "policy",
+    "topic": "展覽攤位申請",
+    "event": "攤位申請",
+    "deadline": "2028-10-04",
+    "unit": "攤位類型",
+    "names": [
+      "展示攤位",
+      "互動攤位",
+      "講座攤位"
+    ],
+    "fees": [
+      1500,
+      2100,
+      900
+    ],
+    "qualifications": [
+      "有核准展示計畫",
+      "有互動展示設備",
+      "有核准講師名單"
+    ],
+    "steps": [
+      "核對活動適用日期",
+      "填寫展示內容",
+      "提交審核資料",
+      "收到通知後安排進場"
+    ],
+    "missing": "對外售票的分潤比例",
+    "open_count": 14,
+    "completeness": "partial_visibility"
+  },
+  {
+    "id": "H05",
+    "split": "holdout",
+    "domain": "operations",
+    "topic": "儲存容量檢查",
+    "event": "容量盤點",
+    "deadline": "2028-11-28",
+    "unit": "儲存區",
+    "names": [
+      "熱資料區",
+      "封存資料區",
+      "測試資料區"
+    ],
+    "fees": [
+      90,
+      35,
+      20
+    ],
+    "qualifications": [
+      "應用管理員",
+      "資料管理員",
+      "測試管理員"
+    ],
+    "steps": [
+      "確認隔離測試資源",
+      "收集容量指標",
+      "比對核准警戒值",
+      "提交容量盤點結果"
+    ],
+    "missing": "正式客戶的資料清單",
+    "open_count": 33,
+    "completeness": "complete"
+  }
+]

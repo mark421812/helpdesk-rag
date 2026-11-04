@@ -1,0 +1,53 @@
+# Local environment and credentials; keep templates versioned.
+.env
+.env.*
+!.env.example
+!.env.*.example
+.aws/
+.ssh/
+secrets/
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Python environments, caches and build output.
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.uv-cache/
+.cache/
+.tox/
+.nox/
+.coverage*
+coverage.xml
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Runtime logs, local data and backups.
+*.log
+*.log.*
+data/
+model-cache/
+backups/
+*.dump
+
+# Editor and operating-system files.
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+._*
+Thumbs.db
+
+# Local source documents may contain company-confidential data.
+/documents/*
+!/documents/.gitkeep

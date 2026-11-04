@@ -1,0 +1,114 @@
+services:
+  migrate:
+    build:
+      context: .
+    image: helpdesk/chat-service:local
+    # This service is the migration barrier.  It must run Alembic directly;
+    # inheriting the image's uvicorn CMD would start the application before
+    # chat tables exist and make startup recovery fail with UndefinedTable.
+    command: ["alembic", "upgrade", "head"]
+    init: true
+    restart: "no"
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      APP_NAME: ${APP_NAME:-chat-service}
+      APP_ENV: ${APP_ENV:-development}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      CHAT_BIND_ADDRESS: ${CHAT_BIND_ADDRESS:-127.0.0.1}
+      CHAT_API_PORT: ${CHAT_API_PORT:-8120}
+      HELPDESK_NETWORK: ${HELPDESK_NETWORK:-helpdesk-rag}
+      CORS_ORIGINS: ${CORS_ORIGINS:-[]}
+      IDENTITY_MODE: ${IDENTITY_MODE:-development_headers}
+      ADMIN_ROLE: ${ADMIN_ROLE:-helpdesk-admin}
+      DATABASE_URL: ${DATABASE_URL:-postgresql+asyncpg://knowledge:knowledge@postgres:5432/knowledge}
+      DATABASE_POOL_SIZE: ${DATABASE_POOL_SIZE:-10}
+      DATABASE_MAX_OVERFLOW: ${DATABASE_MAX_OVERFLOW:-10}
+      RETRIEVAL_URL: ${RETRIEVAL_URL:-http://retrieval-api:8100}
+      RETRIEVAL_API_KEY: ${RETRIEVAL_API_KEY:-local-development-only}
+      CHAT_RETRIEVAL_LIMIT: ${CHAT_RETRIEVAL_LIMIT:-8}
+      RETRIEVAL_CONNECT_TIMEOUT_SECONDS: ${RETRIEVAL_CONNECT_TIMEOUT_SECONDS:-3}
+      RETRIEVAL_READ_TIMEOUT_SECONDS: ${RETRIEVAL_READ_TIMEOUT_SECONDS:-55}
+      RETRIEVAL_TOTAL_TIMEOUT_SECONDS: ${RETRIEVAL_TOTAL_TIMEOUT_SECONDS:-60}
+      RETRIEVAL_READINESS_TIMEOUT_SECONDS: ${RETRIEVAL_READINESS_TIMEOUT_SECONDS:-5}
+      RETRIEVAL_MAX_RESPONSE_BODY_BYTES: ${RETRIEVAL_MAX_RESPONSE_BODY_BYTES:-5000000}
+      ANSWER_GENERATION_URL: ${ANSWER_GENERATION_URL:-http://answer-generation-api:8110}
+      ANSWER_GENERATION_API_KEY: ${ANSWER_GENERATION_API_KEY:-local-development-only}
+      ANSWER_CONNECT_TIMEOUT_SECONDS: ${ANSWER_CONNECT_TIMEOUT_SECONDS:-3}
+      ANSWER_READ_TIMEOUT_SECONDS: ${ANSWER_READ_TIMEOUT_SECONDS:-85}
+      ANSWER_TOTAL_TIMEOUT_SECONDS: ${ANSWER_TOTAL_TIMEOUT_SECONDS:-90}
+      ANSWER_READINESS_TIMEOUT_SECONDS: ${ANSWER_READINESS_TIMEOUT_SECONDS:-5}
+      ANSWER_MAX_RESPONSE_BODY_BYTES: ${ANSWER_MAX_RESPONSE_BODY_BYTES:-524288}
+      MAX_ACTIVE_TURNS: ${MAX_ACTIVE_TURNS:-10}
+      MAX_TURN_QUEUE_SIZE: ${MAX_TURN_QUEUE_SIZE:-20}
+      TURN_QUEUE_WAIT_TIMEOUT_SECONDS: ${TURN_QUEUE_WAIT_TIMEOUT_SECONDS:-120}
+      PROCESSING_STALE_SECONDS: ${PROCESSING_STALE_SECONDS:-360}
+      PURGE_PREVIEW_TTL_SECONDS: ${PURGE_PREVIEW_TTL_SECONDS:-600}
+      API_MAX_REQUEST_BODY_BYTES: ${API_MAX_REQUEST_BODY_BYTES:-65536}
+    networks:
+      default: {}
+
+  chat-api:
+    image: helpdesk/chat-service:local
+    init: true
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      APP_NAME: ${APP_NAME:-chat-service}
+      APP_ENV: ${APP_ENV:-development}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      CHAT_BIND_ADDRESS: ${CHAT_BIND_ADDRESS:-127.0.0.1}
+      CHAT_API_PORT: ${CHAT_API_PORT:-8120}
+      HELPDESK_NETWORK: ${HELPDESK_NETWORK:-helpdesk-rag}
+      CORS_ORIGINS: ${CORS_ORIGINS:-[]}
+      IDENTITY_MODE: ${IDENTITY_MODE:-development_headers}
+      ADMIN_ROLE: ${ADMIN_ROLE:-helpdesk-admin}
+      DATABASE_URL: ${DATABASE_URL:-postgresql+asyncpg://knowledge:knowledge@postgres:5432/knowledge}
+      DATABASE_POOL_SIZE: ${DATABASE_POOL_SIZE:-10}
+      DATABASE_MAX_OVERFLOW: ${DATABASE_MAX_OVERFLOW:-10}
+      RETRIEVAL_URL: ${RETRIEVAL_URL:-http://retrieval-api:8100}
+      RETRIEVAL_API_KEY: ${RETRIEVAL_API_KEY:-local-development-only}
+      CHAT_RETRIEVAL_LIMIT: ${CHAT_RETRIEVAL_LIMIT:-8}
+      RETRIEVAL_CONNECT_TIMEOUT_SECONDS: ${RETRIEVAL_CONNECT_TIMEOUT_SECONDS:-3}
+      RETRIEVAL_READ_TIMEOUT_SECONDS: ${RETRIEVAL_READ_TIMEOUT_SECONDS:-55}
+      RETRIEVAL_TOTAL_TIMEOUT_SECONDS: ${RETRIEVAL_TOTAL_TIMEOUT_SECONDS:-60}
+      RETRIEVAL_READINESS_TIMEOUT_SECONDS: ${RETRIEVAL_READINESS_TIMEOUT_SECONDS:-5}
+      RETRIEVAL_MAX_RESPONSE_BODY_BYTES: ${RETRIEVAL_MAX_RESPONSE_BODY_BYTES:-5000000}
+      ANSWER_GENERATION_URL: ${ANSWER_GENERATION_URL:-http://answer-generation-api:8110}
+      ANSWER_GENERATION_API_KEY: ${ANSWER_GENERATION_API_KEY:-local-development-only}
+      ANSWER_CONNECT_TIMEOUT_SECONDS: ${ANSWER_CONNECT_TIMEOUT_SECONDS:-3}
+      ANSWER_READ_TIMEOUT_SECONDS: ${ANSWER_READ_TIMEOUT_SECONDS:-85}
+      ANSWER_TOTAL_TIMEOUT_SECONDS: ${ANSWER_TOTAL_TIMEOUT_SECONDS:-90}
+      ANSWER_READINESS_TIMEOUT_SECONDS: ${ANSWER_READINESS_TIMEOUT_SECONDS:-5}
+      ANSWER_MAX_RESPONSE_BODY_BYTES: ${ANSWER_MAX_RESPONSE_BODY_BYTES:-524288}
+      MAX_ACTIVE_TURNS: ${MAX_ACTIVE_TURNS:-10}
+      MAX_TURN_QUEUE_SIZE: ${MAX_TURN_QUEUE_SIZE:-20}
+      TURN_QUEUE_WAIT_TIMEOUT_SECONDS: ${TURN_QUEUE_WAIT_TIMEOUT_SECONDS:-120}
+      PROCESSING_STALE_SECONDS: ${PROCESSING_STALE_SECONDS:-360}
+      PURGE_PREVIEW_TTL_SECONDS: ${PURGE_PREVIEW_TTL_SECONDS:-600}
+      API_MAX_REQUEST_BODY_BYTES: ${API_MAX_REQUEST_BODY_BYTES:-65536}
+    ports:
+      - "${CHAT_BIND_ADDRESS:-127.0.0.1}:${CHAT_API_PORT:-8120}:8120"
+    networks:
+      default:
+        aliases:
+          - chat-api
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+
+networks:
+  default:
+    name: ${HELPDESK_NETWORK:-helpdesk-rag}
+    external: true
